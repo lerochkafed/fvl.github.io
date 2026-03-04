@@ -712,27 +712,28 @@ document.addEventListener('DOMContentLoaded', function() {
 📦 Пакет: ${selectedPackage}
 💬 Комментарий: ${comment || 'нет'}`;
              
-            // Отправка в Telegram
-           fetch('https://api.telegram.org/bot8783670971:AAFmRffjKI1ekIn6RrXR8FTPQN3Pk2DRRhg/sendMessage', {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'}, 
-                body: JSON.stringify({
-                    chat_id: 716232442, 
-                    text: message
-                }) 
-            }) 
-            .then(response => response.json()) 
-            .then(data => { 
-                if (data.ok) { 
-                    alert('✅ Заявка отправлена! Мы свяжемся с вами.'); 
-                    form.reset(); 
-                } else { 
-                    alert('❌ Ошибка: ' + (data.description || 'попробуйте позже')); 
-                } 
-            }) 
-            .catch(error => { 
-                alert('❌ Ошибка сети. Проверьте подключение к интернету.'); 
-                console.error(error); 
+            // Отправка в Telegram - ТОЛЬКО ОДИН РАЗ!
+fetch('https://api.telegram.org/bot8783670971:AAFmRffjKI1ekIn6RrXR8FTPQN3Pk2DRRhg/sendMessage', {
+    method: 'POST',
+    headers: {'Content-Type': 'application/json'}, 
+    body: JSON.stringify({
+        chat_id: 716232442, 
+        text: message
+    }) 
+}) 
+.then(response => response.json()) 
+.then(data => { 
+    if (data.ok) { 
+        alert('✅ Заявка отправлена! Мы свяжемся с вами.'); 
+        form.reset(); 
+    } else { 
+        alert('❌ Ошибка: ' + (data.description || 'попробуйте позже')); 
+    } 
+}) 
+.catch(error => { 
+    alert('❌ Ошибка сети. Проверьте подключение к интернету.'); 
+    console.error(error); 
+}); 
             }); 
         }); 
     } 
@@ -741,6 +742,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	 
 </body> 
 </html>
+
 
 
 
