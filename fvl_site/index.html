@@ -1,0 +1,729 @@
+<!DOCTYPE HTML>
+<!--
+	Spectral by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<title>Волейбольная лига FVL | Официальный сайт</title>
+		<link rel="icon" type="image/x-icon" href="favicon.ico">
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+	</head>
+	<body class="landing is-preload"> 
+	<style>
+/* Только фон - меняем синий на черный */
+#one.wrapper.style1.special,
+#three.wrapper.style3.special,
+#cta.wrapper.style4,
+footer#footer {
+    background: #0a0a0a !important;
+    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%) !important;
+}
+
+/* Кнопки оставляем коралловыми как были */
+/* Ничего больше не трогаем! */
+</style>	
+		<style>
+/* УВЕЛИЧИВАЕМ ВСЕ ЗАГОЛОВКИ */
+h1 { font-size: 2.5rem !important; }
+h2 { font-size: 2.2rem !important; }
+h3 { font-size: 1.8rem !important; }
+#banner h2 { font-size: 3.5rem !important; }  /* главный заголовок */
+#banner p { font-size: 1.5rem !important; }   /* подзаголовок на баннере */
+#one h2 { font-size: 2.5rem !important; }      /* "Наша лига в цифрах" */
+#one h3 { font-size: 2.5rem !important; }      /* сами цифры 200+, 20, и т.д. */
+#two h2 { font-size: 2.5rem !important; }      /* "Пакеты партнерского участия" */
+.spotlight h2 { font-size: 2.2rem !important; } /* названия пакетов */
+#three h2 { font-size: 3rem !important; }      /* "СУПЕРМАТЧ FVL PRO 7" */
+</style>
+<style> 
+/* ========== СТИЛИ ДЛЯ МЕНЮ ========== */
+
+/* Фон меню */
+#menu {
+    background: #00a8ff !important;
+}
+
+/* Пункты меню */
+#menu ul li a {
+    color: white !important;
+    font-size: 1.2rem !important;
+    font-weight: 500 !important;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+    padding: 1rem !important;
+}
+
+/* Эффект при наведении */
+#menu ul li a:hover {
+    background: rgba(255, 255, 255, 0.2) !important;
+    padding-left: 2rem !important;
+}
+
+/* Кнопка открытия меню (три полоски) */
+.menuToggle {
+    color: white !important;
+}
+
+.menuToggle:hover {
+    color: #00a8ff !important;
+}
+</style>
+<style>
+/* ========== МОБИЛЬНАЯ АДАПТАЦИЯ ========== */
+
+/* Для экранов шириной до 768px (телефоны) */
+@media screen and (max-width: 768px) {
+
+    /* Заголовки на телефоне */
+    #banner h2 { font-size: 2.2rem !important; }
+    #banner p { font-size: 1.1rem !important; }
+    h2 { font-size: 1.8rem !important; }
+    h3 { font-size: 1.5rem !important; }
+    
+    /* Текст на главной */
+    #banner .inner p {
+        font-size: 1.1rem !important;
+        line-height: 1.6 !important;
+        margin: 1rem auto !important;
+        max-width: 90% !important;
+    }
+    
+    /* Блок с цифрами */
+    #one .row {
+        display: flex !important;
+        flex-wrap: wrap !important;
+    }
+    #one .col-3 {
+        width: 50% !important;  /* По 2 в ряд */
+        margin-bottom: 2rem !important;
+    }
+    #one h3 { font-size: 2.2rem !important; }
+    #one p { font-size: 1.1rem !important; }
+    
+    /* Пакеты партнерства */
+    .spotlight {
+        flex-direction: column !important;
+        text-align: center !important;
+    }
+    .spotlight .image {
+        width: 100% !important;
+        margin-bottom: 1rem !important;
+    }
+    .spotlight .content {
+        width: 100% !important;
+        padding: 1.5rem !important;
+    }
+    .spotlight ul li {
+        text-align: left !important;
+        font-size: 1rem !important;
+    }
+    
+    /* Суперматч */
+    #three .inner {
+        padding: 1rem !important;
+    }
+    #three h2 { 
+        font-size: 2.2rem !important; 
+        line-height: 1.2 !important;
+    }
+    #three .inner > div:first-of-type {
+        flex-direction: column !important;
+        gap: 1rem !important;
+    }
+    #three .inner > div:first-of-type > div {
+        width: 100% !important;
+        min-height: auto !important;
+        padding: 1.5rem !important;
+    }
+    
+    /* Статистика в суперматче */
+    #three .inner > div:nth-of-type(2) > div {
+        flex-direction: column !important;
+        gap: 1.5rem !important;
+    }
+    
+    /* Форма */
+    #four {
+        padding: 2rem 1rem !important;
+    }
+    #four .inner {
+        max-width: 100% !important;
+    }
+    #four input,
+    #four select,
+    #four textarea {
+        font-size: 1rem !important;
+        padding: 0.8rem !important;
+    }
+    #four button[type="submit"] {
+        width: 100% !important;
+        min-width: auto !important;
+        font-size: 1rem !important;
+        padding: 0.8rem !important;
+    }
+    
+    /* Футер */
+    #footer .icons {
+        gap: 1rem !important;
+    }
+    #footer .icons li a {
+        font-size: 1.5rem !important;
+    }
+    #footer p, #footer a {
+        font-size: 0.9rem !important;
+    }
+    
+    /* Меню */
+    #menu ul li a {
+        font-size: 1rem !important;
+        padding: 0.8rem !important;
+    }
+}
+
+/* Для очень маленьких экранов (до 480px) */
+@media screen and (max-width: 480px) {
+    #one .col-3 {
+        width: 100% !important;  /* По 1 в ряд */
+    }
+    #banner h2 { font-size: 1.8rem !important; }
+    .spotlight .content {
+        padding: 1rem !important;
+    }
+    .spotlight h2 {
+        font-size: 1.5rem !important;
+    }
+}
+</style>
+<style>
+/* ========== КОМПАКТНЫЕ ЗАГОЛОВКИ ДЛЯ ВСЕХ ПАКЕТОВ ========== */
+.spotlight h2 {
+    white-space: nowrap !important;  /* запрещаем перенос */
+    font-size: 1.8rem !important;    /* чуть уменьшаем если надо */
+    margin-bottom: 1rem !important;
+}
+
+/* Для мобильных всё же разрешаем перенос */
+@media screen and (max-width: 768px) {
+    .spotlight h2 {
+        white-space: normal !important;
+        font-size: 1.5rem !important;
+    }
+}
+</style>
+<style> 
+/* ========== УВЕЛИЧИВАЕМ ТЕКСТ (УСИЛЕННЫЙ ВАРИАНТ) ========== */
+
+/* 1. Подписи под цифрами в "Наша лига в цифрах" */
+#one .row p,
+#one .col-3 p,
+#one .col-12-medium p {
+    font-size: 1.4rem !important;
+    color: rgba(255,255,255,0.9) !important;
+}
+
+/* 2. Списки в пакетах партнерства */
+.spotlight .content ul li,
+.spotlight ul li {
+    font-size: 1.3rem !important;
+    margin-bottom: 0.7rem !important;
+    line-height: 1.5 !important;
+}
+
+/* 3. Текст в форме */
+#four input, 
+#four select, 
+#four textarea {
+    font-size: 1.2rem !important;
+    padding: 1rem !important;
+}
+
+#four ::placeholder {
+    font-size: 1.2rem !important;
+    color: rgba(255,255,255,0.6) !important;
+}
+
+/* 4. Текст в футере */
+#footer p, 
+#footer a, 
+.copyright li,
+#footer .icons a {
+    font-size: 1.2rem !important;
+}
+
+/* 5. Текст в суперматче (под цифрами) */
+#three .inner div div div:last-child,
+#three .inner .row + div div div {
+    font-size: 1.3rem !important;
+}
+
+/* 6. Подписи под заголовками */
+.major p,
+header.major p {
+    font-size: 1.3rem !important;
+}
+
+/* 7. Текст на баннере (под главным заголовком) */
+#banner .inner p {
+    font-size: 1.3rem !important;
+}
+
+/* 8. Текст в статистике суперматча (№1, 1M+, 2 года и подписи к ним) */
+#three .inner div div div {
+    font-size: 1.2rem !important;
+}
+</style>
+
+		<!-- Page Wrapper -->
+			<div id="page-wrapper">
+
+			<!-- Header -->
+<header id="header" class="alt">
+    <h1><a href="index.html">FVL</a></h1>
+    <nav id="nav">
+        <ul>
+            <li class="special">
+                <a href="#menu" class="menuToggle"><span>Меню</span></a>
+                <div id="menu">
+                    <ul>
+                        <li><a href="#banner">Главная</a></li>
+                        <li><a href="#one">О лиге</a></li>
+                        <li><a href="#two">Пакеты партнерства</a></li>
+                        <li><a href="#three">Суперматч</a></li>
+                        <li><a href="#four">Стать партнером</a></li>
+                        <li><a href="#footer">Контакты</a></li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+    </nav>
+</header>	
+
+				<!-- Banner --> 
+<section id="banner"> 
+    <div class="inner"> 
+        <h2>Волейбольная лига FVL</h2> 
+        <p style="font-size: 1.3rem; line-height: 1.9; max-width: 650px; margin: 2rem auto;">
+            Объединяем любителей волейбола<br />
+            <span style="display: inline-block; margin-top: 0.7rem;">в Москве</span><br />
+            <span style="display: inline-block; margin-top: 0.7rem;">с 2024 года</span>
+        </p> 
+        <ul class="actions special">  
+            <li><a href="#four" class="button primary" style="background: #00a8ff !important; border-color: #00a8ff !important;">Стать партнером</a></li> 
+        </ul>  
+    </div> 
+    <a href="#one" class="more scrolly">Узнать больше</a> 
+</section>
+				
+<!-- One --> 
+<section id="one" class="wrapper style1 special" style="background: linear-gradient(135deg, #1e1e2f 0%, #2a2a40 100%);"> 
+    <div class="inner"> 
+        <header class="major"> 
+            <h2 style="color: #ffffff;">Наша лига в цифрах</h2> 
+            <p style="color: rgba(255,255,255,0.8);">Цифры, которые говорят сами за себя</p> 
+        </header> 
+        
+        <div class="row"> 
+            <div class="col-3 col-12-medium" style="text-align: center;"> 
+                <h3 style="color: #ffffff; font-size: 3rem; margin-bottom: 0.5rem;">200+</h3> 
+                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">активных игроков</p> 
+            </div> 
+            <div class="col-3 col-12-medium" style="text-align: center;"> 
+                <h3 style="color: #ffffff; font-size: 3rem; margin-bottom: 0.5rem;">20</h3> 
+                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">команд</p> 
+            </div> 
+            <div class="col-3 col-12-medium" style="text-align: center;"> 
+                <h3 style="color: #ffffff; font-size: 3rem; margin-bottom: 0.5rem;">5</h3> 
+                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">сезонов</p> 
+            </div> 
+            <div class="col-3 col-12-medium" style="text-align: center;"> 
+                <h3 style="color: #ffffff; font-size: 3rem; margin-bottom: 0.5rem;">1000+</h3> 
+                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">зрителей за сезон</p> 
+            </div> 
+        </div> 
+    </div> 
+</section>
+
+<!-- Two - Пакеты для спонсоров FVL PRO7 -->
+<section id="two" class="wrapper alt style2">
+    
+    <!-- Заголовок раздела -->
+    <header class="major" style="text-align: center; padding: 2rem 2rem 0 2rem;">
+        <h2>Пакеты партнерского участия</h2>
+        <p>Выберите уровень сотрудничества с главным волейбольным событием</p>
+    </header>
+    
+    <!-- ПАКЕТ 1: СООРГАНИЗАТОР (Самый крупный) -->
+    <section class="spotlight">
+        <div class="image"><img src="images/soorganizator.jpg" alt="Соорганизатор" /></div>
+        <div class="content">
+            <h2>СООРГАНИЗАТОР</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li>✓ Открываете матч с Правительством Москвы</li>
+                <li>✓ Логотип на одном уровне с организатором</li>
+                <li>✓ Самый крупный логотип на форме игроков</li>
+                <li>✓ Упоминания: ведущий 6 раз, комментатор 5 раз</li>
+                <li>✓ Логотип рядом со счетом в трансляции 24/7</li>
+                <li>✓ Рекламный ролик под руководством Дмитрия Борисова</li>
+                <li>✓ Участие в пресс-конференции с олимпийскими чемпионами</li>
+                <li>✓ Ваш QR-код на медиа-кубе с призывом подписаться</li>
+                <li>✓ Награждение победителей чемпионским поясом</li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- ПАКЕТ 2: ГЕНЕРАЛЬНЫЙ ПАРТНЕР -->
+    <section class="spotlight">
+        <div class="image"><img src="images/general_partner.jpg" alt="Генеральный партнер" /></div>
+        <div class="content">
+            <h2>ГЕНЕРАЛЬНЫЙ ПАРТНЕР</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li>✓ Логотип на всей рекламной продукции</li>
+                <li>✓ Билеты SUPER VIP и в фанатский сектор</li>
+                <li>✓ Упоминания: ведущий 4 раза, комментатор 3 раза</li>
+                <li>✓ Трансляция логотипа на медиа-кубе (4 экрана)</li>
+                <li>✓ Самый большой логотип на PRESS WALL</li>
+                <li>✓ Интервью для телевидения на фоне PRESS WALL</li>
+                <li>✓ Логотип по периметру игровой площадки</li>
+                <li>✓ Награждение призеров матча</li>
+                <li>✓ Размещение продукции в любой точке фойе</li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- ПАКЕТ 3: ГЕНЕРАЛЬНЫЙ СПОНСОР -->
+    <section class="spotlight">
+        <div class="image"><img src="images/general_sponsor.jpg" alt="Генеральный спонсор" /></div>
+        <div class="content">
+            <h2>ГЕНЕРАЛЬНЫЙ СПОНСОР</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li>✓ Логотип на всей рекламной продукции</li>
+                <li>✓ Билеты SUPER VIP и в фанатский сектор</li>
+                <li>✓ Упоминания: ведущий 5 раз, комментатор 5 раз</li>
+                <li>✓ Трансляция логотипа/ролика на медиа-кубе</li>
+                <li>✓ Самый большой логотип на PRESS WALL</li>
+                <li>✓ Логотип на форме игроков обеих команд</li>
+                <li>✓ Ваша рекламная продукция каждому гостю</li>
+                <li>✓ Логотип по периметру игровой площадки</li>
+                <li>✓ Награждение участников матча</li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- ПАКЕТ 4: СПОНСОР VIP -->
+    <section class="spotlight">
+        <div class="image"><img src="images/vip.jpg" alt="Спонсор VIP" /></div>
+        <div class="content">
+            <h2>СПОНСОР VIP</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li>✓ Логотип на всей рекламной продукции</li>
+                <li>✓ Билеты SUPER VIP и в фанатский сектор</li>
+                <li>✓ Упоминания: ведущий 3 раза, комментатор 3 раза</li>
+                <li>✓ Ваш логотип на обоих PRESS WALL</li>
+                <li>✓ Раздача полиграфии 3500 болельщикам</li>
+                <li>✓ Логотип по периметру игровой площадки</li>
+                <li>✓ Размещение продукции в фойе</li>
+                <li>✓ Розыгрыш ваших призов среди зрителей</li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- ПАКЕТ 5: СПОНСОР PLUS -->
+<section class="spotlight">
+        <div class="image"><img src="images/plus.jpg" alt="Спонсор PLUS" /></div>
+        <div class="content">
+            <h2>СПОНСОР PLUS</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li>✓ Логотип на главном PRESS WALL</li>
+                <li>✓ Билеты VIP и в фанатский сектор</li>
+                <li>✓ Упоминания: ведущий 2 раза, комментатор 2 раза</li>
+                <li>✓ Раздача полиграфии 3500 болельщикам</li>
+                <li>✓ Логотип по периметру игровой площадки</li>
+                <li>✓ Реклама в соцсетях fvl_spb (2 недели)</li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- ПАКЕТ 6: ПАРТНЕР -->
+    <section class="spotlight">
+        <div class="image"><img src="images/partner.jpg" alt="Партнер" /></div>
+        <div class="content">
+            <h2>ПАРТНЕР</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li>✓ Логотип на главном PRESS WALL</li>
+                <li>✓ Билеты VIP и в фанатский сектор</li>
+                <li>✓ Раздача полиграфии 3500 болельщикам</li>
+                <li>✓ Реклама в соцсетях fvl_spb (1 неделя)</li>
+            </ul>
+        </div>
+    </section>
+    
+    <!-- ПАКЕТ 7: СПОНСОР (Базовый) -->
+    <section class="spotlight">
+        <div class="image"><img src="images/sponsor.jpg" alt="Спонсор" /></div>
+        <div class="content">
+            <h2>СПОНСОР</h2>
+            <ul style="list-style: none; padding: 0;">
+                <li>✓ Логотип на главном PRESS WALL</li>
+                <li>✓ Билеты VIP и в фанатский сектор</li>
+                <li>✓ Раздача полиграфии 3500 болельщикам</li>
+                <li>✓ Упоминание ведущего 1 раз</li>
+                <li>✓ Упоминание комментатора 1 раз</li>
+                <li>✓ Реклама в соцсетях fvl_spb (1 неделя + сторис)</li>
+            </ul>
+        </div>
+    </section>
+    
+</section>		
+
+
+    <!-- Three - Анонс суперматча FVL PRO 7 -->
+<section id="three" class="wrapper style3 special" style="background: linear-gradient(135deg, #1e1e2f 0%, #2a2a40 100%); padding: 4rem 0; position: relative; border-bottom: 3px solid #00a8ff; border-top: 3px solid #00a8ff;">
+    
+    <!-- Тонкий декоративный элемент -->
+    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 20% 50%, rgba(0, 168, 255, 0.3) 0%, transparent 50%); pointer-events: none;"></div>
+    
+    <div class="inner" style="max-width: 1000px; margin: 0 auto; position: relative; z-index: 2;">
+        
+        <!-- Заголовок с акцентным цветом --> 
+<header class="major" style="text-align: center; margin-bottom: 3rem;"> 
+    <!-- ГЛАВНОЕ СОБЫТИЕ ГОДА -->
+    <p style="color: #00a8ff; font-size: 2rem; font-weight: 600; letter-spacing: 3px; margin-bottom: 2rem;"> 
+        ГЛАВНОЕ СОБЫТИЕ ГОДА
+    </p> 
+    
+    <!-- СУПЕРМАТЧ -->
+    <h2 style="color: white; font-size: 4rem; font-weight: 800; text-transform: uppercase; margin: 2rem 0 0.8rem 0; line-height: 1.2;"> 
+        СУПЕРМАТЧ <span style="color: #00a8ff;">FVL PRO 7</span> 
+    </h2> 
+    
+    <!-- МОСКВА VS ПИТЕР (теперь ближе к суперматчу) -->
+    <p style="color: rgba(255,255,255,0.9); font-size: 2rem; font-weight: 600; margin-top: 0.5rem; margin-bottom: 1rem;"> 
+        МОСКВА <span style="color: #00a8ff; font-weight: 800;">VS</span> ПИТЕР 
+    </p> 
+    
+    <div style="width: 80px; height: 3px; background: #00a8ff; margin: 2rem auto;"></div> 
+</header>
+        
+<!-- Блок с датой и местом (без эмодзи, текст по центру) --> 
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin: 3rem 0;">
+    
+    <!-- Дата -->
+    <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px; text-align: center; flex: 1; min-width: 200px; border: 1px solid rgba(0, 168, 255, 0.3); display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 180px;"> 
+        <div style="color: white; font-size: 2rem; font-weight: 700; line-height: 1.3;">24 АПРЕЛЯ</div> 
+        <div style="color: #00a8ff; font-size: 1.8rem; font-weight: 600;">2026</div> 
+    </div> 
+    
+    <!-- Место --> 
+    <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px; text-align: center; flex: 1; min-width: 200px; border: 1px solid rgba(0, 168, 255, 0.3); display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 180px;"> 
+        <div style="color: white; font-size: 1.6rem; font-weight: 600; line-height: 1.3;">АРЕНА «ДИНАМО»</div> 
+        <div style="color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-top: 0.5rem;">м. Парк Победы</div> 
+    </div> 
+    
+    <!-- Зрители --> 
+    <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px; text-align: center; flex: 1; min-width: 200px; border: 1px solid rgba(0, 168, 255, 0.3); display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 180px;"> 
+        <div style="color: white; font-size: 2.5rem; font-weight: 700; line-height: 1.3;">3 500</div> 
+        <div style="color: rgba(255,255,255,0.7); font-size: 1.2rem;">зрителей</div> 
+    </div> 
+</div>
+        
+       <!-- Статистика (акцентная) --> 
+<div style="background: rgba(0, 168, 255, 0.3); border-radius: 8px; padding: 2.5rem 1.5rem; margin: 3rem 0; text-align: center; border: 1px solid rgba(0, 168, 255, 0.3);"> 
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 2rem;"> 
+        <div> 
+            <div style="color: #00a8ff; font-size: 2.5rem; font-weight: 800;">№1</div> 
+            <div style="color: white; font-size: 1.3rem;">в России по просмотрам</div> 
+        </div> 
+        <div> 
+            <div style="color: #00a8ff; font-size: 2.5rem; font-weight: 800;">1M+</div> 
+            <div style="color: white; font-size: 1.3rem;">онлайн-зрителей</div> 
+        </div> 
+        <div> 
+            <div style="color: #00a8ff; font-size: 2.5rem; font-weight: 800;">2 года</div> 
+            <div style="color: white; font-size: 1.3rem;">лидер медиалиг</div> 
+        </div> 
+    </div> 
+</div>
+        </div>
+        
+    </div>
+</section>
+<!-- КОНЕЦ БЛОКА СУПЕРМАТЧА (Three) -->
+</section> 
+
+<!-- ========== НАЧАЛО: Форма обратной связи ========== -->
+<section id="four" style="padding: 4rem 2rem; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);">
+    <div class="inner" style="max-width: 700px; margin: 0 auto;">
+        <header class="major" style="text-align: center; margin-bottom: 3rem;">
+            <h2 style="color: white; font-size: 2.5rem;">Стать партнером</h2>
+            <p style="color: rgba(255,255,255,0.8);">Заполните форму, и мы свяжемся с вами</p>
+            <div style="width: 80px; height: 3px; background: #00a8ff; margin: 1.5rem auto;"></div>
+        </header>
+        
+        <form id="partnerForm" style="display: flex; flex-direction: column; gap: 1.2rem;">
+            <!-- Имя -->
+            <div style="width: 100%;">
+                <input type="text" placeholder="Ваше имя *" required 
+                       style="width: 100%; padding: 1rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(0, 168, 255, 0.3); color: white; border-radius: 4px;">
+            </div>
+            
+            <!-- Телефон -->
+            <div style="width: 100%;">
+                <input type="tel" placeholder="Телефон *" required 
+                       style="width: 100%; padding: 1rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(0, 168, 255, 0.3); color: white; border-radius: 4px;">
+            </div>
+            
+            <!-- Email -->
+            <div style="width: 100%;">
+                <input type="email" placeholder="E-mail" 
+                       style="width: 100%; padding: 1rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(0, 168, 255, 0.3); color: white; border-radius: 4px;">
+            </div>
+            
+            <!-- Выбор пакета -->
+            <div style="width: 100%;">
+                <select style="width: 100%; padding: 1rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(0, 168, 255, 0.3); color: white; border-radius: 4px;">
+                    <option style="background: #1a1a1a;">Выберите пакет</option>
+                    <option style="background: #1a1a1a;">Соорганизатор</option>
+                    <option style="background: #1a1a1a;">Генеральный партнер</option>
+                    <option style="background: #1a1a1a;">Генеральный спонсор</option>
+                    <option style="background: #1a1a1a;">Спонсор VIP</option>
+                    <option style="background: #1a1a1a;">Спонсор PLUS</option>
+                    <option style="background: #1a1a1a;">Партнер</option>
+                    <option style="background: #1a1a1a;">Спонсор (базовый)</option>
+                </select>
+            </div>
+            
+            <!-- Комментарий -->
+            <div style="width: 100%;">
+                <textarea placeholder="Комментарий" rows="4" 
+                          style="width: 100%; padding: 1rem; background: rgba(255,255,255,0.1); border: 1px solid rgba(0, 168, 255, 0.3); color: white; border-radius: 4px;"></textarea>
+            </div>
+           <!-- Согласие на обработку данных -->
+<div style="text-align: left; margin: 1rem 0; color: rgba(255,255,255,0.7); font-size: 0.95rem;">
+    <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+        <input type="checkbox" required style="width: 18px; height: 18px; cursor: pointer; accent-color: #00a8ff;">
+        <span>Я соглашаюсь на <a href="#privacy" style="color: #00a8ff; text-decoration: underline;">обработку персональных данных</a></span>
+    </label>
+</div> 
+
+         <!-- Кнопка (исправлена) -->
+<div style="width: 100%; margin-top: 1rem; text-align: center;">
+    <button type="submit" 
+            style="display: inline-block; width: auto; min-width: 250px; padding: 0.9rem 2rem; background: #00a8ff; color: white; border: none; border-radius: 4px; font-weight: 600; font-size: 1.1rem; cursor: pointer; transition: 0.3s; margin: 0 auto;">
+        Отправить заявку →
+    </button>
+</div>   
+            
+            <!-- Альтернативный контакт -->
+            <p style="text-align: center; color: rgba(255,255,255,0.5); margin-top: 1rem;">
+                Или напишите нам в Telegram: 
+                <a href="https://t.me/dimaboets" target="_blank" style="color: #00a8ff; text-decoration: none;">@dimaboets</a>
+            </p>
+        </form>
+    </div>
+</section>
+<!-- ========== КОНЕЦ: Форма обратной связи ========== -->
+
+<!-- ДАЛЬШЕ ИДЕТ Footer (ваш существующий футер) -->
+<footer id="footer" style="background: #1e1e2f; padding: 2rem 0;">
+				<!-- Footer с контактами FVL --> 
+     <footer id="footer" style="background: #1e1e2f; padding: 2rem 0;"> 
+      
+      <!-- Соцсети -->
+      <ul class="icons" style="margin-bottom: 1.5rem;"> 
+       <li><a href="https://vk.com/fvl_spb" target="_blank" class="icon brands fa-vk fa-2x" style="color: white;"><span class="label">VK</span></a></li> 
+       <li><a href="https://instagram.com/fvl_spb" target="_blank" class="icon brands fa-instagram fa-2x" style="color: white;"><span class="label">Instagram</span></a></li> 
+       <li><a href="tel:+79216336342" class="icon solid fa-phone fa-2x" style="color: white;"><span class="label">Phone</span></a></li> 
+      </ul> 
+      
+      <!-- Контакты текстом -->
+      <div style="text-align: center; color: white; margin-bottom: 1rem;">
+       <p style="margin: 0.3rem 0;">Дмитрий Александрович Борисов</p>
+       <p style="margin: 0.3rem 0;"><a href="tel:+79216336342" style="color: #00a8ff; text-decoration: none;">+7 (921) 633-63-42</a></p>
+      </div>
+      
+      <!-- Адрес -->
+      <div style="text-align: center; color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 1.5rem;">
+       <p>г. Москва, м. Парк Победы, ул. Василисы Кожиной, 13<br>Волейбольная арена «Динамо»</p>
+      </div>
+      
+      <!-- Копирайт -->
+      <ul class="copyright" style="margin-top: 1rem;"> 
+       <li style="color: rgba(255,255,255,0.5);">&copy; Волейбольная лига FVL</li>
+      </ul> 
+      
+     </footer>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Находим форму по атрибуту id
+    const form = document.getElementById('partnerForm');
+    
+    if (form) {
+        form.addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Telegram данные
+            const BOT_TOKEN = '8783670971:AAFmRffjKI1ekIn6RrXR8FTPQN3Pk2DRRhg';
+            const CHAT_ID = '509448603';
+            
+            // Собираем данные (простой способ)
+            const formData = new FormData(form);
+            const name = formData.get('name')  document.querySelector('input[placeholder*="Имя"]')?.value  '';
+            const phone = formData.get('phone')  document.querySelector('input[placeholder*="Телефон"]')?.value  '';
+            const email = document.querySelector('input[type="email"]')?.value || '';
+            
+            // Выбор пакета
+            const select = document.querySelector('select');
+            const selectedPackage = select ? select.options[select.selectedIndex].text : 'Не выбран';
+            
+            // Комментарий
+            const comment = document.querySelector('textarea')?.value || '';
+            
+            // Проверка
+            if (!name || !phone) {
+                alert('Заполните имя и телефон');
+                return;
+            }
+            
+            // Сообщение
+            const message = `📬 Новая заявка
+👤 ${name}
+📞 ${phone}
+📧 ${email || 'не указан'}
+📦 ${selectedPackage}
+💬 ${comment || 'нет'}`;
+            
+            // Отправка
+            fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+                method: 'POST',
+                headers: {'Content-Type': 'application/json'},
+                body: JSON.stringify({chat_id: CHAT_ID, text: message})
+            })
+            .then(r => r.json())
+            .then(d => {
+                if (d.ok) {
+                    alert('✅ Отправлено!');
+                    form.reset();
+                } else {
+                    alert('❌ Ошибка: ' + (d.description || 'попробуйте позже'));
+                }
+            })
+            .catch(() => alert('❌ Ошибка сети'));
+        });
+    }
+});
+</script>
+	</body>
+</html>
