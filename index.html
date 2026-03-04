@@ -713,8 +713,8 @@ document.addEventListener('DOMContentLoaded', function() {
 💬 Комментарий: ${comment || 'нет'}`;
              
             // Отправка в Telegram
-            fetch(`https://api.telegram.org/bot${8783670971:AAFmRffjKI1ekIn6RrXR8FTPQN3Pk2DRRhg}/sendMessage`, { 
-                method: 'POST', 
+           fetch('https://api.telegram.org/bot8783670971:AAFmRffjKI1ekIn6RrXR8FTPQN3Pk2DRRhg/sendMessage', {
+                method: 'POST',
                 headers: {'Content-Type': 'application/json'}, 
                 body: JSON.stringify({
                     chat_id: 716232442, 
@@ -741,5 +741,6 @@ document.addEventListener('DOMContentLoaded', function() {
 	 
 </body> 
 </html>
+
 
 
