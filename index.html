@@ -610,7 +610,7 @@ header.major p {
 </div> 
 
          <!-- Кнопка (исправлена) -->
-<div style="width: 100%; margin-top: 1rem; text-align: center;">
+<div style="text-align: left; margin: 1rem 0; color: white; font-size: 0.95rem;">
     <button type="submit" 
             style="display: inline-block; width: auto; min-width: 250px; padding: 0.9rem 2rem; background: #00a8ff; color: white; border: none; border-radius: 4px; font-weight: 600; font-size: 1.1rem; cursor: pointer; transition: 0.3s; margin: 0 auto;">
         Отправить заявку →
@@ -675,7 +675,7 @@ document.addEventListener('DOMContentLoaded', function() {
              
             // Telegram данные (ТВОИ) 
             const BOT_TOKEN = '8783670971:AAFmRffjKI1ekIn6RrXR8FTPQN3Pk2DRRhg'; 
-            const CHAT_ID = '509448603'; 
+            const CHAT_ID = '716232442'; 
             
             // СОЗДАЁМ formData ПРАВИЛЬНО
             const formData = new FormData(form);
@@ -713,11 +713,11 @@ document.addEventListener('DOMContentLoaded', function() {
 💬 Комментарий: ${comment || 'нет'}`;
              
             // Отправка в Telegram
-            fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, { 
+            fetch(`https://api.telegram.org/bot${8783670971:AAFmRffjKI1ekIn6RrXR8FTPQN3Pk2DRRhg}/sendMessage`, { 
                 method: 'POST', 
                 headers: {'Content-Type': 'application/json'}, 
                 body: JSON.stringify({
-                    chat_id: CHAT_ID, 
+                    chat_id: 716232442, 
                     text: message
                 }) 
             }) 
@@ -741,4 +741,5 @@ document.addEventListener('DOMContentLoaded', function() {
 	 
 </body> 
 </html>
+
 
