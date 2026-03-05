@@ -740,47 +740,73 @@ fetch('https://api.telegram.org/bot8783670971:AAFMo4VvnePNrLNhguxZb-OnVO3dQ3vfiz
   ); 
 </script>
 <script>
-  const telegramForm = document.getElementById('partner-form');
-  if (telegramForm) {
-    telegramForm.addEventListener('submit', function(e) {
+  const form = document.getElementById('partner-form');
+  console.log('🔍 Поиск формы:', form);
+
+  if (form) {
+    form.addEventListener('submit', function(e) {
       e.preventDefault();
-      
-      const name = document.getElementById('name').value;
-      const phone = document.getElementById('phone').value;
-      
-      // Кавычки ПРАВИЛЬНЫЕ - одинаковые!
-      const token = '8783670971:AAFMo4VvnePNrLNhguxZb-OnVO3dQ3vfizo';
+      console.log('✅ Форма перехвачена');
+
+      const name = document.getElementById('name');
+      const phone = document.getElementById('phone');
+
+      console.log('📌 Поле name:', name);
+      console.log('📌 Поле phone:', phone);
+
+      if (!name || !phone) {
+        console.error('❌ Поля name или phone не найдены в DOM');
+        alert('Ошибка: поля не найдены');
+        return;
+      }
+
+      const nameValue = name.value.trim();
+      const phoneValue = phone.value.trim();
+
+      console.log('👤 Имя:', nameValue);
+      console.log('📞 Телефон:', phoneValue);
+
+      if (!nameValue || !phoneValue) {
+        alert('Заполните имя и телефон');
+        return;
+      }
+
+      const token = '7783670971:AAFMo4VvnePNrLNhguxZb-OnVO3dQ3vfizo';
       const chatId = '-5283300190';
-      const text = `Новая заявка!\nИмя: ${name}\nТелефон: ${phone}`;
-      
-      const submitButton = telegramForm.querySelector('button');
-      submitButton.disabled = true;
-      submitButton.textContent = 'Отправка...';
-      
+      const text = `Новая заявка\nИмя: ${nameValue}\nТелефон: ${phoneValue}`;
+
+      console.log('📤 Отправка в Telegram...');
+
       fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
         method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({chat_id: chatId, text: text})
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: chatId, text: text })
       })
-      .then(response => response.json())
+      .then(response => {
+        console.log('📥 Статус ответа:', response.status);
+        return response.json();
+      })
       .then(data => {
-        if(data.ok) {
+        console.log('📦 Ответ от Telegram:', data);
+        if (data.ok) {
           alert('✅ Заявка отправлена!');
-          telegramForm.reset();
+          form.reset();
         } else {
           alert('❌ Ошибка: ' + data.description);
         }
       })
-      .catch(() => alert('❌ Ошибка сети'))
-      .finally(() => {
-        submitButton.disabled = false;
-        submitButton.textContent = 'Отправить заявку';
+      .catch(err => {
+        console.error('🔥 Ошибка fetch:', err);
+        alert('Ошибка соединения');
       });
     });
+  } else {
+    console.error('❌ Форма с id="partner-form" не найдена');
   }
 </script>
 </body> 
 </html>
+
 
 
 
