@@ -642,7 +642,7 @@ header.major p {
 			<script src="assets/js/main.js"></script>
 <script>
 document.addEventListener('DOMContentLoaded', function() { 
-    const form = document.getElementById('volleyForm'); 
+    const form = document.getElementById('partner-form'); 
      
     if (form) { 
         form.addEventListener('submit', function(e) { 
@@ -714,73 +714,9 @@ fetch('https://api.telegram.org/bot8783670971:AAFMo4VvnePNrLNhguxZb-OnVO3dQ3vfiz
     } 
   ); 
 </script>
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('partner-form');
-    console.log('🔍 Поиск формы:', form);
-    
-    if (!form) {
-      console.error('❌ Форма не найдена! Проверьте id="partner-form"');
-      return;
-    }
-
-    form.addEventListener('submit', function(e) {
-      e.preventDefault();
-      console.log('✅ Форма перехвачена');
-      
-      const nameInput = document.getElementById('name');
-      const phoneInput = document.getElementById('phone');
-      
-      console.log('📌 Поля:', nameInput, phoneInput);
-      
-      if (!nameInput || !phoneInput) {
-        alert('Ошибка: поля ввода не найдены');
-        return;
-      }
-      
-      const name = nameInput.value.trim();
-      const phone = phoneInput.value.trim();
-      
-      if (!name || !phone) {
-        alert('Заполните имя и телефон');
-        return;
-      }
-      
-      const token = '8783670971:AAFMo4VvnePNrLNhguxZb-OnVO3dQ3vfizo';
-      const chatId = '716232442';  // ВАШ ЛИЧНЫЙ ID из ответа!
-      const text = `🔔 Новая заявка с сайта FVL\n👤 Имя: ${name}\n📞 Телефон: ${phone}`;
-      
-      console.log('📤 Отправка...', {token, chatId, text});
-      
-      const url = `https://api.telegram.org/bot${token}/sendMessage`;
-      
-      fetch(url, {
-        method: 'POST',
-        headers: {'Content-Type': 'application/json'},
-        body: JSON.stringify({
-          chat_id: chatId,
-          text: text
-        })
-      })
-      .then(response => response.json())
-      .then(data => {
-        console.log('📦 Ответ Telegram:', data);
-        if (data.ok) {
-          alert('✅ Заявка отправлена! Мы свяжемся с вами.');
-          form.reset();
-        } else {
-          alert('❌ Ошибка Telegram: ' + data.description);
-        }
-      })
-      .catch(error => {
-        console.error('🔥 Ошибка:', error);
-        alert('❌ Ошибка соединения');
-      });
-    });
-  });
-</script>
 </body> 
 </html>
+
 
 
 
