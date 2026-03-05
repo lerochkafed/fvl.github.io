@@ -78,210 +78,45 @@ h3 { font-size: 1.8rem !important; }
 /* Для экранов шириной до 768px (телефоны) */
 /* ========== ПОЛНАЯ МОБИЛЬНАЯ ВЕРСИЯ - ВСЁ ПО ЦЕНТРУ ========== */
 @media screen and (max-width: 768px) {
-    
-    /* ----- ГЛАВНЫЙ БАННЕР (полностью по центру) ----- */
-    #banner,
-    #banner .inner,
-    #banner .inner * {
+
+    /* Заголовки на телефоне (как было, но чуть меньше) */
+    #banner h2 { 
+        font-size: 1.8rem !important; 
         text-align: center !important;
-    }
-    
-    #banner .inner {
-        padding: 2rem 1rem !important;
-        width: 100% !important;
-    }
-    
-    #banner h2 {
-        text-align: center !important;
-        font-size: 2.2rem !important;
         line-height: 1.3 !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
         white-space: normal !important;
         word-break: break-word !important;
+        margin: 0 auto !important;
+        max-width: 95% !important;
     }
     
-    #banner p {
+    #banner p { 
+        font-size: 1rem !important; 
         text-align: center !important;
-        font-size: 1.2rem !important;
-        line-height: 1.6 !important;
-        margin: 1.5rem auto !important;
+        line-height: 1.5 !important;
+        margin: 1rem auto !important;
         max-width: 90% !important;
-        white-space: normal !important;
     }
     
+    #banner .inner p {
+        font-size: 1rem !important;
+        line-height: 1.5 !important;
+        margin: 1rem auto !important;
+        max-width: 90% !important;
+        text-align: center !important;
+    }
+    
+    /* Кнопка */
     #banner .actions {
         display: flex !important;
         justify-content: center !important;
-        margin: 2rem auto !important;
+        margin: 1.5rem auto !important;
     }
     
     #banner .button {
-        margin: 0 auto !important;
-        text-align: center !important;
-    }
-    
-    /* ----- РАЗДЕЛ "НАША ЛИГА В ЦИФРАХ" ----- */
-    #one,
-    #one .inner,
-    #one header.major {
-        text-align: center !important;
-    }
-    
-    #one .row {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-    }
-    
-    #one .col-3 {
-        width: 50% !important;
-        text-align: center !important;
-        margin-bottom: 2rem !important;
-    }
-    
-    #one .col-3 h3,
-    #one .col-3 p {
-        text-align: center !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-    
-    /* ----- ЗАГОЛОВКИ РАЗДЕЛОВ (например "ПАКЕТЫ ПАРТНЕРСКОГО УЧАСТИЯ") ----- */
-    #two header.major,
-    #three header.major,
-    #four header.major {
-        text-align: center !important;
-        padding: 0 1rem !important;
-    }
-    
-    #two header.major h2,
-    #three header.major h2,
-    #four header.major h2 {
-        text-align: center !important;
-        font-size: 2rem !important;
-        line-height: 1.3 !important;
+        font-size: 0.9rem !important;
+        padding: 0.8rem 1.5rem !important;
         white-space: normal !important;
-        word-break: break-word !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-        max-width: 100% !important;
-    }
-    
-    #two header.major p,
-    #three header.major p,
-    #four header.major p {
-        text-align: center !important;
-        font-size: 1.2rem !important;
-        line-height: 1.5 !important;
-        max-width: 90% !important;
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-    
-    /* ----- ВСЕ ПАКЕТЫ (каждый заголовок по центру) ----- */
-    .spotlight {
-        text-align: center !important;
-    }
-    
-    .spotlight .content {
-        text-align: center !important;
-        padding: 1.5rem !important;
-    }
-    
-    .spotlight .content h2 {
-        text-align: center !important;
-        font-size: 1.8rem !important;
-        line-height: 1.3 !important;
-        white-space: normal !important;
-        word-break: break-word !important;
-        margin: 1rem auto !important;
-        max-width: 100% !important;
-    }
-    
-    /* Списки внутри пакетов - слева (так читаемее) */
-    .spotlight .content ul {
-        text-align: left !important;
-        max-width: 90% !important;
-        margin: 1rem auto !important;
-        padding-left: 1rem !important;
-    }
-    
-    /* ----- СУПЕРМАТЧ ----- */
-    #three .inner {
-        text-align: center !important;
-        padding: 1rem !important;
-    }
-    
-    #three header.major p:first-child {
-        text-align: center !important;
-        font-size: 1.4rem !important;
-        white-space: normal !important;
-    }
-    
-    #three header.major h2 {
-        text-align: center !important;
-        font-size: 2.2rem !important;
-        line-height: 1.2 !important;
-        word-break: break-word !important;
-    }
-    
-    #three header.major p:last-of-type {
-        text-align: center !important;
-        font-size: 1.5rem !important;
-    }
-    
-    /* Блок с датой и местом */
-    #three .inner > div:first-of-type {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 1rem !important;
-    }
-    
-    #three .inner > div:first-of-type > div {
-        text-align: center !important;
-        min-width: 150px !important;
-        padding: 1rem !important;
-    }
-    
-    /* Статистика */
-    #three .inner > div:nth-of-type(2) > div {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-        gap: 1.5rem !important;
-        text-align: center !important;
-    }
-    
-    #three .inner > div:nth-of-type(2) > div > div {
-        text-align: center !important;
-    }
-    
-    /* ----- ФОРМА ----- */
-    #four {
-        text-align: center !important;
-        padding: 2rem 1rem !important;
-    }
-    
-    #four .inner {
-        text-align: center !important;
-    }
-    
-    #four form {
-        text-align: left !important;  /* Сама форма - по левому краю, так удобнее заполнять */
-    }
-    
-    /* ----- ФУТЕР ----- */
-    #footer {
-        text-align: center !important;
-    }
-    
-    #footer .icons {
-        justify-content: center !important;
-    }
-    
-    #footer .copyright {
         text-align: center !important;
     }
 }
@@ -832,6 +667,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body> 
 </html>
+
 
 
 
