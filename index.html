@@ -586,7 +586,7 @@ header.major p {
 
     <!-- ИСПРАВЛЕННАЯ ГАЛОЧКА - теперь видно! -->
     <label style="display: flex; align-items: center; gap: 1rem; background: rgba(255,255,255,0.05); padding: 0.8rem 1rem; border-radius: 12px; cursor: pointer;">
-        <input type="checkbox" id="consent" required style="width: 20px; height: 20px; accent-color: #4169e1; transform: scale(1.2); margin: 0;">
+        <input type="checkbox" id="consent" required style="width: 22px; height: 22px; accent-color: #ffffff; filter: drop-shadow(0 0 2px rgba(0,0,0,0.5));">
         <span style="color: white; font-size: 1rem;">Я согласен на обработку персональных данных</span>
     </label>
 
@@ -654,41 +654,41 @@ document.addEventListener('DOMContentLoaded', function() {
             const BOT_TOKEN = '8783670971:AAFMo4VvnePNrLNhguxZb-OnVO3dQ3vfizo'; 
             const CHAT_ID = '716232442'; 
             
-            // СОЗДАЁМ formData
-            const formData = new FormData(form);
-             
-            // Собираем данные
-            const name = formData.get('name') || document.querySelector('input[placeholder*="Имя"]')?.value || '';
-            const phone = formData.get('phone') || document.querySelector('input[placeholder*="Телефон"]')?.value || '';
-            const email = formData.get('email') || document.querySelector('input[placeholder*="Email"]')?.value || '';
+            // Получаем значения напрямую из полей (проще и надежнее)
+            const nameInput = document.getElementById('name');
+            const phoneInput = document.getElementById('phone');
+            const emailInput = document.getElementById('email');
+            const packageSelect = document.getElementById('package');
+            const commentInput = document.getElementById('comment');
+            const consentCheck = document.getElementById('consent');
             
-            // Для select
-            const selectElement = document.querySelector('select[name="package"]');
-            const selectedPackage = selectElement ? selectElement.options[selectElement.selectedIndex].text : 'Не выбран';
-            
-            const comment = formData.get('comment') || document.querySelector('textarea')?.value || ''; 
-             
-            // Проверка обязательных полей
-            if (!name || !name.trim()) { 
-                alert('Заполните имя'); 
-                return; 
-            }
-
-            // Проверяем телефон
-            const cleanPhone = phone.replace(/[\s\-\(\)]/g, '');
-            if (!phone || !phone.trim()) { 
-                alert('Заполните телефон'); 
-                return; 
-            }
-
-            if (cleanPhone.length < 10) {
-                alert('Телефон должен содержать минимум 10 цифр');
+            // Проверка что поля существуют
+            if (!nameInput || !phoneInput || !consentCheck) {
+                alert('Ошибка: не найдены поля формы');
                 return;
             }
+            
+            const name = nameInput.value.trim();
+            const phone = phoneInput.value.trim();
+            const email = emailInput ? emailInput.value.trim() : '';
+            const packageText = packageSelect ? packageSelect.options[packageSelect.selectedIndex].text : 'Не выбран';
+            const comment = commentInput ? commentInput.value.trim() : '';
+             
+            // Проверка обязательных полей
+            if (!name) { 
+                alert('Заполните имя'); 
+                nameInput.focus();
+                return; 
+            }
 
-            // Проверка согласия (ТОЛЬКО ОДИН РАЗ!)
-            const consentCheckbox = document.getElementById('consent');
-            if (consentCheckbox && !consentCheckbox.checked) {
+            if (!phone) { 
+                alert('Заполните телефон'); 
+                phoneInput.focus();
+                return; 
+            }
+
+            // Проверка согласия
+            if (!consentCheck.checked) {
                 alert('Необходимо согласие на обработку персональных данных');
                 return;
             }
@@ -698,7 +698,7 @@ document.addEventListener('DOMContentLoaded', function() {
 👤 Имя: ${name}
 📞 Телефон: ${phone}
 📧 Email: ${email || 'не указан'}
-📦 Пакет: ${selectedPackage}
+📦 Пакет: ${packageText}
 💬 Комментарий: ${comment || 'нет'}`;
              
             // Отправка в Telegram
@@ -729,6 +729,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body> 
 </html>
+
 
 
 
