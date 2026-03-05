@@ -651,7 +651,7 @@ document.addEventListener('DOMContentLoaded', function() {
              
             // Telegram данные (ТВОИ) 
             const BOT_TOKEN = '8783670971:AAFMo4VvnePNrLNhguxZb-OnVO3dQ3vfizo'; 
-            const CHAT_ID = '-5283300190'; 
+            const CHAT_ID = '716232442'; 
             
             // СОЗДАЁМ formData ПРАВИЛЬНО
             const formData = new FormData(form);
@@ -693,7 +693,7 @@ fetch('https://api.telegram.org/bot8783670971:AAFMo4VvnePNrLNhguxZb-OnVO3dQ3vfiz
     method: 'POST',
     headers: {'Content-Type': 'application/json'}, 
     body: JSON.stringify({
-        chat_id: '-5283300190', 
+        chat_id: '716232442', 
         text: message
     }) 
 }) 
@@ -716,72 +716,73 @@ fetch('https://api.telegram.org/bot8783670971:AAFMo4VvnePNrLNhguxZb-OnVO3dQ3vfiz
   ); 
 </script>
 <script>
-  const form = document.getElementById('partner-form');
-  console.log('🔍 Поиск формы:', form);
+  document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('partner-form');
+    console.log('🔍 Поиск формы:', form);
+    
+    if (!form) {
+      console.error('❌ Форма не найдена! Проверьте id="partner-form"');
+      return;
+    }
 
-  if (form) {
     form.addEventListener('submit', function(e) {
       e.preventDefault();
       console.log('✅ Форма перехвачена');
-
-      const name = document.getElementById('name');
-      const phone = document.getElementById('phone');
-
-      console.log('📌 Поле name:', name);
-      console.log('📌 Поле phone:', phone);
-
-      if (!name || !phone) {
-        console.error('❌ Поля name или phone не найдены в DOM');
-        alert('Ошибка: поля не найдены');
+      
+      const nameInput = document.getElementById('name');
+      const phoneInput = document.getElementById('phone');
+      
+      console.log('📌 Поля:', nameInput, phoneInput);
+      
+      if (!nameInput || !phoneInput) {
+        alert('Ошибка: поля ввода не найдены');
         return;
       }
-
-      const nameValue = name.value.trim();
-      const phoneValue = phone.value.trim();
-
-      console.log('👤 Имя:', nameValue);
-      console.log('📞 Телефон:', phoneValue);
-
-      if (!nameValue || !phoneValue) {
+      
+      const name = nameInput.value.trim();
+      const phone = phoneInput.value.trim();
+      
+      if (!name || !phone) {
         alert('Заполните имя и телефон');
         return;
       }
-
+      
       const token = '8783670971:AAFMo4VvnePNrLNhguxZb-OnVO3dQ3vfizo';
-      const chatId = '-5283300190';
-      const text = `Новая заявка\nИмя: ${nameValue}\nТелефон: ${phoneValue}`;
-
-      console.log('📤 Отправка в Telegram...');
-
-      fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
+      const chatId = '716232442';  // ВАШ ЛИЧНЫЙ ID из ответа!
+      const text = `🔔 Новая заявка с сайта FVL\n👤 Имя: ${name}\n📞 Телефон: ${phone}`;
+      
+      console.log('📤 Отправка...', {token, chatId, text});
+      
+      const url = `https://api.telegram.org/bot${token}/sendMessage`;
+      
+      fetch(url, {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ chat_id: chatId, text: text })
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({
+          chat_id: chatId,
+          text: text
+        })
       })
-      .then(response => {
-        console.log('📥 Статус ответа:', response.status);
-        return response.json();
-      })
+      .then(response => response.json())
       .then(data => {
-        console.log('📦 Ответ от Telegram:', data);
+        console.log('📦 Ответ Telegram:', data);
         if (data.ok) {
-          alert('✅ Заявка отправлена!');
+          alert('✅ Заявка отправлена! Мы свяжемся с вами.');
           form.reset();
         } else {
-          alert('❌ Ошибка: ' + data.description);
+          alert('❌ Ошибка Telegram: ' + data.description);
         }
       })
-      .catch(err => {
-        console.error('🔥 Ошибка fetch:', err);
-        alert('Ошибка соединения');
+      .catch(error => {
+        console.error('🔥 Ошибка:', error);
+        alert('❌ Ошибка соединения');
       });
     });
-  } else {
-    console.error('❌ Форма с id="partner-form" не найдена');
-  }
+  });
 </script>
 </body> 
 </html>
+
 
 
 
