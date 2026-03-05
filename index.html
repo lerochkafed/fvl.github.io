@@ -740,63 +740,48 @@ fetch('https://api.telegram.org/bot8783670971:AAFMo4VvnePNrLNhguxZb-OnVO3dQ3vfiz
   ); 
 </script>
 <script>
-  const telegramForm = document.getElementById('partner-form'); // Убедитесь, что ID совпадает с ID вашей формы
+  const telegramForm = document.getElementById('partner-form');
   if (telegramForm) {
     telegramForm.addEventListener('submit', function(e) {
-      e.preventDefault(); // Отменяем перезагрузку страницы
-
-      // Получаем данные из полей формы
+      e.preventDefault();
+      
       const name = document.getElementById('name').value;
       const phone = document.getElementById('phone').value;
-
-      const token = '8783670971:AAFMo4VvnePNrLNhguxZb-OnVO3dQ3vfizo'; // <--- ВАШ ТОКЕН
-      const chatId = '-5283300190';  // <--- ВАШ CHAT ID
-      const text = `Новая заявка на партнерство!\nИмя: ${name}\nТелефон: ${phone}`;
-
-      const url = `https://api.telegram.org/bot$8783670971:AAFMo4VvnePNrLNhguxZb-OnVO3dQ3vfizo/sendMessage`;
-      const data = {
-        chat_id: '-5283300190',
-        text: text,
-        parse_mode: 'HTML'
-      };
-
-      // Показываем, что заявка отправляется
-      const submitButton = telegramForm.querySelector('button[type="submit"]');
-      const originalText = submitButton.textContent;
-      submitButton.textContent = 'Отправка...';
+      
+      // Кавычки ПРАВИЛЬНЫЕ - одинаковые!
+      const token = ‘8783670971:AAFMo4VvnePNrLNhguxZb-OnVO3dQ3vfizo';
+      const chatId = '-5283300190';
+      const text = `Новая заявка!\nИмя: ${name}\nТелефон: ${phone}`;
+      
+      const submitButton = telegramForm.querySelector('button');
       submitButton.disabled = true;
-
-      // Отправляем данные
-      fetch(url, {
+      submitButton.textContent = 'Отправка...';
+      
+      fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
         method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify(data)
+        headers: {'Content-Type': 'application/json'},
+        body: JSON.stringify({chat_id: chatId, text: text})
       })
       .then(response => response.json())
       .then(data => {
-        if (data.ok) {
-          alert('Спасибо! Заявка отправлена.');
-          telegramForm.reset(); // Очищаем форму
+        if(data.ok) {
+          alert('✅ Заявка отправлена!');
+          telegramForm.reset();
         } else {
-          alert('Ошибка при отправке. Попробуйте позже.');
+          alert('❌ Ошибка: ' + data.description);
         }
       })
-      .catch((error) => {
-        console.error('Ошибка:', error);
-        alert('Произошла ошибка. Проверьте соединение.');
-      })
+      .catch(() => alert('❌ Ошибка сети'))
       .finally(() => {
-        // Возвращаем кнопку в исходное состояние
-        submitButton.textContent = originalText;
         submitButton.disabled = false;
+        submitButton.textContent = 'Отправить заявку';
       });
     });
   }
 </script>
 </body> 
 </html>
+
 
 
 
