@@ -673,11 +673,30 @@ document.addEventListener('DOMContentLoaded', function() {
             
             const comment = formData.get('comment') || document.querySelector('textarea')?.value || ''; 
              
-            // Проверка обязательных полей
-            if (!name || !phone) { 
-                alert('Заполните имя и телефон'); 
-                return; 
-            } 
+           // Проверка обязательных полей
+if (!name || !name.trim()) { 
+    alert('Заполните имя'); 
+    return; 
+}
+
+// Проверяем телефон (очищаем от пробелов, скобок, тире)
+const cleanPhone = phone.replace(/[\s\-\(\)]/g, '');
+if (!phone || !phone.trim()) { 
+    alert('Заполните телефон'); 
+    return; 
+}
+
+if (cleanPhone.length < 10) {
+    alert('Телефон должен содержать минимум 10 цифр');
+    return;
+}
+
+// Проверка согласия
+const consentCheckbox = document.getElementById('consent');
+if (consentCheckbox && !consentCheckbox.checked) {
+    alert('Необходимо согласие на обработку персональных данных');
+    return;
+}
              
             // Сообщение
             const message = `📬 Новая заявка с сайта FVL
@@ -716,6 +735,7 @@ fetch('https://api.telegram.org/bot8783670971:AAFMo4VvnePNrLNhguxZb-OnVO3dQ3vfiz
 </script>
 </body> 
 </html>
+
 
 
 
