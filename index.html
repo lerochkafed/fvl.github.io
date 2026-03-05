@@ -79,43 +79,74 @@ h3 { font-size: 1.8rem !important; }
 /* ========== ПОЛНАЯ МОБИЛЬНАЯ ВЕРСИЯ - ВСЁ ПО ЦЕНТРУ ========== */
 @media screen and (max-width: 768px) {
 
-    /* ===== ГЛАВНЫЙ БАННЕР ===== */
-    #banner h2 { 
-        font-size: 1.8rem !important; 
-        text-align: center !important;
-        line-height: 1.3 !important;
-        white-space: normal !important;
-        word-break: break-word !important;
-        margin: 0 auto !important;
-        padding: 0 0.5rem !important;
-    }
-    
-    #banner p { 
-        font-size: 1rem !important; 
-        text-align: center !important;
-        line-height: 1.5 !important;
-        margin: 1rem auto !important;
-        max-width: 90% !important;
-    }
-    
-    #banner .inner p {
-        font-size: 1rem !important;
-        line-height: 1.5 !important;
-        margin: 1rem auto !important;
-        max-width: 90% !important;
-        text-align: center !important;
-    }
-    
-    #banner .actions {
-        display: flex !important;
-        justify-content: center !important;
-        margin: 1.5rem auto !important;
-    }
-    
-    #banner .button {
-        font-size: 0.9rem !important;
-        padding: 0.7rem 1.5rem !important;
-    }
+    /* ===== БАННЕР — ИСПРАВЛЕНИЕ ПЕРЕНОСОВ ===== */
+#banner {
+    text-align: center !important;
+}
+
+#banner .inner {
+    text-align: center !important;
+    padding: 1.5rem 1rem !important;
+    max-width: 100% !important;
+    margin: 0 auto !important;
+}
+
+#banner h2 {
+    font-size: 1.8rem !important;
+    line-height: 1.3 !important;
+    text-align: center !important;
+    white-space: normal !important;
+    word-break: normal !important; /* убираем принудительные разрывы */
+    overflow-wrap: break-word !important;
+    max-width: 100% !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+    padding: 0 0.5rem !important;
+}
+
+#banner p {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    max-width: 90% !important;
+    margin: 1rem auto !important;
+    padding: 0 !important;
+}
+
+#banner .inner p {
+    font-size: 1rem !important;
+    line-height: 1.5 !important;
+    text-align: center !important;
+    margin: 0.5rem auto !important;
+    max-width: 95% !important;
+}
+
+/* КНОПКА — исправляем */
+#banner .actions {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    margin: 1.5rem auto 0 auto !important;
+    padding: 0 !important;
+    width: 100% !important;
+}
+
+#banner .button {
+    display: inline-block !important;
+    width: auto !important;
+    min-width: 200px !important;
+    max-width: 90% !important;
+    margin: 0 auto !important;
+    padding: 0.8rem 1.5rem !important;
+    font-size: 1rem !important;
+    text-align: center !important;
+    white-space: normal !important;
+    word-break: keep-all !important;
+    line-height: 1.3 !important;
+    box-sizing: border-box !important;
+}
 
     /* ===== ЗАГОЛОВКИ РАЗДЕЛОВ ===== */
     h2 { 
@@ -833,6 +864,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body> 
 </html>
+
 
 
 
