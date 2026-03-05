@@ -674,7 +674,7 @@ document.addEventListener('DOMContentLoaded', function() {
             e.preventDefault(); 
              
             // Telegram данные (ТВОИ) 
-            const BOT_TOKEN = '8783670971:AAFmRffjKI1ekIn6RrXR8FTPQN3Pk2DRRhg'; 
+            const BOT_TOKEN = '8783670971:AAFMo4VvnePNrLNhguxZb-OnVO3dQ3vfizo'; 
             const CHAT_ID = '-5283300190'; 
             
             // СОЗДАЁМ formData ПРАВИЛЬНО
@@ -713,7 +713,7 @@ document.addEventListener('DOMContentLoaded', function() {
 💬 Комментарий: ${comment || 'нет'}`;
              
             // Отправка в Telegram - ТОЛЬКО ОДИН РАЗ!
-fetch('https://api.telegram.org/bot8783670971:AAFmRffjKI1ekIn6RrXR8FTPQN3Pk2DRRhg/sendMessage', {
+fetch('https://api.telegram.org/bot8783670971:AAFMo4VvnePNrLNhguxZb-OnVO3dQ3vfizo', {
     method: 'POST',
     headers: {'Content-Type': 'application/json'}, 
     body: JSON.stringify({
@@ -749,7 +749,7 @@ fetch('https://api.telegram.org/bot8783670971:AAFmRffjKI1ekIn6RrXR8FTPQN3Pk2DRRh
       const name = document.getElementById('name').value;
       const phone = document.getElementById('phone').value;
 
-      const token = '8783670971:AAFmRffjKI1ekIn6RrXR8FTPQN3Pk2DRRhg'; // <--- ВАШ ТОКЕН
+      const token = '8783670971:AAFMo4VvnePNrLNhguxZb-OnVO3dQ3vfizo'; // <--- ВАШ ТОКЕН
       const chatId = '-5283300190';  // <--- ВАШ CHAT ID
       const text = `Новая заявка на партнерство!\nИмя: ${name}\nТелефон: ${phone}`;
 
@@ -797,6 +797,7 @@ fetch('https://api.telegram.org/bot8783670971:AAFmRffjKI1ekIn6RrXR8FTPQN3Pk2DRRh
 </script>
 </body> 
 </html>
+
 
 
 
