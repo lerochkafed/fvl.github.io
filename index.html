@@ -740,7 +740,51 @@ header.major p {
         </header>
         
 <form id="partner-form" style="display: flex; flex-direction: column; gap: 1.2rem; max-width: 500px; margin: 0 auto;">
-
+<!-- ===== ДОБАВЛЯЕМ СТИЛИ ДЛЯ ЧЕКБОКСА ===== -->
+<style>
+    /* Увеличиваем чекбокс и делаем его заметнее */
+    #partner-form input[type="checkbox"] {
+        width: 24px !important;
+        height: 24px !important;
+        accent-color: #4169e1 !important;
+        background-color: white !important;
+        border: 2px solid #4169e1 !important;
+        border-radius: 4px !important;
+        margin: 0 !important;
+        opacity: 1 !important;
+        filter: none !important;
+        cursor: pointer !important;
+    }
+    
+    /* Яркая подсветка при нажатии */
+    #partner-form input[type="checkbox"]:focus {
+        outline: 3px solid #00a8ff !important;
+        outline-offset: 2px !important;
+    }
+    
+    /* Делаем селект такой же высоты, как и поля ввода */
+    #partner-form select {
+        height: calc(1rem + 2rem) !important;  /* Такой же как у input */
+        padding: 1rem !important;
+        padding-right: 2.5rem !important;
+        font-size: 1rem !important;
+        line-height: normal !important;
+        background-color: rgba(255,255,255,0.08) !important;
+        color: white !important;
+        border: 2px solid rgba(255,255,255,0.1) !important;
+        border-radius: 12px !important;
+        box-sizing: border-box !important;
+        width: 100% !important;
+    }
+    
+    /* Исправляем текст в селекте */
+    #partner-form select option {
+        background-color: #1a1a1a !important;
+        color: white !important;
+        padding: 10px !important;
+    }
+</style>
+<!-- ===== КОНЕЦ ДОБАВЛЕННЫХ СТИЛЕЙ ===== -->
     <input type="text" id="name" placeholder="Ваше имя" required style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 12px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem;">
 
     <input type="tel" id="phone" placeholder="Ваш телефон" required style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 12px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem;">
@@ -760,10 +804,23 @@ header.major p {
 
     <textarea id="comment" placeholder="Комментарий (необязательно)" rows="3" style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 12px; background: rgba(255,255,255,0.08); color: white; font-family: inherit; font-size: 1rem;"></textarea>
 
-    <!-- ГАЛОЧКА - теперь точно видно! -->
-<label style="display: flex; align-items: center; gap: 0.8rem; background: rgba(255,255,255,0.05); padding: 0.8rem 1rem; border-radius: 12px; cursor: pointer; width: 100%; box-sizing: border-box;">
-    <input type="checkbox" id="consent" required style="width: 22px; height: 22px; accent-color: #4169e1; background-color: white !important; border: 2px solid #4169e1 !important; border-radius: 4px; margin: 0; filter: none; opacity: 1;">
-    <span style="color: white; font-size: 1rem;">Я согласен на обработку персональных данных</span>
+    <!-- ГАЛОЧКА - УЛУЧШЕННАЯ ВЕРСИЯ -->
+<label style="display: flex; align-items: center; gap: 0.8rem; background: rgba(255,255,255,0.05); padding: 0.8rem 1rem; border-radius: 12px; cursor: pointer; width: 100%; box-sizing: border-box; transition: all 0.3s;" onmouseover="this.style.background='rgba(65,105,225,0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'">
+    
+    <!-- САМ ФЛАЖОК - теперь с идеальными настройками -->
+    <input type="checkbox" id="consent" required 
+           style="width: 24px; 
+                  height: 24px; 
+                  accent-color: #4169e1; 
+                  background-color: white; 
+                  border: 2px solid #4169e1; 
+                  border-radius: 6px; 
+                  margin: 0; 
+                  cursor: pointer;
+                  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+                  transition: all 0.2s;">
+    
+    <span style="color: white; font-size: 1rem; font-weight: 500; user-select: none;">Я согласен на обработку персональных данных</span>
 </label>
 
     <!-- ИСПРАВЛЕННАЯ КНОПКА - текст по центру! -->
@@ -905,6 +962,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body> 
 </html>
+
 
 
 
