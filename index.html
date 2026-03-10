@@ -747,7 +747,7 @@ header.major p {
 
     <input type="email" id="email" placeholder="Email (необязательно)" style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 12px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem;">
 
-    <select id="package" required style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 12px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem; text-overflow: clip;">
+    <select id="package" required style="width: 600px; padding: 1rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 12px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem;">
     <option value="" disabled selected style="background: #1a1a1a; color: white; white-space: normal;">Выберите пакет</option>
     <option value="coorganizer" style="background: #1a1a1a; color: white; white-space: normal;">Соорганизатор</option>
     <option value="general_partner" style="background: #1a1a1a; color: white; white-space: normal;">Генеральный партнер</option>
@@ -767,9 +767,9 @@ header.major p {
 </label>
 
     <!-- ИСПРАВЛЕННАЯ КНОПКА - текст по центру! -->
-    <button type="submit" style="width: fit-content; min-width: 250px; margin: 1rem auto; padding: 1rem 2rem; background: #4169e1; color: white; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.2; height: auto; font-size: 1rem;">
-        ОТПРАВИТЬ ЗАЯВКУ
-    </button>
+    <button type="submit" style="width: fit-content; min-width: 250px; margin: 1rem auto; padding: 1rem 2rem; background: #4169e1; color: white; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.2; height: auto; font-size: 1rem; transition: all 0.3s;" onmouseover="this.style.background='#3154b3'" onmouseout="this.style.background='#4169e1'">
+    ОТПРАВИТЬ ЗАЯВКУ
+</button>
 
     <p style="text-align: center; color: rgba(255,255,255,0.6);">
         Или напишите нам в Telegram: <a href="https://t.me/dimaboets" target="_blank" style="color: #4169e1; text-decoration: none;">@dimaboets</a>
@@ -905,6 +905,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body> 
 </html>
+
 
 
 
