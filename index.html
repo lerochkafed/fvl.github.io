@@ -747,16 +747,16 @@ header.major p {
 
     <input type="email" id="email" placeholder="Email (необязательно)" style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 12px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem;">
 
-    <select id="package" required style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 12px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem;">
-        <option value="" disabled selected style="background: #1a1a1a; color: white;">Выберите пакет</option>
-        <option value="coorganizer" style="background: #1a1a1a; color: white;">Соорганизатор</option>
-        <option value="general_partner" style="background: #1a1a1a; color: white;">Генеральный партнер</option>
-        <option value="general_sponsor" style="background: #1a1a1a; color: white;">Генеральный спонсор</option>
-        <option value="vip_sponsor" style="background: #1a1a1a; color: white;">Спонсор VIP</option>
-        <option value="plus_sponsor" style="background: #1a1a1a; color: white;">Спонсор Plus</option>
-        <option value="partner" style="background: #1a1a1a; color: white;">Партнер</option>
-        <option value="sponsor" style="background: #1a1a1a; color: white;">Спонсор</option>
-    </select>
+    <select id="package" required style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 12px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem; text-overflow: clip;">
+    <option value="" disabled selected style="background: #1a1a1a; color: white; white-space: normal;">Выберите пакет</option>
+    <option value="coorganizer" style="background: #1a1a1a; color: white; white-space: normal;">Соорганизатор</option>
+    <option value="general_partner" style="background: #1a1a1a; color: white; white-space: normal;">Генеральный партнер</option>
+    <option value="general_sponsor" style="background: #1a1a1a; color: white; white-space: normal;">Генеральный спонсор</option>
+    <option value="vip_sponsor" style="background: #1a1a1a; color: white; white-space: normal;">Спонсор VIP</option>
+    <option value="plus_sponsor" style="background: #1a1a1a; color: white; white-space: normal;">Спонсор Plus</option>
+    <option value="partner" style="background: #1a1a1a; color: white; white-space: normal;">Партнер</option>
+    <option value="sponsor" style="background: #1a1a1a; color: white; white-space: normal;">Спонсор</option>
+</select>
 
     <textarea id="comment" placeholder="Комментарий (необязательно)" rows="3" style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 12px; background: rgba(255,255,255,0.08); color: white; font-family: inherit; font-size: 1rem;"></textarea>
 
@@ -905,6 +905,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body> 
 </html>
+
 
 
 
