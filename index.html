@@ -14,350 +14,349 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 	</head>
 	<body class="landing is-preload"> 
-	<style>
-/* Только фон - меняем синий на черный */
-#one.wrapper.style1.special,
-#three.wrapper.style3.special,
-#cta.wrapper.style4,
-footer#footer {
-    background: #0a0a0a !important;
-    background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%) !important;
-}
-
-/* Кнопки оставляем коралловыми как были */
-/* Ничего больше не трогаем! */
-</style>	
-		<style>
-/* УВЕЛИЧИВАЕМ ВСЕ ЗАГОЛОВКИ */
-h1 { font-size: 2.5rem !important; }
-h2 { font-size: 2.2rem !important; }
-h3 { font-size: 1.8rem !important; }
-#banner h2 { font-size: 3.5rem !important; }  /* главный заголовок */
-#banner p { font-size: 1.5rem !important; }   /* подзаголовок на баннере */
-#one h2 { font-size: 2.5rem !important; }      /* "Наша лига в цифрах" */
-#one h3 { font-size: 2.5rem !important; }      /* сами цифры 200+, 20, и т.д. */
-#two h2 { font-size: 2.5rem !important; }      /* "Пакеты партнерского участия" */
-.spotlight h2 { font-size: 2.2rem !important; } /* названия пакетов */
-#three h2 { font-size: 3rem !important; }      /* "СУПЕРМАТЧ FVL PRO 7" */
-</style>
-<style> 
-/* ========== СТИЛИ ДЛЯ МЕНЮ ========== */
-
-/* Фон меню */
-#menu {
-    background: #00a8ff !important;
-}
-
-/* Пункты меню */
-#menu ul li a {
-    color: white !important;
-    font-size: 1.2rem !important;
-    font-weight: 500 !important;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
-    padding: 1rem !important;
-}
-
-/* Эффект при наведении */
-#menu ul li a:hover {
-    background: rgba(255, 255, 255, 0.2) !important;
-    padding-left: 2rem !important;
-}
-
-/* Кнопка открытия меню (три полоски) */
-.menuToggle {
-    color: white !important;
-}
-
-.menuToggle:hover {
-    color: #00a8ff !important;
-}
-</style>
-</style
-  </head>
-/* ========== МОБИЛЬНАЯ АДАПТАЦИЯ ========== */
-
-/* Для экранов шириной до 768px (телефоны) */
-/* ========== ПОЛНАЯ МОБИЛЬНАЯ ВЕРСИЯ - ВСЁ ПО ЦЕНТРУ ========== */
-@media screen and (max-width: 768px) {
-
-    /* ===== БАННЕР — ЧИСТО, ШИРОКО, ПО ЦЕНТРУ ===== */
-#banner {
-    text-align: center !important;
-}
-
-#banner .inner {
-    text-align: center !important;
-    padding: 2rem 1rem !important;
-    max-width: 100% !important;
-    margin: 0 auto !important;
-}
-
-#banner h2 {
-    font-size: 2rem !important;           /* чуть больше, но не гигантски */
-    line-height: 1.3 !important;
-    text-align: center !important;
-    white-space: normal !important;
-    word-break: normal !important;        /* не режем слова на части */
-    overflow-wrap: break-word !important; /* только если совсем не влезает */
-    max-width: 95% !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    padding: 0 0.2rem !important;
-}
-
-#banner p {
-    font-size: 1.2rem !important;         /* чуть крупнее, читаемо */
-    line-height: 1.5 !important;
-    text-align: center !important;
-    white-space: normal !important;
-    word-break: normal !important;
-    max-width: 95% !important;
-    margin: 0.8rem auto !important;
-    padding: 0 !important;
-}
-
-#banner .inner p {
-    font-size: 1.2rem !important;
-    line-height: 1.5 !important;
-    text-align: center !important;
-    margin: 0.6rem auto !important;
-    max-width: 95% !important;
-}
-
-/* КНОПКА — ровно по центру */
-#banner .actions {
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    margin: 1.8rem auto 0 auto !important;
-    padding: 0 !important;
-    width: 100% !important;
-}
-
-#banner .button {
-    display: inline-block !important;
-    width: auto !important;
-    min-width: 220px !important;
-    max-width: 90% !important;
-    margin: 0 auto !important;
-    padding: 0.9rem 2rem !important;
-    font-size: 1.1rem !important;
-    text-align: center !important;
-    white-space: normal !important;
-    word-break: keep-all !important;
-    line-height: 1.3 !important;
-    border-radius: 40px !important;
-}
-
-    /* ===== ЗАГОЛОВКИ РАЗДЕЛОВ ===== */
-    /* Заголовок банера на мобильных - ВОЛЕЙБОЛЬНАЯ (без переноса) + ЛИГА FVL (новая строка) */
-#banner h2 {
-    white-space: normal !important;
-    word-break: normal !important;
-    font-size: 2rem !important;
-    line-height: 1.3 !important;
-}
-
-#banner h2 .part1 {
-    display: block;           /* меняем inline-block на block */
-    white-space: nowrap !important;
-    text-align: center !important;  /* добавляем */
-    width: 100% !important;          /* добавляем */
-}
-
-#banner h2 .part2 {
-    display: block;
-    white-space: nowrap !important;
-    text-align: center !important;  /* добавляем */
-    width: 100% !important;          /* добавляем */
-}
+    <style>
+        /* Только фон - меняем синий на черный */
+        #one.wrapper.style1.special,
+        #three.wrapper.style3.special,
+        #cta.wrapper.style4,
+        footer#footer {
+            background: #0a0a0a !important;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%) !important;
+        }
+        
+        /* Кнопки оставляем коралловыми как были */
+        /* Ничего больше не трогаем! */
+    </style>	
     
-    h3 { 
-        font-size: 1.5rem !important; 
-        text-align: center !important;
-    }
+    <style>
+        /* УВЕЛИЧИВАЕМ ВСЕ ЗАГОЛОВКИ */
+        h1 { font-size: 2.5rem !important; }
+        h2 { font-size: 2.2rem !important; }
+        h3 { font-size: 1.8rem !important; }
+        #banner h2 { font-size: 3.5rem !important; }  /* главный заголовок */
+        #banner p { font-size: 1.5rem !important; }   /* подзаголовок на баннере */
+        #one h2 { font-size: 2.5rem !important; }      /* "Наша лига в цифрах" */
+        #one h3 { font-size: 2.5rem !important; }      /* сами цифры 200+, 20, и т.д. */
+        #two h2 { font-size: 2.5rem !important; }      /* "Пакеты партнерского участия" */
+        .spotlight h2 { font-size: 2.2rem !important; } /* названия пакетов */
+        #three h2 { font-size: 3rem !important; }      /* "СУПЕРМАТЧ FVL PRO 7" */
+    </style>
     
-    /* ===== РАЗДЕЛ "НАША ЛИГА В ЦИФРАХ" ===== */
-    #one .row {
-        display: flex !important;
-        flex-wrap: wrap !important;
-        justify-content: center !important;
-    }
-    #one .col-3 {
-        width: 50% !important;
-        margin-bottom: 2rem !important;
-        text-align: center !important;
-    }
-    #one h3 { 
-        font-size: 2rem !important; 
-        margin-bottom: 0.3rem !important;
-    }
-    #one p { 
-        font-size: 1rem !important; 
-    }
+    <style> 
+        /* ========== СТИЛИ ДЛЯ МЕНЮ ========== */
+        
+        /* Фон меню */
+        #menu {
+            background: #00a8ff !important;
+        }
+        
+        /* Пункты меню */
+        #menu ul li a {
+            color: white !important;
+            font-size: 1.2rem !important;
+            font-weight: 500 !important;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
+            padding: 1rem !important;
+        }
+        
+        /* Эффект при наведении */
+        #menu ul li a:hover {
+            background: rgba(255, 255, 255, 0.2) !important;
+            padding-left: 2rem !important;
+        }
+        
+        /* Кнопка открытия меню (три полоски) */
+        .menuToggle {
+            color: white !important;
+        }
+        
+        .menuToggle:hover {
+            color: #00a8ff !important;
+        }
+    </style>
+    
+    <style>
+        /* ========== МОБИЛЬНАЯ АДАПТАЦИЯ ========== */
+        /* Для экранов шириной до 768px (телефоны) */
+        
+        @media screen and (max-width: 768px) {
+        
+            /* ===== БАННЕР ===== */
+            #banner {
+                text-align: center !important;
+            }
+            
+            #banner .inner {
+                text-align: center !important;
+                padding: 2rem 1rem !important;
+                max-width: 100% !important;
+                margin: 0 auto !important;
+            }
+            
+            #banner h2 {
+                font-size: 2rem !important;
+                line-height: 1.3 !important;
+                text-align: center !important;
+                white-space: normal !important;
+                word-break: normal !important;
+                overflow-wrap: break-word !important;
+                max-width: 95% !important;
+                margin-left: auto !important;
+                margin-right: auto !important;
+                padding: 0 0.2rem !important;
+            }
+            
+            #banner p {
+                font-size: 1.2rem !important;
+                line-height: 1.5 !important;
+                text-align: center !important;
+                white-space: normal !important;
+                word-break: normal !important;
+                max-width: 95% !important;
+                margin: 0.8rem auto !important;
+                padding: 0 !important;
+            }
+            
+            /* КНОПКА — ровно по центру */
+            #banner .actions {
+                display: flex !important;
+                justify-content: center !important;
+                align-items: center !important;
+                margin: 1.8rem auto 0 auto !important;
+                padding: 0 !important;
+                width: 100% !important;
+            }
+            
+            #banner .button {
+                display: inline-block !important;
+                width: auto !important;
+                min-width: 220px !important;
+                max-width: 90% !important;
+                margin: 0 auto !important;
+                padding: 0.9rem 2rem !important;
+                font-size: 1.1rem !important;
+                text-align: center !important;
+                white-space: normal !important;
+                word-break: keep-all !important;
+                line-height: 1.3 !important;
+                border-radius: 40px !important;
+            }
+            
+            /* ===== ЗАГОЛОВКИ РАЗДЕЛОВ ===== */
+            h3 { 
+                font-size: 1.5rem !important; 
+                text-align: center !important;
+            }
+            
+            /* ===== РАЗДЕЛ "НАША ЛИГА В ЦИФРАХ" ===== */
+            #one .row {
+                display: flex !important;
+                flex-wrap: wrap !important;
+                justify-content: center !important;
+            }
+            #one .col-3 {
+                width: 50% !important;
+                margin-bottom: 2rem !important;
+                text-align: center !important;
+            }
+            #one h3 { 
+                font-size: 2rem !important; 
+                margin-bottom: 0.3rem !important;
+            }
+            #one p { 
+                font-size: 1rem !important; 
+            }
+        
+            /* ===== ПАКЕТЫ ПАРТНЕРСТВА ===== */
+            #two header.major h2 {
+                font-size: 1.8rem !important;
+                text-align: center !important;
+                line-height: 1.3 !important;
+                white-space: normal !important;
+                word-break: break-word !important;
+                padding: 0 0.5rem !important;
+                margin-bottom: 0.5rem !important;
+            }
+            
+            #two header.major p {
+                font-size: 1.1rem !important;
+                text-align: center !important;
+                max-width: 90% !important;
+                margin: 0 auto !important;
+            }
+            
+            .spotlight {
+                flex-direction: column !important;
+                text-align: center !important;
+            }
+            .spotlight .image {
+                width: 100% !important;
+                margin-bottom: 1rem !important;
+            }
+            .spotlight .content {
+                width: 100% !important;
+                padding: 1.2rem !important;
+                text-align: center !important;
+            }
+            
+            .spotlight .content h2 {
+                text-align: center !important;
+                font-size: 1.5rem !important;
+                line-height: 1.3 !important;
+                white-space: normal !important;
+                word-break: break-word !important;
+                margin: 0.5rem auto 1rem auto !important;
+                padding: 0 0.3rem !important;
+                max-width: 100% !important;
+                letter-spacing: normal !important;
+            }
+            
+            .spotlight ul li {
+                text-align: left !important;
+                font-size: 0.95rem !important;
+                line-height: 1.5 !important;
+                margin-bottom: 0.5rem !important;
+            }
+        
+            /* ===== СУПЕРМАТЧ ===== */
+            #three h2 { 
+                font-size: 1.8rem !important; 
+                line-height: 1.2 !important;
+                text-align: center !important;
+            }
+            
+            #three header.major p:first-child {
+                font-size: 1.2rem !important;
+                text-align: center !important;
+            }
+            
+            #three header.major p:last-of-type {
+                font-size: 1.3rem !important;
+                text-align: center !important;
+            }
+            
+            #three .inner > div:first-of-type {
+                flex-direction: column !important;
+                gap: 1rem !important;
+            }
+            #three .inner > div:first-of-type > div {
+                width: 100% !important;
+                padding: 1.2rem !important;
+                text-align: center !important;
+            }
+            
+            #three .inner > div:nth-of-type(2) > div {
+                flex-direction: column !important;
+                gap: 1.5rem !important;
+            }
+        
+            /* ===== ФОРМА ===== */
+            #four {
+                padding: 2rem 1rem !important;
+            }
+            #four .inner {
+                max-width: 100% !important;
+            }
+            #four h2 {
+                font-size: 1.8rem !important;
+            }
+            #four input,
+            #four select,
+            #four textarea {
+                font-size: 0.95rem !important;
+                padding: 0.8rem !important;
+            }
+            #four button[type="submit"] {
+                width: 100% !important;
+                min-width: auto !important;
+                font-size: 1rem !important;
+                padding: 0.8rem !important;
+            }
+        
+            /* ===== ФУТЕР ===== */
+            #footer {
+                text-align: center !important;
+            }
+            #footer .icons {
+                gap: 1rem !important;
+                justify-content: center !important;
+            }
+            #footer .icons li a {
+                font-size: 1.4rem !important;
+            }
+            #footer p, #footer a {
+                font-size: 0.9rem !important;
+            }
+        
+            /* ===== МЕНЮ ===== */
+            #menu ul li a {
+                font-size: 1rem !important;
+                padding: 0.8rem !important;
+            }
+        }
+        
+        /* Для очень маленьких экранов (до 480px) */
+        @media screen and (max-width: 480px) {
+            #one .col-3 {
+                width: 100% !important;
+            }
+            #banner h2 { 
+                font-size: 1.8rem !important; 
+            }
+            .spotlight .content {
+                padding: 1rem !important;
+            }
+            .spotlight h2 {
+                font-size: 1.5rem !important;
+            }
+        }
+    </style>
 
-    /* ===== ПАКЕТЫ ПАРТНЕРСТВА ===== */
-    /* Заголовок раздела */
-    #two header.major h2 {
-        font-size: 1.8rem !important;
-        text-align: center !important;
-        line-height: 1.3 !important;
-        white-space: normal !important;
-        word-break: break-word !important;
-        padding: 0 0.5rem !important;
-        margin-bottom: 0.5rem !important;
-    }
-    
-    #two header.major p {
-        font-size: 1.1rem !important;
-        text-align: center !important;
-        max-width: 90% !important;
-        margin: 0 auto !important;
-    }
-    
-    /* Каждый пакет */
-    .spotlight {
-        flex-direction: column !important;
-        text-align: center !important;
-    }
-    .spotlight .image {
-        width: 100% !important;
-        margin-bottom: 1rem !important;
-    }
-    .spotlight .content {
-        width: 100% !important;
-        padding: 1.2rem !important;
-        text-align: center !important;
-    }
-    
-    /* ЗАГОЛОВКИ ПАКЕТОВ - вот здесь основное изменение */
-    .spotlight .content h2 {
-        text-align: center !important;
-        font-size: 1.5rem !important;  /* Уменьшили */
-        line-height: 1.3 !important;
-        white-space: normal !important;
-        word-break: break-word !important;
-        margin: 0.5rem auto 1rem auto !important;
-        padding: 0 0.3rem !important;
-        max-width: 100% !important;
-        letter-spacing: normal !important;
-    }
-    
-    /* Длинные названия пакетов */
-    .spotlight .content h2:contains("ГЕНЕРАЛЬНЫЙ") {
-        font-size: 1.3rem !important;
-    }
-    
-    /* Списки в пакетах */
-    .spotlight ul li {
-        text-align: left !important;
-        font-size: 0.95rem !important;
-        line-height: 1.5 !important;
-        margin-bottom: 0.5rem !important;
-    }
-
-    /* ===== СУПЕРМАТЧ ===== */
-    #three h2 { 
-        font-size: 1.8rem !important; 
-        line-height: 1.2 !important;
-        text-align: center !important;
-    }
-    
-    #three header.major p:first-child {
-        font-size: 1.2rem !important;
-        text-align: center !important;
-    }
-    
-    #three header.major p:last-of-type {
-        font-size: 1.3rem !important;
-        text-align: center !important;
-    }
-    
-    #three .inner > div:first-of-type {
-        flex-direction: column !important;
-        gap: 1rem !important;
-    }
-    #three .inner > div:first-of-type > div {
-        width: 100% !important;
-        padding: 1.2rem !important;
-        text-align: center !important;
-    }
-    
-    #three .inner > div:nth-of-type(2) > div {
-        flex-direction: column !important;
-        gap: 1.5rem !important;
-    }
-
-    /* ===== ФОРМА ===== */
-    #four {
-        padding: 2rem 1rem !important;
-    }
-    #four .inner {
-        max-width: 100% !important;
-    }
-    #four h2 {
-        font-size: 1.8rem !important;
-    }
-    #four input,
-    #four select,
-    #four textarea {
-        font-size: 0.95rem !important;
-        padding: 0.8rem !important;
-    }
-    #four button[type="submit"] {
-        width: 100% !important;
-        min-width: auto !important;
-        font-size: 1rem !important;
-        padding: 0.8rem !important;
-    }
-
-    /* ===== ФУТЕР ===== */
-    #footer {
-        text-align: center !important;
-    }
-	#banner h2 {
-    text-align: center !important;
-    font-size: 2.2rem !important;
-    line-height: 1.3 !important;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    white-space: nowrap !important;     /* ← меняем на nowrap */
-    word-break: normal !important;      /* ← меняем на normal */
-}
-    #footer .icons {
-        gap: 1rem !important;
-        justify-content: center !important;
-    }
-    #footer .icons li a {
-        font-size: 1.4rem !important;
-    }
-    #footer p, #footer a {
-        font-size: 0.9rem !important;
-    }
-
-    /* ===== МЕНЮ ===== */
-    #menu ul li a {
-        font-size: 1rem !important;
-        padding: 0.8rem !important;
-    }
-}
-
-/* Для очень маленьких экранов (до 480px) */
-@media screen and (max-width: 480px) {
-    #one .col-3 {
-        width: 100% !important;  /* По 1 в ряд */
-    }
-    #banner h2 { font-size: 1.8rem !important; }
-    .spotlight .content {
-        padding: 1rem !important;
-    }
-    .spotlight h2 {
-        font-size: 1.5rem !important;
-    }
-}
-</style>
 <style>
-/* ========== КОМПАКТНЫЕ ЗАГОЛОВКИ ДЛЯ ВСЕХ ПАКЕТОВ ========== */
+    /* ИСПРАВЛЕНИЕ ДЛЯ КАРТОЧЕК СПОНСОРОВ - добавляем прокрутку */
+    .spotlight .content ul {
+        max-height: 250px !important;
+        overflow-y: auto !important;
+        padding-right: 10px !important;
+        margin-bottom: 15px !important;
+    }
+    
+    /* Стилизация полосы прокрутки (для красоты) */
+    .spotlight .content ul::-webkit-scrollbar {
+        width: 6px !important;
+    }
+    .spotlight .content ul::-webkit-scrollbar-track {
+        background: #f1f1f1 !important;
+        border-radius: 10px !important;
+    }
+    .spotlight .content ul::-webkit-scrollbar-thumb {
+        background: #00a8ff !important;
+        border-radius: 10px !important;
+    }
+    
+    /* ИСПРАВЛЕНИЕ ДЛЯ ЧЕКБОКСА - делаем его видимым */
+    input[type="checkbox"] {
+        opacity: 1 !important;
+        position: relative !important;
+        width: 18px !important;
+        height: 18px !important;
+        margin-right: 8px !important;
+        transform: scale(1.2) !important;
+        accent-color: #00a8ff !important;  /* цвет галочки */
+        cursor: pointer !important;
+    }
+    
+    /* Чтобы текст согласия был рядом с чекбоксом */
+    label {
+        display: flex !important;
+        align-items: center !important;
+        cursor: pointer !important;
+    }
+</style>
+    
+</head>
+
+* ========== КОМПАКТНЫЕ ЗАГОЛОВКИ ДЛЯ ВСЕХ ПАКЕТОВ ========== */
 .spotlight h2 {
     white-space: nowrap !important;  /* запрещаем перенос */
     font-size: 1.8rem !important;    /* чуть уменьшаем если надо */
@@ -370,7 +369,7 @@ h3 { font-size: 1.8rem !important; }
         white-space: normal !important;
         font-size: 1.5rem !important;
     }
-}
+} /*
 </style>
 <style> 
 /* ========== УВЕЛИЧИВАЕМ ТЕКСТ (УСИЛЕННЫЙ ВАРИАНТ) ========== */
@@ -963,6 +962,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body> 
 </html>
+
 
 
 
