@@ -352,9 +352,6 @@
         align-items: center !important;
         cursor: pointer !important;
     }
-</style>
-    
-</head>
 
 * ========== КОМПАКТНЫЕ ЗАГОЛОВКИ ДЛЯ ВСЕХ ПАКЕТОВ ========== */
 .spotlight h2 {
@@ -370,68 +367,91 @@
         font-size: 1.5rem !important;
     }
 } /*
+</style> <!-- Закрываем последний блок стилей -->
+
+</head> <!-- Закрываем head -->
+
+<body> <!-- Начинаем body -->
+
+<!-- ========== УВЕЛИЧИВАЕМ ТЕКСТ (УСИЛЕННЫЙ ВАРИАНТ) ========== -->
+<style>
+    /* 1. Подписи под цифрами в "Наша лига в цифрах" */
+    #one .row p,
+    #one .col-3 p,
+    #one .col-12-medium p {
+        font-size: 1.4rem !important;
+        color: rgba(255, 255, 255, 0.9) !important;
+    }
+
+    /* 2. Списки в пакетах партнерства */
+    .spotlight .content ul li,
+    .spotlight ul li {
+        font-size: 1.3rem !important;
+        margin-bottom: 0.7rem !important;
+        line-height: 1.5 !important;
+    }
+
+    /* 3. Текст в форме */
+    #four input,
+    #four select,
+    #four textarea,
+    #four label,
+    #four p,
+    .field label {
+        font-size: 1.2rem !important;
+    }
+    
+    /* 4. Текст согласия */
+    .field.checkbox label,
+    label[for*="agree"] {
+        font-size: 1.2rem !important;
+    }
+    
+    /* 5. Кнопка отправки */
+    #four button,
+    #four input[type="submit"],
+    #four .button {
+        font-size: 1.3rem !important;
+        padding: 1rem 2rem !important;
+    }
 </style>
-<style> 
-/* ========== УВЕЛИЧИВАЕМ ТЕКСТ (УСИЛЕННЫЙ ВАРИАНТ) ========== */
 
-/* 1. Подписи под цифрами в "Наша лига в цифрах" */
-#one .row p,
-#one .col-3 p,
-#one .col-12-medium p {
-    font-size: 1.4rem !important;
-    color: rgba(255,255,255,0.9) !important;
-}
+<!-- ========== КОД ДЛЯ КОМПАКТНЫХ ЗАГОЛОВКОВ ========== -->
+<style>
+    /* Заголовки пакетов */
+    .spotlight h2 {
+        white-space: nowrap !important;
+        font-size: 1.8rem !important;
+        margin-bottom: 1rem !important;
+    }
 
-/* 2. Списки в пакетах партнерства */
-.spotlight .content ul li,
-.spotlight ul li {
-    font-size: 1.3rem !important;
-    margin-bottom: 0.7rem !important;
-    line-height: 1.5 !important;
-}
+    /* Для мобильных */
+    @media screen and (max-width: 768px) {
+        .spotlight h2 {
+            white-space: normal !important;
+            font-size: 1.5rem !important;
+        }
+    }
+</style>
 
-/* 3. Текст в форме */
-#four input, 
-#four select, 
-#four textarea {
-    font-size: 1.2rem !important;
-    padding: 1rem !important;
-}
-
-#four ::placeholder {
-    font-size: 1.2rem !important;
-    color: rgba(255,255,255,0.6) !important;
-}
-
-/* 4. Текст в футере */
-#footer p, 
-#footer a, 
-.copyright li,
-#footer .icons a {
-    font-size: 1.2rem !important;
-}
-
-/* 5. Текст в суперматче (под цифрами) */
-#three .inner div div div:last-child,
-#three .inner .row + div div div {
-    font-size: 1.3rem !important;
-}
-
-/* 6. Подписи под заголовками */
-.major p,
-header.major p {
-    font-size: 1.3rem !important;
-}
-
-/* 7. Текст на баннере (под главным заголовком) */
-#banner .inner p {
-    font-size: 1.3rem !important;
-}
-
-/* 8. Текст в статистике суперматча (№1, 1M+, 2 года и подписи к ним) */
-#three .inner div div div {
-    font-size: 1.2rem !important;
-}
+<!-- ========== ИСПРАВЛЕНИЕ ДЛЯ ЧЕКБОКСА ========== -->
+<style>
+    input[type="checkbox"] {
+        opacity: 1 !important;
+        position: relative !important;
+        width: 18px !important;
+        height: 18px !important;
+        margin-right: 8px !important;
+        transform: scale(1.2) !important;
+        accent-color: #00a8ff !important;
+        cursor: pointer !important;
+    }
+    
+    label {
+        display: flex !important;
+        align-items: center !important;
+        cursor: pointer !important;
+    }
 </style>
 
 		<!-- Page Wrapper -->
@@ -962,6 +982,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body> 
 </html>
+
 
 
 
