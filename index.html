@@ -15,6 +15,27 @@
 	</head>
 	<body class="landing is-preload"> 
 	<style>
+		<!-- МОИ ИСПРАВЛЕНИЯ -->
+    <style>
+        /* Исправление для обрезанных списков пакетов */
+        .w-dyn-item .w-richtext {
+            max-height: 300px;
+            overflow-y: auto;
+            padding-right: 10px;
+        }
+        
+        /* Исправление для невидимого чекбокса */
+        input[type="checkbox"] {
+            opacity: 1 !important;
+            position: relative !important;
+            width: auto !important;
+            height: auto !important;
+            margin-right: 8px;
+        }
+    </style>
+    <!-- КОНЕЦ ИСПРАВЛЕНИЙ -->
+    
+</head>
 /* Только фон - меняем синий на черный */
 #one.wrapper.style1.special,
 #three.wrapper.style3.special,
@@ -962,6 +983,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body> 
 </html>
+
 
 
 
