@@ -750,7 +750,7 @@
   </p>
 </div>
 <!-- Конец блока с видео -->
-<!-- ========== НАЧАЛО: Форма обратной связи (ОБНОВЛЕННАЯ) ========== -->
+<!-- ========== НАЧАЛО: Форма обратной связи (ФИНАЛЬНАЯ) ========== -->
 <section id="four" style="padding: 4rem 2rem; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);">
     <div class="inner" style="max-width: 800px; margin: 0 auto;">
         <header class="major" style="text-align: center; margin-bottom: 3rem;">
@@ -764,49 +764,49 @@
             <!-- Имя (левая колонка) -->
             <div style="grid-column: span 1;">
                 <input type="text" name="name" placeholder="Ваше имя *" required 
-                       style="width: 100%; padding: 1rem 1.2rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 50px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem; box-sizing: border-box;">
+                       style="width: 100%; padding: 1rem 1.2rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 50px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem; box-sizing: border-box; height: 58px; line-height: normal;">
             </div>
             
             <!-- Телефон (правая колонка) -->
             <div style="grid-column: span 1;">
                 <input type="tel" name="phone" placeholder="Ваш телефон *" required 
-                       style="width: 100%; padding: 1rem 1.2rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 50px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem; box-sizing: border-box;">
+                       style="width: 100%; padding: 1rem 1.2rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 50px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem; box-sizing: border-box; height: 58px; line-height: normal;">
             </div>
             
             <!-- Email (левая колонка) -->
             <div style="grid-column: span 1;">
                 <input type="email" name="email" placeholder="Email (необязательно)" 
-                       style="width: 100%; padding: 1rem 1.2rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 50px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem; box-sizing: border-box;">
+                       style="width: 100%; padding: 1rem 1.2rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 50px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem; box-sizing: border-box; height: 58px; line-height: normal;">
             </div>
             
-            <!-- Выбор пакета (правая колонка) - ИСПРАВЛЕННАЯ ВЕРСИЯ -->
-<div style="grid-column: span 1;">
-    <select name="package" required 
-            style="width: 100%; 
-                   padding: 1rem 1.2rem; 
-                   border: 2px solid rgba(255,255,255,0.1); 
-                   border-radius: 50px; 
-                   background: rgba(255,255,255,0.08); 
-                   color: white; 
-                   font-size: 1rem; 
-                   box-sizing: border-box; 
-                   appearance: none; 
-                   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>'); 
-                   background-repeat: no-repeat; 
-                   background-position: right 1.2rem center; 
-                   background-size: 16px;
-                   line-height: 1.2;
-                   min-height: calc(1rem + 2rem);">
-        <option value="" disabled selected style="background: #1a1a1a; color: white; padding: 1rem;">Выберите пакет *</option>
-        <option value="coorganizer" style="background: #1a1a1a; color: white; padding: 1rem;">Соорганизатор</option>
-        <option value="general_partner" style="background: #1a1a1a; color: white; padding: 1rem;">Генеральный партнер</option>
-        <option value="general_sponsor" style="background: #1a1a1a; color: white; padding: 1rem;">Генеральный спонсор</option>
-        <option value="vip_sponsor" style="background: #1a1a1a; color: white; padding: 1rem;">Спонсор VIP</option>
-        <option value="plus_sponsor" style="background: #1a1a1a; color: white; padding: 1rem;">Спонсор Plus</option>
-        <option value="partner" style="background: #1a1a1a; color: white; padding: 1rem;">Партнер</option>
-        <option value="sponsor" style="background: #1a1a1a; color: white; padding: 1rem;">Спонсор</option>
-    </select>
-</div>
+            <!-- Выбор пакета (правая колонка) - ИСПРАВЛЕНО -->
+            <div style="grid-column: span 1;">
+                <select name="package" required 
+                        style="width: 100%; 
+                               padding: 1rem 1.2rem; 
+                               border: 2px solid rgba(255,255,255,0.1); 
+                               border-radius: 50px; 
+                               background: rgba(255,255,255,0.08); 
+                               color: white; 
+                               font-size: 1rem; 
+                               box-sizing: border-box; 
+                               height: 58px;
+                               line-height: 1.2;
+                               appearance: none; 
+                               background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>'); 
+                               background-repeat: no-repeat; 
+                               background-position: right 1.2rem center; 
+                               background-size: 16px;">
+                    <option value="" disabled selected style="background: #1a1a1a; color: white;">Выберите пакет *</option>
+                    <option value="coorganizer" style="background: #1a1a1a; color: white;">Соорганизатор</option>
+                    <option value="general_partner" style="background: #1a1a1a; color: white;">Генеральный партнер</option>
+                    <option value="general_sponsor" style="background: #1a1a1a; color: white;">Генеральный спонсор</option>
+                    <option value="vip_sponsor" style="background: #1a1a1a; color: white;">Спонсор VIP</option>
+                    <option value="plus_sponsor" style="background: #1a1a1a; color: white;">Спонсор Plus</option>
+                    <option value="partner" style="background: #1a1a1a; color: white;">Партнер</option>
+                    <option value="sponsor" style="background: #1a1a1a; color: white;">Спонсор</option>
+                </select>
+            </div>
             
             <!-- Комментарий (на всю ширину - обе колонки) -->
             <div style="grid-column: span 2;">
@@ -824,7 +824,7 @@
             </div>
             
             <!-- Кнопка отправки (на всю ширину) -->
-            <button type="submit" style="grid-column: span 2; width: fit-content; min-width: 250px; margin: 0.5rem auto; padding: 1rem 2.5rem; background: #4169e1; color: white; border: none; border-radius: 50px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: background 0.3s; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.2;" 
+            <button type="submit" style="grid-column: span 2; width: fit-content; min-width: 250px; margin: 0.5rem auto; padding: 1rem 2.5rem; background: #4169e1; color: white; border: none; border-radius: 50px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: background 0.3s; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.2; height: 58px; box-sizing: border-box;" 
                     onmouseover="this.style.background='#3154b3'" onmouseout="this.style.background='#4169e1'">
                 ОТПРАВИТЬ ЗАЯВКУ
             </button>
@@ -965,6 +965,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body> 
 </html>
+
 
 
 
