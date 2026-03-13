@@ -779,20 +779,34 @@
                        style="width: 100%; padding: 1rem 1.2rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 50px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem; box-sizing: border-box;">
             </div>
             
-            <!-- Выбор пакета (правая колонка) -->
-            <div style="grid-column: span 1;">
-                <select name="package" required 
-                        style="width: 100%; padding: 1rem 1.2rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 50px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem; box-sizing: border-box; appearance: none; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>'); background-repeat: no-repeat; background-position: right 1.2rem center; background-size: 16px;">
-                    <option value="" disabled selected style="background: #1a1a1a; color: white;">Выберите пакет *</option>
-                    <option value="coorganizer" style="background: #1a1a1a; color: white;">Соорганизатор</option>
-                    <option value="general_partner" style="background: #1a1a1a; color: white;">Генеральный партнер</option>
-                    <option value="general_sponsor" style="background: #1a1a1a; color: white;">Генеральный спонсор</option>
-                    <option value="vip_sponsor" style="background: #1a1a1a; color: white;">Спонсор VIP</option>
-                    <option value="plus_sponsor" style="background: #1a1a1a; color: white;">Спонсор Plus</option>
-                    <option value="partner" style="background: #1a1a1a; color: white;">Партнер</option>
-                    <option value="sponsor" style="background: #1a1a1a; color: white;">Спонсор</option>
-                </select>
-            </div>
+            <!-- Выбор пакета (правая колонка) - ИСПРАВЛЕННАЯ ВЕРСИЯ -->
+<div style="grid-column: span 1;">
+    <select name="package" required 
+            style="width: 100%; 
+                   padding: 1rem 1.2rem; 
+                   border: 2px solid rgba(255,255,255,0.1); 
+                   border-radius: 50px; 
+                   background: rgba(255,255,255,0.08); 
+                   color: white; 
+                   font-size: 1rem; 
+                   box-sizing: border-box; 
+                   appearance: none; 
+                   background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>'); 
+                   background-repeat: no-repeat; 
+                   background-position: right 1.2rem center; 
+                   background-size: 16px;
+                   line-height: 1.2;
+                   min-height: calc(1rem + 2rem);">
+        <option value="" disabled selected style="background: #1a1a1a; color: white; padding: 1rem;">Выберите пакет *</option>
+        <option value="coorganizer" style="background: #1a1a1a; color: white; padding: 1rem;">Соорганизатор</option>
+        <option value="general_partner" style="background: #1a1a1a; color: white; padding: 1rem;">Генеральный партнер</option>
+        <option value="general_sponsor" style="background: #1a1a1a; color: white; padding: 1rem;">Генеральный спонсор</option>
+        <option value="vip_sponsor" style="background: #1a1a1a; color: white; padding: 1rem;">Спонсор VIP</option>
+        <option value="plus_sponsor" style="background: #1a1a1a; color: white; padding: 1rem;">Спонсор Plus</option>
+        <option value="partner" style="background: #1a1a1a; color: white; padding: 1rem;">Партнер</option>
+        <option value="sponsor" style="background: #1a1a1a; color: white; padding: 1rem;">Спонсор</option>
+    </select>
+</div>
             
             <!-- Комментарий (на всю ширину - обе колонки) -->
             <div style="grid-column: span 2;">
@@ -951,6 +965,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body> 
 </html>
+
 
 
 
