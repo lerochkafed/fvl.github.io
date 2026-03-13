@@ -750,109 +750,78 @@
   </p>
 </div>
 <!-- Конец блока с видео -->
-<!-- ========== НАЧАЛО: Форма обратной связи ========== -->
+<!-- ========== НАЧАЛО: Форма обратной связи (ОБНОВЛЕННАЯ) ========== -->
 <section id="four" style="padding: 4rem 2rem; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);">
-    <div class="inner" style="max-width: 700px; margin: 0 auto;">
+    <div class="inner" style="max-width: 800px; margin: 0 auto;">
         <header class="major" style="text-align: center; margin-bottom: 3rem;">
-            <h2 style="color: white; font-size: 2.5rem;">Стать партнером</h2>
-            <p style="color: rgba(255,255,255,0.8);">Заполните форму, и мы свяжемся с вами</p>
-            <div style="width: 80px; height: 3px; background: #00a8ff; margin: 1.5rem auto;"></div>
+            <h2 style="color: white; font-size: 2.5rem; margin: 0;">Стать партнером</h2>
+            <p style="color: rgba(255,255,255,0.8); font-size: 1.2rem; margin: 1rem 0;">Заполните форму, и мы свяжемся с вами</p>
+            <div style="width: 80px; height: 3px; background: #4169e1; margin: 1.5rem auto;"></div>
         </header>
         
-<form id="partner-form" style="display: flex; flex-direction: column; gap: 1.2rem; max-width: 500px; margin: 0 auto;">
-<!-- ===== ДОБАВЛЯЕМ СТИЛИ ДЛЯ ЧЕКБОКСА ===== -->
-<style>
-    /* Увеличиваем чекбокс и делаем его заметнее */
-    #partner-form input[type="checkbox"] {
-        width: 24px !important;
-        height: 24px !important;
-        accent-color: #4169e1 !important;
-        background-color: white !important;
-        border: 2px solid #4169e1 !important;
-        border-radius: 4px !important;
-        margin: 0 !important;
-        opacity: 1 !important;
-        filter: none !important;
-        cursor: pointer !important;
-    }
-    
-    /* Яркая подсветка при нажатии */
-    #partner-form input[type="checkbox"]:focus {
-        outline: 3px solid #00a8ff !important;
-        outline-offset: 2px !important;
-    }
-    
-    /* Делаем селект такой же высоты, как и поля ввода */
-    #partner-form select {
-        height: calc(1rem + 2rem) !important;  /* Такой же как у input */
-        padding: 1rem !important;
-        padding-right: 2.5rem !important;
-        font-size: 1rem !important;
-        line-height: normal !important;
-        background-color: rgba(255,255,255,0.08) !important;
-        color: white !important;
-        border: 2px solid rgba(255,255,255,0.1) !important;
-        border-radius: 12px !important;
-        box-sizing: border-box !important;
-        width: 100% !important;
-    }
-    
-    /* Исправляем текст в селекте */
-    #partner-form select option {
-        background-color: #1a1a1a !important;
-        color: white !important;
-        padding: 10px !important;
-    }
-</style>
-<!-- ===== КОНЕЦ ДОБАВЛЕННЫХ СТИЛЕЙ ===== -->
-    <input type="text" id="name" placeholder="Ваше имя" required style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 12px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem;">
-
-    <input type="tel" id="phone" placeholder="Ваш телефон" required style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 12px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem;">
-
-    <input type="email" id="email" placeholder="Email (необязательно)" style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 12px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem;">
-
-    <select id="package" required style="width: 100%; padding: 1rem; padding-right: 2.5rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 12px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem; box-sizing: border-box; text-overflow: clip;">
-    <option value="" disabled selected style="background: #1a1a1a; color: white;">Выберите пакет</option>
-    <option value="coorganizer" style="background: #1a1a1a; color: white;">Соорганизатор</option>
-    <option value="general_partner" style="background: #1a1a1a; color: white;">Генеральный партнер</option>
-    <option value="general_sponsor" style="background: #1a1a1a; color: white;">Генеральный спонсор</option>
-    <option value="vip_sponsor" style="background: #1a1a1a; color: white;">Спонсор VIP</option>
-    <option value="plus_sponsor" style="background: #1a1a1a; color: white;">Спонсор Plus</option>
-    <option value="partner" style="background: #1a1a1a; color: white;">Партнер</option>
-    <option value="sponsor" style="background: #1a1a1a; color: white;">Спонсор</option>
-</select>
-
-    <textarea id="comment" placeholder="Комментарий (необязательно)" rows="3" style="width: 100%; padding: 1rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 12px; background: rgba(255,255,255,0.08); color: white; font-family: inherit; font-size: 1rem;"></textarea>
-
-    <!-- ГАЛОЧКА - УЛУЧШЕННАЯ ВЕРСИЯ -->
-<label style="display: flex; align-items: center; gap: 0.8rem; background: rgba(255,255,255,0.05); padding: 0.8rem 1rem; border-radius: 12px; cursor: pointer; width: 100%; box-sizing: border-box; transition: all 0.3s;" onmouseover="this.style.background='rgba(65,105,225,0.15)'" onmouseout="this.style.background='rgba(255,255,255,0.05)'">
-    
-    <!-- САМ ФЛАЖОК - теперь с идеальными настройками -->
-    <input type="checkbox" id="consent" required 
-           style="width: 24px; 
-                  height: 24px; 
-                  accent-color: #4169e1; 
-                  background-color: white; 
-                  border: 2px solid #4169e1; 
-                  border-radius: 6px; 
-                  margin: 0; 
-                  cursor: pointer;
-                  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
-                  transition: all 0.2s;">
-    
-    <span style="color: white; font-size: 1rem; font-weight: 500; user-select: none;">Я согласен на обработку персональных данных</span>
-</label>
-
-    <!-- ИСПРАВЛЕННАЯ КНОПКА - текст по центру! -->
-    <button type="submit" style="width: fit-content; min-width: 250px; margin: 1rem auto; padding: 1rem 2rem; background: #4169e1; color: white; border: none; border-radius: 50px; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.2; height: auto; font-size: 1rem; transition: all 0.3s;" onmouseover="this.style.background='#3154b3'" onmouseout="this.style.background='#4169e1'">
-    ОТПРАВИТЬ ЗАЯВКУ
-</button>
-
-    <p style="text-align: center; color: rgba(255,255,255,0.6);">
-        Или напишите нам в Telegram: <a href="https://t.me/dimaboets" target="_blank" style="color: #4169e1; text-decoration: none;">@dimaboets</a>
-    </p>
-
-</form>
+        <form id="partner-form" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; max-width: 800px; margin: 0 auto;">
+            
+            <!-- Имя (левая колонка) -->
+            <div style="grid-column: span 1;">
+                <input type="text" name="name" placeholder="Ваше имя *" required 
+                       style="width: 100%; padding: 1rem 1.2rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 50px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem; box-sizing: border-box;">
+            </div>
+            
+            <!-- Телефон (правая колонка) -->
+            <div style="grid-column: span 1;">
+                <input type="tel" name="phone" placeholder="Ваш телефон *" required 
+                       style="width: 100%; padding: 1rem 1.2rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 50px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem; box-sizing: border-box;">
+            </div>
+            
+            <!-- Email (левая колонка) -->
+            <div style="grid-column: span 1;">
+                <input type="email" name="email" placeholder="Email (необязательно)" 
+                       style="width: 100%; padding: 1rem 1.2rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 50px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem; box-sizing: border-box;">
+            </div>
+            
+            <!-- Выбор пакета (правая колонка) -->
+            <div style="grid-column: span 1;">
+                <select name="package" required 
+                        style="width: 100%; padding: 1rem 1.2rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 50px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem; box-sizing: border-box; appearance: none; background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>'); background-repeat: no-repeat; background-position: right 1.2rem center; background-size: 16px;">
+                    <option value="" disabled selected style="background: #1a1a1a; color: white;">Выберите пакет *</option>
+                    <option value="coorganizer" style="background: #1a1a1a; color: white;">Соорганизатор</option>
+                    <option value="general_partner" style="background: #1a1a1a; color: white;">Генеральный партнер</option>
+                    <option value="general_sponsor" style="background: #1a1a1a; color: white;">Генеральный спонсор</option>
+                    <option value="vip_sponsor" style="background: #1a1a1a; color: white;">Спонсор VIP</option>
+                    <option value="plus_sponsor" style="background: #1a1a1a; color: white;">Спонсор Plus</option>
+                    <option value="partner" style="background: #1a1a1a; color: white;">Партнер</option>
+                    <option value="sponsor" style="background: #1a1a1a; color: white;">Спонсор</option>
+                </select>
+            </div>
+            
+            <!-- Комментарий (на всю ширину - обе колонки) -->
+            <div style="grid-column: span 2;">
+                <textarea name="comment" placeholder="Комментарий (необязательно)" rows="3" 
+                          style="width: 100%; padding: 1rem 1.2rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 24px; background: rgba(255,255,255,0.08); color: white; font-family: inherit; font-size: 1rem; box-sizing: border-box; resize: vertical;"></textarea>
+            </div>
+            
+            <!-- Чекбокс с согласием (на всю ширину) -->
+            <div style="grid-column: span 2; display: flex; align-items: center; gap: 1rem; background: rgba(255,255,255,0.05); padding: 0.8rem 1.2rem; border-radius: 50px; margin: 0.5rem 0;">
+                <input type="checkbox" name="consent" id="consent" required 
+                       style="width: 24px; height: 24px; flex-shrink: 0; margin: 0; accent-color: #4169e1; background-color: white; border: 2px solid #4169e1; border-radius: 6px; cursor: pointer;">
+                <label for="consent" style="color: white; font-size: 1rem; line-height: 1.4; cursor: pointer;">
+                    Я согласен на обработку персональных данных
+                </label>
+            </div>
+            
+            <!-- Кнопка отправки (на всю ширину) -->
+            <button type="submit" style="grid-column: span 2; width: fit-content; min-width: 250px; margin: 0.5rem auto; padding: 1rem 2.5rem; background: #4169e1; color: white; border: none; border-radius: 50px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: background 0.3s; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.2;" 
+                    onmouseover="this.style.background='#3154b3'" onmouseout="this.style.background='#4169e1'">
+                ОТПРАВИТЬ ЗАЯВКУ
+            </button>
+            
+            <!-- Telegram (на всю ширину) -->
+            <p style="grid-column: span 2; text-align: center; color: rgba(255,255,255,0.6); margin-top: 1rem;">
+                Или напишите нам в Telegram: 
+                <a href="https://t.me/dimaboets" target="_blank" style="color: #4169e1; text-decoration: none; font-weight: 500;">@dimaboets</a>
+            </p>
+            
+        </form>
     </div>
 </section>
 <!-- ========== КОНЕЦ: Форма обратной связи ========== -->
@@ -982,6 +951,7 @@ document.addEventListener('DOMContentLoaded', function() {
 </script>
 </body> 
 </html>
+
 
 
 
