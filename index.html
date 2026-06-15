@@ -879,89 +879,64 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 <script>
-document.addEventListener('DOMContentLoaded', function() { 
-    const form = document.getElementById('partner-form'); 
-     
-    if (form) { 
-        form.addEventListener('submit', function(e) { 
-            e.preventDefault(); 
-             
-            // Telegram данные
-            const BOT_TOKEN = '8783670971:AAFMo4VvnePNrLNhguxZb-OnVO3dQ3vfizo'; 
-            const CHAT_ID = '716232442'; 
-            
-            // Получаем значения напрямую из полей (проще и надежнее)
-            const nameInput = document.getElementById('name');
-            const phoneInput = document.getElementById('phone');
-            const emailInput = document.getElementById('email');
-            const packageSelect = document.getElementById('package');
-            const commentInput = document.getElementById('comment');
-            const consentCheck = document.getElementById('consent');
-            
-            // Проверка что поля существуют
-            if (!nameInput || !phoneInput || !consentCheck) {
-                alert('Ошибка: не найдены поля формы');
-                return;
-            }
-            
-            const name = nameInput.value.trim();
-            const phone = phoneInput.value.trim();
-            const email = emailInput ? emailInput.value.trim() : '';
-            const packageText = packageSelect ? packageSelect.options[packageSelect.selectedIndex].text : 'Не выбран';
-            const comment = commentInput ? commentInput.value.trim() : '';
-             
-            // Проверка обязательных полей
-            if (!name) { 
-                alert('Заполните имя'); 
-                nameInput.focus();
-                return; 
-            }
-
-            if (!phone) { 
-                alert('Заполните телефон'); 
-                phoneInput.focus();
-                return; 
-            }
-
-            // Проверка согласия
-            if (!consentCheck.checked) {
-                alert('Необходимо согласие на обработку персональных данных');
-                return;
-            }
-             
-            // Сообщение
-            const message = `📬 Новая заявка с сайта FVL
+document.addEventListener('DOMContentLoaded', function() {
+    const form = document.getElementById('partnerForm');
+    if (!form) {
+        console.log('Форма не найдена');
+        return;
+    }
+    
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // ТВОИ ДАННЫЕ TELEGRAM
+        const BOT_TOKEN = '8783670971:AAFmRffjKI1ekIn6RrXR8FTPQN3Pk2DRRhg';
+        const CHAT_ID = '509448603';
+        
+        // Находим поля
+        const inputs = form.querySelectorAll('input');
+        const name = inputs[0] ? inputs[0].value : '';
+        const phone = inputs[1] ? inputs[1].value : '';
+        const email = inputs[2] ? inputs[2].value : '';
+        
+        const selectBox = form.querySelector('select');
+        const packageText = selectBox ? selectBox.options[selectBox.selectedIndex].text : 'Не выбран';
+        
+        const comment = form.querySelector('textarea') ? form.querySelector('textarea').value : '';
+        
+        // Проверка
+        if (!name || !phone) {
+            alert('❌ Заполните имя и телефон!');
+            return;
+        }
+        
+        // Сообщение
+        const message = `📬 НОВАЯ ЗАЯВКА!
+━━━━━━━━━━━━━━━━━━
 👤 Имя: ${name}
 📞 Телефон: ${phone}
 📧 Email: ${email || 'не указан'}
 📦 Пакет: ${packageText}
 💬 Комментарий: ${comment || 'нет'}`;
-             
-            // Отправка в Telegram
-            fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-                method: 'POST',
-                headers: {'Content-Type': 'application/json'}, 
-                body: JSON.stringify({
-                    chat_id: CHAT_ID, 
-                    text: message
-                }) 
-            }) 
-            .then(response => response.json()) 
-            .then(data => { 
-                if (data.ok) { 
-                    alert('✅ Заявка отправлена! Мы свяжемся с вами.'); 
-                    form.reset(); 
-                } else { 
-                    alert('❌ Ошибка: ' + (data.description || 'попробуйте позже')); 
-                } 
-            }) 
-            .catch(error => { 
-                alert('❌ Ошибка сети. Проверьте подключение к интернету.'); 
-                console.error(error); 
-            }); 
-        }); 
-    } 
-}); 
+        
+        // Отправка
+        fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
+            method: 'POST',
+            headers: {'Content-Type': 'application/json'},
+            body: JSON.stringify({chat_id: CHAT_ID, text: message})
+        })
+        .then(r => r.json())
+        .then(d => {
+            if (d.ok) {
+                alert('✅ Заявка отправлена! Мы свяжемся с вами.');
+                form.reset();
+            } else {
+                alert('❌ Ошибка: ' + (d.description || 'попробуйте позже'));
+            }
+        })
+        .catch(() => alert('❌ Ошибка соединения'));
+    });
+});
 </script>
 </body> 
 </html>
