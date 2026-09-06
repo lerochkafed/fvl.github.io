@@ -1,1000 +1,2022 @@
-<!DOCTYPE HTML>
-<!--
-	Spectral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>Волейбольная лига FVL | Официальный сайт</title>
-		<link rel="icon" type="image/jpeg" href="flavicon.ico.jpg">
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="landing is-preload"> 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Рыжий инструмент | Ремонт квартир под ключ</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+
     <style>
-        /* Только фон - меняем синий на черный */
-        #one.wrapper.style1.special,
-        #three.wrapper.style3.special,
-        #cta.wrapper.style4,
-        footer#footer {
-            background: #0a0a0a !important;
-            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%) !important;
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
         }
-        
-        /* Кнопки оставляем коралловыми как были */
-        /* Ничего больше не трогаем! */
-    </style>	
-    
-    <style>
-        /* УВЕЛИЧИВАЕМ ВСЕ ЗАГОЛОВКИ */
-        h1 { font-size: 2.5rem !important; }
-        h2 { font-size: 2.2rem !important; }
-        h3 { font-size: 1.8rem !important; }
-        #banner h2 { font-size: 3.5rem !important; }  /* главный заголовок */
-        #banner p { font-size: 1.5rem !important; }   /* подзаголовок на баннере */
-        #one h2 { font-size: 2.5rem !important; }      /* "Наша лига в цифрах" */
-        #one h3 { font-size: 2.5rem !important; }      /* сами цифры 200+, 20, и т.д. */
-        #two h2 { font-size: 2.5rem !important; }      /* "Пакеты партнерского участия" */
-        .spotlight h2 { font-size: 2.2rem !important; } /* названия пакетов */
-        #three h2 { font-size: 3rem !important; }      /* "СУПЕРМАТЧ FVL PRO 7" */
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #faf8f6;
+            color: #1e1e1e;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 24px;
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+
+        .animate {
+            opacity: 0;
+            animation: fadeInUp 0.8s ease forwards;
+        }
+
+        .animate-delay-1 {
+            animation-delay: 0.1s;
+        }
+        .animate-delay-2 {
+            animation-delay: 0.3s;
+        }
+        .animate-delay-3 {
+            animation-delay: 0.5s;
+        }
+        .animate-delay-4 {
+            animation-delay: 0.7s;
+        }
+
+        .hero-content .badge {
+            animation: fadeIn 0.6s ease forwards;
+        }
+
+        /* ===== HEADER ===== */
+        .header {
+            padding: 12px 0 8px;
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(16px);
+            border-bottom: 1px solid rgba(224, 90, 42, 0.08);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .header-content {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 12px;
+        }
+
+        .logo-block {
+            display: flex;
+            align-items: center;
+            gap: 14px;
+        }
+
+        .logo-icon {
+            font-size: 1.8rem;
+            color: #e05a2a;
+            background: #f5ede6;
+            padding: 8px 12px;
+            border-radius: 12px;
+            transition: 0.3s;
+        }
+
+        .logo-icon:hover {
+            background: #e05a2a;
+            color: #fff;
+            transform: rotate(-6deg);
+        }
+
+        .logo-text {
+            font-size: 1.4rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            color: #1e1e1e;
+        }
+
+        .logo-text span {
+            color: #e05a2a;
+        }
+
+        /* ===== НАВИГАЦИЯ ===== */
+        .nav-wrapper {
+            display: flex;
+            align-items: center;
+            gap: 24px;
+        }
+
+        .nav-menu {
+            display: flex;
+            align-items: center;
+            gap: 32px;
+            list-style: none;
+        }
+
+        .nav-menu a {
+            text-decoration: none;
+            color: #4a3f37;
+            font-weight: 600;
+            font-size: 1.1rem;
+            transition: 0.3s;
+            position: relative;
+        }
+
+        .nav-menu a::after {
+            content: '';
+            position: absolute;
+            bottom: -4px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: #e05a2a;
+            transition: 0.3s;
+        }
+
+        .nav-menu a:hover {
+            color: #e05a2a;
+        }
+
+        .nav-menu a:hover::after {
+            width: 100%;
+        }
+
+        /* ===== БУРГЕР-МЕНЮ ===== */
+        .burger-btn {
+            display: none;
+            background: none;
+            border: none;
+            font-size: 1.8rem;
+            color: #4a3f37;
+            cursor: pointer;
+            padding: 4px 8px;
+            transition: 0.3s;
+            z-index: 101;
+        }
+
+        .burger-btn:hover {
+            color: #e05a2a;
+        }
+
+        .mobile-menu-overlay {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.4);
+            z-index: 98;
+            backdrop-filter: blur(4px);
+        }
+
+        .mobile-menu-overlay.active {
+            display: block;
+        }
+
+        .mobile-menu {
+            display: none;
+            position: fixed;
+            top: 0;
+            right: 0;
+            width: 280px;
+            height: 100%;
+            background: #fff;
+            z-index: 99;
+            padding: 80px 30px 30px;
+            box-shadow: -10px 0 40px rgba(0, 0, 0, 0.1);
+            transform: translateX(100%);
+            transition: transform 0.3s ease;
+            overflow-y: auto;
+        }
+
+        .mobile-menu.active {
+            transform: translateX(0);
+        }
+
+        .mobile-menu ul {
+            list-style: none;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .mobile-menu ul li a {
+            text-decoration: none;
+            color: #1e1e1e;
+            font-weight: 600;
+            font-size: 1.2rem;
+            transition: 0.3s;
+            display: block;
+            padding: 12px 0;
+            border-bottom: 1px solid #f0e8e0;
+        }
+
+        .mobile-menu ul li a:hover {
+            color: #e05a2a;
+            padding-left: 8px;
+        }
+
+        .mobile-menu .mobile-phone {
+            display: block;
+            margin-top: 30px;
+            padding: 14px 20px;
+            background: #e05a2a;
+            color: #fff !important;
+            border-radius: 60px;
+            text-align: center;
+            font-weight: 700;
+            font-size: 1.1rem;
+            border-bottom: none !important;
+        }
+
+        .mobile-menu .mobile-phone:hover {
+            background: #c94b1e;
+            padding-left: 20px !important;
+        }
+
+        /* ===== НОМЕР ПОД НАВИГАЦИЕЙ ===== */
+        .header-phone-row {
+            display: flex;
+            justify-content: flex-end;
+            padding-top: 6px;
+            border-top: 1px solid rgba(224, 90, 42, 0.06);
+            margin-top: 6px;
+        }
+
+        .header-phone {
+            font-weight: 700;
+            font-size: 1.1rem;
+            padding: 6px 20px;
+            border-radius: 40px;
+            color: #1e1e1e;
+            text-decoration: none;
+            background: #f5ede6;
+            transition: 0.3s;
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .header-phone i {
+            color: #e05a2a;
+            font-size: 1rem;
+        }
+
+        .header-phone:hover {
+            background: #e05a2a;
+            color: #fff;
+        }
+
+        .header-phone:hover i {
+            color: #fff;
+        }
+
+        /* ===== HERO ===== */
+        .hero {
+            padding: 0;
+            min-height: 580px;
+            display: flex;
+            align-items: center;
+            position: relative;
+            background: #1e1e1e;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background-image: url('images/remont-bg.jpg');
+            background-size: cover;
+            background-position: center;
+            z-index: 0;
+        }
+
+        .hero-bg::after {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(90deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.3) 60%, rgba(0,0,0,0.5) 100%);
+            z-index: 1;
+        }
+
+        .hero .container {
+            position: relative;
+            z-index: 2;
+            width: 100%;
+            padding: 80px 24px;
+        }
+
+        .hero-content {
+            max-width: 620px;
+        }
+
+        .hero-content .badge {
+            display: inline-block;
+            background: rgba(224, 90, 42, 0.2);
+            backdrop-filter: blur(8px);
+            color: #fff;
+            font-weight: 600;
+            padding: 6px 22px;
+            border-radius: 40px;
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 0.8px;
+            margin-bottom: 20px;
+            border: 1px solid rgba(224, 90, 42, 0.25);
+        }
+
+        .hero-content .badge i {
+            color: #e05a2a;
+            margin-right: 8px;
+        }
+
+        .hero-content h1 {
+            font-size: 3.6rem;
+            font-weight: 800;
+            line-height: 1.1;
+            letter-spacing: -1.5px;
+            color: #fff;
+            margin-bottom: 18px;
+            text-align: left;
+        }
+
+        .hero-content h1 .highlight {
+            color: #e05a2a;
+        }
+
+        .hero-content p {
+            font-size: 1.2rem;
+            color: rgba(255, 255, 255, 0.9);
+            max-width: 480px;
+            margin-bottom: 32px;
+            text-align: left;
+        }
+
+        .btn-primary {
+            display: inline-block;
+            background: #e05a2a;
+            color: #fff;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 18px 48px;
+            border-radius: 60px;
+            text-decoration: none;
+            border: none;
+            cursor: pointer;
+            transition: 0.3s;
+            box-shadow: 0 8px 32px rgba(224, 90, 42, 0.4);
+        }
+
+        .btn-primary i {
+            margin-right: 12px;
+        }
+
+        .btn-primary:hover {
+            background: #c94b1e;
+            transform: translateY(-3px);
+            box-shadow: 0 16px 48px rgba(224, 90, 42, 0.5);
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 36px;
+        }
+
+        .hero-stats .stat {
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .hero-stats .stat strong {
+            display: block;
+            font-size: 1.6rem;
+            font-weight: 800;
+            color: #fff;
+        }
+
+        .hero-stats .stat span {
+            font-size: 0.9rem;
+        }
+
+        /* ===== GALLERY ===== */
+        .gallery {
+            padding: 70px 0 80px;
+            background: #fff;
+            overflow: hidden;
+        }
+
+        .section-title {
+            font-size: 2.2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 6px;
+            text-align: center;
+        }
+
+        .section-sub {
+            color: #6b5f55;
+            font-size: 1.05rem;
+            margin-bottom: 36px;
+            text-align: center;
+        }
+
+        .gallery-slider-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .gallery-slider {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+            padding: 8px 4px 16px;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x mandatory;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .gallery-slider::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .gallery-slider::-webkit-scrollbar-track {
+            background: #ede6de;
+            border-radius: 10px;
+        }
+
+        .gallery-slider::-webkit-scrollbar-thumb {
+            background: #e05a2a;
+            border-radius: 10px;
+        }
+
+        .gallery-item {
+            flex: 0 0 320px;
+            min-width: 280px;
+            border-radius: 20px;
+            overflow: hidden;
+            background: #faf8f6;
+            transition: 0.4s;
+            box-shadow: 0 4px 16px rgba(0,0,0,0.02);
+            cursor: pointer;
+            scroll-snap-align: start;
+        }
+
+        .gallery-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.06);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 280px;
+            object-fit: cover;
+            display: block;
+            transition: 0.5s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.04);
+        }
+
+        .gallery-item .info {
+            padding: 20px 24px 22px;
+        }
+
+        .gallery-item .info h4 {
+            font-size: 1.1rem;
+            font-weight: 700;
+            text-align: center;
+        }
+
+        .gallery-item .info p {
+            font-size: 0.9rem;
+            color: #6b5f55;
+            text-align: center;
+        }
+
+        .gallery-arrow {
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 2px solid #ede6de;
+            background: #fff;
+            color: #4a3f37;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .gallery-arrow:hover {
+            background: #e05a2a;
+            border-color: #e05a2a;
+            color: #fff;
+        }
+
+        .gallery-arrow:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        /* ===== МОДАЛЬНОЕ ОКНО ===== */
+        .modal {
+            display: none;
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.92);
+            z-index: 999;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            position: relative;
+            max-width: 900px;
+            width: 100%;
+            max-height: 90vh;
+            background: #1e1e1e;
+            border-radius: 24px;
+            overflow: hidden;
+            box-shadow: 0 24px 80px rgba(0, 0, 0, 0.6);
+        }
+
+        .modal-image {
+            width: 100%;
+            height: 70vh;
+            object-fit: contain;
+            display: block;
+            background: #0a0a0a;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 16px;
+            right: 20px;
+            background: rgba(255, 255, 255, 0.15);
+            backdrop-filter: blur(8px);
+            border: none;
+            color: #fff;
+            font-size: 2rem;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .modal-close:hover {
+            background: rgba(224, 90, 42, 0.8);
+            transform: rotate(90deg);
+        }
+
+        .modal-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(8px);
+            border: none;
+            color: #fff;
+            font-size: 2rem;
+            width: 56px;
+            height: 56px;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+        }
+
+        .modal-nav:hover {
+            background: rgba(224, 90, 42, 0.7);
+        }
+
+        .modal-nav.prev {
+            left: 16px;
+        }
+
+        .modal-nav.next {
+            right: 16px;
+        }
+
+        .modal-counter {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(8px);
+            color: #fff;
+            padding: 8px 20px;
+            border-radius: 40px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            z-index: 10;
+        }
+
+        .modal-thumbs {
+            display: flex;
+            gap: 8px;
+            padding: 12px 20px;
+            background: #1a1a1a;
+            overflow-x: auto;
+            justify-content: center;
+        }
+
+        .modal-thumbs img {
+            width: 70px;
+            height: 50px;
+            object-fit: cover;
+            border-radius: 8px;
+            cursor: pointer;
+            opacity: 0.5;
+            transition: 0.3s;
+            border: 2px solid transparent;
+            flex-shrink: 0;
+        }
+
+        .modal-thumbs img:hover {
+            opacity: 0.8;
+        }
+
+        .modal-thumbs img.active {
+            opacity: 1;
+            border-color: #e05a2a;
+        }
+
+        /* ===== BENEFITS ===== */
+        .benefits {
+            padding: 60px 0 70px;
+            background: #faf8f6;
+            overflow: hidden;
+        }
+
+        .benefits-slider-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+            gap: 16px;
+        }
+
+        .benefits-slider {
+            display: flex;
+            gap: 24px;
+            overflow-x: auto;
+            padding: 8px 4px 16px;
+            scroll-behavior: smooth;
+            -webkit-overflow-scrolling: touch;
+            scroll-snap-type: x mandatory;
+            flex: 1;
+            min-width: 0;
+        }
+
+        .benefits-slider::-webkit-scrollbar {
+            height: 4px;
+        }
+
+        .benefits-slider::-webkit-scrollbar-track {
+            background: #ede6de;
+            border-radius: 10px;
+        }
+
+        .benefits-slider::-webkit-scrollbar-thumb {
+            background: #e05a2a;
+            border-radius: 10px;
+        }
+
+        .benefit-item {
+            flex: 0 0 220px;
+            min-width: 200px;
+            text-align: center;
+            padding: 28px 20px;
+            border-radius: 20px;
+            background: #fff;
+            border: 1px solid #ede6de;
+            transition: 0.3s;
+            scroll-snap-align: start;
+        }
+
+        .benefit-item:hover {
+            border-color: #e05a2a;
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(224, 90, 42, 0.08);
+        }
+
+        .benefit-item i {
+            font-size: 2rem;
+            color: #e05a2a;
+            margin-bottom: 12px;
+            display: block;
+        }
+
+        .benefit-item h4 {
+            font-size: 1rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            text-align: center;
+        }
+
+        .benefit-item p {
+            font-size: 0.9rem;
+            color: #6b5f55;
+            text-align: center;
+        }
+
+        .benefits-arrow {
+            flex-shrink: 0;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: 2px solid #ede6de;
+            background: #fff;
+            color: #4a3f37;
+            font-size: 1.2rem;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .benefits-arrow:hover {
+            background: #e05a2a;
+            border-color: #e05a2a;
+            color: #fff;
+        }
+
+        .benefits-arrow:disabled {
+            opacity: 0.3;
+            cursor: not-allowed;
+        }
+
+        /* ===== PRICES ===== */
+        .prices {
+            padding: 70px 0 80px;
+            background: #fff;
+        }
+
+        .prices-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            margin-top: 16px;
+        }
+
+        .price-card {
+            background: #faf8f6;
+            border-radius: 28px;
+            padding: 32px 24px 28px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: 0.4s;
+            position: relative;
+        }
+
+        .price-card:hover {
+            border-color: #e05a2a;
+            transform: translateY(-4px);
+        }
+
+        .price-card.popular {
+            border-color: #e05a2a;
+            background: #fffcf9;
+        }
+
+        .price-card.popular::before {
+            content: 'Выбор клиентов';
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #e05a2a;
+            color: #fff;
+            font-size: 0.65rem;
+            font-weight: 700;
+            padding: 4px 20px;
+            border-radius: 40px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .price-card h4 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            margin-bottom: 4px;
+            text-align: center;
+        }
+
+        .price-card .amount {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: #1e1e1e;
+            margin: 6px 0 2px;
+        }
+
+        .price-card .amount small {
+            font-size: 1rem;
+            font-weight: 400;
+            color: #6b5f55;
+        }
+
+        .price-card .desc {
+            color: #6b5f55;
+            font-size: 0.9rem;
+            margin-bottom: 14px;
+        }
+
+        .price-card ul {
+            list-style: none;
+            text-align: left;
+            padding: 0;
+            margin: 14px 0 22px;
+        }
+
+        .price-card ul li {
+            padding: 5px 0;
+            border-bottom: 1px solid #ede6de;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .price-card ul li i {
+            color: #e05a2a;
+            width: 18px;
+            font-size: 0.8rem;
+        }
+
+        .btn-outline {
+            display: inline-block;
+            padding: 12px 34px;
+            border-radius: 60px;
+            font-weight: 600;
+            text-decoration: none;
+            border: 2px solid #e05a2a;
+            color: #e05a2a;
+            transition: 0.3s;
+            background: transparent;
+            font-size: 0.9rem;
+            cursor: pointer;
+        }
+
+        .btn-outline:hover {
+            background: #e05a2a;
+            color: #fff;
+            transform: scale(1.02);
+        }
+
+        .price-card.popular .btn-outline {
+            background: #e05a2a;
+            color: #fff;
+            border-color: #e05a2a;
+        }
+
+        .price-card.popular .btn-outline:hover {
+            background: #c94b1e;
+            border-color: #c94b1e;
+        }
+
+        .prices-note {
+            text-align: center;
+            margin-top: 28px;
+            color: #6b5f55;
+            font-size: 0.9rem;
+        }
+
+        .prices-note i {
+            color: #e05a2a;
+            margin-right: 8px;
+        }
+
+        /* ===== FORM ===== */
+        .form-section {
+            padding: 70px 0 80px;
+            background: #f0e8e0;
+        }
+
+        .form-wrapper {
+            display: flex;
+            gap: 44px;
+            flex-wrap: wrap;
+            background: #fff;
+            border-radius: 40px;
+            padding: 48px 44px;
+            box-shadow: 0 12px 48px rgba(0, 0, 0, 0.04);
+        }
+
+        .form-info {
+            flex: 1 1 260px;
+        }
+
+        .form-info h2 {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.5px;
+            margin-bottom: 10px;
+            text-align: left;
+        }
+
+        .form-info h2 span {
+            color: #e05a2a;
+        }
+
+        .form-info p {
+            color: #4a3f37;
+            margin-bottom: 18px;
+            text-align: left;
+        }
+
+        .form-info .contact-row {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            margin: 6px 0;
+            font-size: 0.95rem;
+            justify-content: flex-start;
+        }
+
+        .form-info .contact-row i {
+            color: #e05a2a;
+            width: 24px;
+        }
+
+        .form-card {
+            flex: 2 1 340px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            font-weight: 600;
+            font-size: 0.85rem;
+            display: block;
+            margin-bottom: 4px;
+            color: #2d251f;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 14px 20px;
+            border: 2px solid #ede6de;
+            border-radius: 30px;
+            font-size: 1rem;
+            font-family: 'Inter', sans-serif;
+            transition: 0.25s;
+            background: #faf8f6;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            outline: none;
+            border-color: #e05a2a;
+            background: #fff;
+            box-shadow: 0 0 0 4px rgba(224, 90, 42, 0.06);
+        }
+
+        .form-group textarea {
+            min-height: 90px;
+            resize: vertical;
+        }
+
+        .form-row {
+            display: flex;
+            gap: 16px;
+            flex-wrap: wrap;
+        }
+
+        .form-row .form-group {
+            flex: 1 1 140px;
+        }
+
+        /* ===== ЧЕКБОКС СОГЛАСИЯ ===== */
+        .checkbox-group {
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            margin: 16px 0 20px;
+        }
+
+        .checkbox-group input[type="checkbox"] {
+            width: 20px;
+            height: 20px;
+            min-width: 20px;
+            margin-top: 2px;
+            cursor: pointer;
+            accent-color: #e05a2a;
+        }
+
+        .checkbox-group label {
+            font-size: 0.85rem;
+            color: #4a3f37;
+            cursor: pointer;
+            line-height: 1.4;
+        }
+
+        .checkbox-group label a {
+            color: #e05a2a;
+            text-decoration: underline;
+            font-weight: 600;
+        }
+
+        .checkbox-group label a:hover {
+            color: #c94b1e;
+        }
+
+        .checkbox-group .required {
+            color: #e05a2a;
+            font-weight: 700;
+        }
+
+        .btn-submit {
+            background: #1e1e1e;
+            color: #fff;
+            border: none;
+            padding: 16px 36px;
+            border-radius: 60px;
+            font-weight: 700;
+            font-size: 1rem;
+            width: 100%;
+            cursor: pointer;
+            transition: 0.3s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .btn-submit:hover:not(:disabled) {
+            background: #e05a2a;
+            transform: scale(1.01);
+        }
+
+        .btn-submit:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        #form-status {
+            margin-top: 14px;
+            padding: 12px 20px;
+            border-radius: 40px;
+            font-weight: 600;
+            display: none;
+        }
+
+        #form-status.success {
+            display: block;
+            background: #d4edda;
+            color: #155724;
+        }
+
+        #form-status.error {
+            display: block;
+            background: #f8d7da;
+            color: #721c24;
+        }
+
+        /* ===== FOOTER ===== */
+        .footer {
+            padding: 28px 0;
+            background: #1e1e1e;
+            color: #cbc1b8;
+            text-align: center;
+            border-top: 4px solid #e05a2a;
+        }
+
+        .footer .brand {
+            font-size: 1.1rem;
+            font-weight: 700;
+        }
+
+        .footer .brand span {
+            color: #e05a2a;
+        }
+
+        .footer small {
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        .footer .footer-links {
+            margin-top: 8px;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .footer .footer-links a {
+            color: #cbc1b8;
+            text-decoration: none;
+            font-size: 0.8rem;
+            transition: 0.3s;
+        }
+
+        .footer .footer-links a:hover {
+            color: #e05a2a;
+            text-decoration: underline;
+        }
+
+        /* ===== RESPONSIVE ===== */
+        @media (max-width: 992px) {
+            .nav-menu {
+                gap: 20px;
+            }
+
+            .nav-menu a {
+                font-size: 1rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+
+            .burger-btn {
+                display: block;
+            }
+
+            .mobile-menu {
+                display: block;
+            }
+
+            .header-phone-row {
+                justify-content: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2.6rem;
+            }
+
+            .hero .container {
+                padding: 60px 24px;
+            }
+
+            .hero-stats {
+                flex-wrap: wrap;
+                gap: 20px;
+            }
+
+            .form-wrapper {
+                padding: 30px 20px;
+                border-radius: 28px;
+                flex-direction: column;
+            }
+
+            .form-info h2 {
+                text-align: center;
+            }
+
+            .form-info p {
+                text-align: center;
+            }
+
+            .form-info .contact-row {
+                justify-content: center;
+            }
+
+            .header-content {
+                flex-direction: row;
+                flex-wrap: wrap;
+            }
+
+            .gallery-item {
+                flex: 0 0 260px;
+                min-width: 220px;
+            }
+
+            .gallery-item img {
+                height: 220px;
+            }
+
+            .gallery-arrow {
+                display: none;
+            }
+
+            .benefits-arrow {
+                display: none;
+            }
+
+            .benefits-slider {
+                padding: 4px 4px 12px;
+            }
+
+            .benefit-item {
+                flex: 0 0 180px;
+                min-width: 160px;
+                padding: 20px 16px;
+            }
+
+            .modal-image {
+                height: 50vh;
+            }
+
+            .modal-nav {
+                width: 40px;
+                height: 40px;
+                font-size: 1.2rem;
+            }
+
+            .modal-thumbs img {
+                width: 50px;
+                height: 35px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 2rem;
+            }
+
+            .logo-text {
+                font-size: 1.1rem;
+            }
+
+            .header-phone {
+                font-size: 0.95rem;
+                padding: 4px 14px;
+            }
+
+            .gallery-item {
+                flex: 0 0 220px;
+                min-width: 180px;
+            }
+
+            .gallery-item img {
+                height: 180px;
+            }
+
+            .gallery-item .info {
+                padding: 14px 16px 16px;
+            }
+
+            .gallery-item .info h4 {
+                font-size: 0.95rem;
+            }
+
+            .benefit-item {
+                flex: 0 0 160px;
+                min-width: 140px;
+                padding: 16px 12px;
+            }
+
+            .benefit-item i {
+                font-size: 1.6rem;
+            }
+
+            .benefit-item h4 {
+                font-size: 0.9rem;
+            }
+
+            .benefit-item p {
+                font-size: 0.8rem;
+            }
+
+            .modal-image {
+                height: 40vh;
+            }
+
+            .modal-nav {
+                width: 36px;
+                height: 36px;
+                font-size: 1rem;
+            }
+
+            .modal-thumbs img {
+                width: 40px;
+                height: 30px;
+            }
+        }
     </style>
-    
-    <style> 
-        /* ========== СТИЛИ ДЛЯ МЕНЮ ========== */
-        
-        /* Фон меню */
-        #menu {
-            background: #00a8ff !important;
-        }
-        
-        /* Пункты меню */
-        #menu ul li a {
-            color: white !important;
-            font-size: 1.2rem !important;
-            font-weight: 500 !important;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.2) !important;
-            padding: 1rem !important;
-        }
-        
-        /* Эффект при наведении */
-        #menu ul li a:hover {
-            background: rgba(255, 255, 255, 0.2) !important;
-            padding-left: 2rem !important;
-        }
-        
-        /* Кнопка открытия меню (три полоски) */
-        .menuToggle {
-            color: white !important;
-        }
-        
-        .menuToggle:hover {
-            color: #00a8ff !important;
-        }
-    </style>
-    
-    <style>
-        /* ========== МОБИЛЬНАЯ АДАПТАЦИЯ ========== */
-        /* Для экранов шириной до 768px (телефоны) */
-        
-        @media screen and (max-width: 768px) {
-        
-            /* ===== БАННЕР ===== */
-            #banner {
-                text-align: center !important;
-            }
-            
-            #banner .inner {
-                text-align: center !important;
-                padding: 2rem 1rem !important;
-                max-width: 100% !important;
-                margin: 0 auto !important;
-            }
-            
-            #banner h2 {
-                font-size: 2rem !important;
-                line-height: 1.3 !important;
-                text-align: center !important;
-                white-space: normal !important;
-                word-break: normal !important;
-                overflow-wrap: break-word !important;
-                max-width: 95% !important;
-                margin-left: auto !important;
-                margin-right: auto !important;
-                padding: 0 0.2rem !important;
-            }
-            
-            #banner p {
-                font-size: 1.2rem !important;
-                line-height: 1.5 !important;
-                text-align: center !important;
-                white-space: normal !important;
-                word-break: normal !important;
-                max-width: 95% !important;
-                margin: 0.8rem auto !important;
-                padding: 0 !important;
-            }
-            
-            /* КНОПКА — ровно по центру */
-            #banner .actions {
-                display: flex !important;
-                justify-content: center !important;
-                align-items: center !important;
-                margin: 1.8rem auto 0 auto !important;
-                padding: 0 !important;
-                width: 100% !important;
-            }
-            
-            #banner .button {
-                display: inline-block !important;
-                width: auto !important;
-                min-width: 220px !important;
-                max-width: 90% !important;
-                margin: 0 auto !important;
-                padding: 0.9rem 2rem !important;
-                font-size: 1.1rem !important;
-                text-align: center !important;
-                white-space: normal !important;
-                word-break: keep-all !important;
-                line-height: 1.3 !important;
-                border-radius: 40px !important;
-            }
-            
-            /* ===== ЗАГОЛОВКИ РАЗДЕЛОВ ===== */
-            h3 { 
-                font-size: 1.5rem !important; 
-                text-align: center !important;
-            }
-            
-            /* ===== РАЗДЕЛ "НАША ЛИГА В ЦИФРАХ" ===== */
-            #one .row {
-                display: flex !important;
-                flex-wrap: wrap !important;
-                justify-content: center !important;
-            }
-            #one .col-3 {
-                width: 50% !important;
-                margin-bottom: 2rem !important;
-                text-align: center !important;
-            }
-            #one h3 { 
-                font-size: 2rem !important; 
-                margin-bottom: 0.3rem !important;
-            }
-            #one p { 
-                font-size: 1rem !important; 
-            }
-        
-            /* ===== ПАКЕТЫ ПАРТНЕРСТВА ===== */
-            #two header.major h2 {
-                font-size: 1.8rem !important;
-                text-align: center !important;
-                line-height: 1.3 !important;
-                white-space: normal !important;
-                word-break: break-word !important;
-                padding: 0 0.5rem !important;
-                margin-bottom: 0.5rem !important;
-            }
-            
-            #two header.major p {
-                font-size: 1.1rem !important;
-                text-align: center !important;
-                max-width: 90% !important;
-                margin: 0 auto !important;
-            }
-            
-            .spotlight {
-                flex-direction: column !important;
-                text-align: center !important;
-            }
-            .spotlight .image {
-                width: 100% !important;
-                margin-bottom: 1rem !important;
-            }
-            .spotlight .content {
-                width: 100% !important;
-                padding: 1.2rem !important;
-                text-align: center !important;
-            }
-            
-            .spotlight .content h2 {
-                text-align: center !important;
-                font-size: 1.5rem !important;
-                line-height: 1.3 !important;
-                white-space: normal !important;
-                word-break: break-word !important;
-                margin: 0.5rem auto 1rem auto !important;
-                padding: 0 0.3rem !important;
-                max-width: 100% !important;
-                letter-spacing: normal !important;
-            }
-            
-            .spotlight ul li {
-                text-align: left !important;
-                font-size: 0.95rem !important;
-                line-height: 1.5 !important;
-                margin-bottom: 0.5rem !important;
-            }
-        
-            /* ===== СУПЕРМАТЧ ===== */
-            #three h2 { 
-                font-size: 1.8rem !important; 
-                line-height: 1.2 !important;
-                text-align: center !important;
-            }
-            
-            #three header.major p:first-child {
-                font-size: 1.2rem !important;
-                text-align: center !important;
-            }
-            
-            #three header.major p:last-of-type {
-                font-size: 1.3rem !important;
-                text-align: center !important;
-            }
-            
-            #three .inner > div:first-of-type {
-                flex-direction: column !important;
-                gap: 1rem !important;
-            }
-            #three .inner > div:first-of-type > div {
-                width: 100% !important;
-                padding: 1.2rem !important;
-                text-align: center !important;
-            }
-            
-            #three .inner > div:nth-of-type(2) > div {
-                flex-direction: column !important;
-                gap: 1.5rem !important;
-            }
-        
-            /* ===== ФОРМА ===== */
-            #four {
-                padding: 2rem 1rem !important;
-            }
-            #four .inner {
-                max-width: 100% !important;
-            }
-            #four h2 {
-                font-size: 1.8rem !important;
-            }
-            #four input,
-            #four select,
-            #four textarea {
-                font-size: 0.95rem !important;
-                padding: 0.8rem !important;
-            }
-            #four button[type="submit"] {
-                width: 100% !important;
-                min-width: auto !important;
-                font-size: 1rem !important;
-                padding: 0.8rem !important;
-            }
-        
-            /* ===== ФУТЕР ===== */
-            #footer {
-                text-align: center !important;
-            }
-            #footer .icons {
-                gap: 1rem !important;
-                justify-content: center !important;
-            }
-            #footer .icons li a {
-                font-size: 1.4rem !important;
-            }
-            #footer p, #footer a {
-                font-size: 0.9rem !important;
-            }
-        
-            /* ===== МЕНЮ ===== */
-            #menu ul li a {
-                font-size: 1rem !important;
-                padding: 0.8rem !important;
-            }
-        }
-        
-        /* Для очень маленьких экранов (до 480px) */
-        @media screen and (max-width: 480px) {
-            #one .col-3 {
-                width: 100% !important;
-            }
-            #banner h2 { 
-                font-size: 1.8rem !important; 
-            }
-            .spotlight .content {
-                padding: 1rem !important;
-            }
-            .spotlight h2 {
-                font-size: 1.5rem !important;
-            }
-        }
-    </style>
+</head>
+<body>
 
-<style>
-    /* ИСПРАВЛЕНИЕ ДЛЯ КАРТОЧЕК СПОНСОРОВ - добавляем прокрутку */
-    .spotlight .content ul {
-        max-height: 250px !important;
-        overflow-y: auto !important;
-        padding-right: 10px !important;
-        margin-bottom: 15px !important;
-    }
-    
-    /* Стилизация полосы прокрутки (для красоты) */
-    .spotlight .content ul::-webkit-scrollbar {
-        width: 6px !important;
-    }
-    .spotlight .content ul::-webkit-scrollbar-track {
-        background: #f1f1f1 !important;
-        border-radius: 10px !important;
-    }
-    .spotlight .content ul::-webkit-scrollbar-thumb {
-        background: #00a8ff !important;
-        border-radius: 10px !important;
-    }
-    
-    /* ИСПРАВЛЕНИЕ ДЛЯ ЧЕКБОКСА - делаем его видимым */
-    input[type="checkbox"] {
-        opacity: 1 !important;
-        position: relative !important;
-        width: 18px !important;
-        height: 18px !important;
-        margin-right: 8px !important;
-        transform: scale(1.2) !important;
-        accent-color: #00a8ff !important;  /* цвет галочки */
-        cursor: pointer !important;
-    }
-    
-    /* Чтобы текст согласия был рядом с чекбоксом */
-    label {
-        display: flex !important;
-        align-items: center !important;
-        cursor: pointer !important;
-    }
-
-* ========== КОМПАКТНЫЕ ЗАГОЛОВКИ ДЛЯ ВСЕХ ПАКЕТОВ ========== */
-.spotlight h2 {
-    white-space: nowrap !important;  /* запрещаем перенос */
-    font-size: 1.8rem !important;    /* чуть уменьшаем если надо */
-    margin-bottom: 1rem !important;
-}
-
-/* Для мобильных всё же разрешаем перенос */
-@media screen and (max-width: 768px) {
-    .spotlight h2 {
-        white-space: normal !important;
-        font-size: 1.5rem !important;
-    }
-} /*
-</style> <!-- Закрываем последний блок стилей -->
-
-</head> <!-- Закрываем head -->
-
-<body> <!-- Начинаем body -->
-
-<!-- ========== УВЕЛИЧИВАЕМ ТЕКСТ (УСИЛЕННЫЙ ВАРИАНТ) ========== -->
-<style>
-    /* 1. Подписи под цифрами в "Наша лига в цифрах" */
-    #one .row p,
-    #one .col-3 p,
-    #one .col-12-medium p {
-        font-size: 1.4rem !important;
-        color: rgba(255, 255, 255, 0.9) !important;
-    }
-
-    /* 2. Списки в пакетах партнерства */
-    .spotlight .content ul li,
-    .spotlight ul li {
-        font-size: 1.3rem !important;
-        margin-bottom: 0.7rem !important;
-        line-height: 1.5 !important;
-    }
-
-    /* 3. Текст в форме */
-    #four input,
-    #four select,
-    #four textarea,
-    #four label,
-    #four p,
-    .field label {
-        font-size: 1.2rem !important;
-    }
-    
-    /* 4. Текст согласия */
-    .field.checkbox label,
-    label[for*="agree"] {
-        font-size: 1.2rem !important;
-    }
-    
-    /* 5. Кнопка отправки */
-    #four button,
-    #four input[type="submit"],
-    #four .button {
-        font-size: 1.3rem !important;
-        padding: 1rem 2rem !important;
-    }
-</style>
-
-<!-- ========== КОД ДЛЯ КОМПАКТНЫХ ЗАГОЛОВКОВ ========== -->
-<style>
-    /* Заголовки пакетов */
-    .spotlight h2 {
-        white-space: nowrap !important;
-        font-size: 1.8rem !important;
-        margin-bottom: 1rem !important;
-    }
-
-    /* Для мобильных */
-    @media screen and (max-width: 768px) {
-        .spotlight h2 {
-            white-space: normal !important;
-            font-size: 1.5rem !important;
-        }
-    }
-</style>
-
-<!-- ========== ИСПРАВЛЕНИЕ ДЛЯ ЧЕКБОКСА ========== -->
-<style>
-    input[type="checkbox"] {
-        opacity: 1 !important;
-        position: relative !important;
-        width: 18px !important;
-        height: 18px !important;
-        margin-right: 8px !important;
-        transform: scale(1.2) !important;
-        accent-color: #00a8ff !important;
-        cursor: pointer !important;
-    }
-    
-    label {
-        display: flex !important;
-        align-items: center !important;
-        cursor: pointer !important;
-    }
-</style>
-
-		<!-- Page Wrapper -->
-			<div id="page-wrapper">
-
-			<!-- Header -->
-<header id="header" class="alt">
-    <h1><a href="index.html">FVL</a></h1>
-    <nav id="nav">
-        <ul>
-            <li class="special">
-                <a href="#menu" class="menuToggle"><span>Меню</span></a>
-                <div id="menu">
-                    <ul>
-                        <li><a href="#banner">Главная</a></li>
-                        <li><a href="#one">О лиге</a></li>
-                        <li><a href="#two">Пакеты партнерства</a></li>
-                        <li><a href="#three">Суперматч</a></li>
-                        <li><a href="#four">Стать партнером</a></li>
-                        <li><a href="#footer">Контакты</a></li>
-                    </ul>
+<!-- ===== HEADER ===== -->
+<header class="header">
+    <div class="container">
+        <div class="header-content">
+            <div class="logo-block">
+                <div class="logo-icon">
+                    <i class="fas fa-tools"></i>
                 </div>
-            </li>
-        </ul>
-    </nav>
-</header>	
+                <div class="logo-text">
+                    <span>Рыжий</span> инструмент
+                </div>
+            </div>
 
-				<!-- Banner --> 
-<section id="banner"> 
-    <div class="inner"> 
-       <h2>
-    <span class="part1">Волейбольная</span>
-    <span class="part2">лига FVL</span>
-</h2> 
-        <p style="font-size: 1.3rem; line-height: 1.9; max-width: 650px; margin: 2rem auto;">
-            Объединяем любителей волейбола<br />
-            <span style="display: inline-block; margin-top: 0.7rem;">в России</span><br />
-            <span style="display: inline-block; margin-top: 0.7rem;">с 2024 года</span>
-        </p> 
-        <ul class="actions special">  
-            <li><a href="#four" class="button primary" style="background: #00a8ff !important; border-color: #00a8ff !important;">Стать партнером</a></li> 
-        </ul>  
-    </div> 
-    <a href="#one" class="more scrolly">Узнать больше</a> 
-</section>
-				
-<!-- One --> 
-<section id="one" class="wrapper style1 special" style="background: linear-gradient(135deg, #1e1e2f 0%, #2a2a40 100%);"> 
-    <div class="inner"> 
-        <header class="major"> 
-            <h2 style="color: #ffffff;">Наша лига в цифрах</h2> 
-            <p style="color: rgba(255,255,255,0.8);">Цифры, которые говорят сами за себя</p> 
-        </header> 
-        
-        <div class="row"> 
-            <div class="col-3 col-12-medium" style="text-align: center;"> 
-                <h3 style="color: #ffffff; font-size: 3rem; margin-bottom: 0.5rem;">200+</h3> 
-                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">активных игроков</p> 
-            </div> 
-            <div class="col-3 col-12-medium" style="text-align: center;"> 
-                <h3 style="color: #ffffff; font-size: 3rem; margin-bottom: 0.5rem;">20</h3> 
-                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">команд</p> 
-            </div> 
-            <div class="col-3 col-12-medium" style="text-align: center;"> 
-                <h3 style="color: #ffffff; font-size: 3rem; margin-bottom: 0.5rem;">5</h3> 
-                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">сезонов</p> 
-            </div> 
-            <div class="col-3 col-12-medium" style="text-align: center;"> 
-                <h3 style="color: #ffffff; font-size: 3rem; margin-bottom: 0.5rem;">1000+</h3> 
-                <p style="color: rgba(255,255,255,0.9); font-size: 1.1rem;">зрителей за сезон</p> 
-            </div> 
-        </div> 
-    </div> 
-</section>
+            <!-- ===== ДЕСКТОПНАЯ НАВИГАЦИЯ ===== -->
+            <nav class="nav-wrapper">
+                <ul class="nav-menu">
+                    <li><a href="#works">Наши работы</a></li>
+                    <li><a href="#benefits">Преимущества</a></li>
+                    <li><a href="#prices">Цены</a></li>
+                    <li><a href="#form">Контакты</a></li>
+                </ul>
+            </nav>
 
-<!-- Two - Пакеты для спонсоров FVL PRO7 -->
-<section id="two" class="wrapper alt style2">
-    
-    <!-- Заголовок раздела -->
-    <header class="major" style="text-align: center; padding: 2rem 2rem 0 2rem;">
-        <h2>Пакеты партнерского участия</h2>
-        <p>Выберите уровень сотрудничества с главным волейбольным событием</p>
-    </header>
-    
-    <!-- ПАКЕТ 1: СООРГАНИЗАТОР (Самый крупный) -->
-    <section class="spotlight">
-        <div class="image"><img src="images/soorganizator.jpg" alt="Соорганизатор" /></div>
-        <div class="content">
-            <h2>СООРГАНИЗАТОР</h2>
-            <ul style="list-style: none; padding: 0;">
-                <li>✓ Открываете матч с Правительством Москвы</li>
-                <li>✓ Логотип на одном уровне с организатором</li>
-                <li>✓ Самый крупный логотип на форме игроков</li>
-                <li>✓ Упоминания: ведущий 6 раз, комментатор 5 раз</li>
-                <li>✓ Логотип рядом со счетом в трансляции 24/7</li>
-                <li>✓ Рекламный ролик под руководством Дмитрия Борисова</li>
-                <li>✓ Участие в пресс-конференции с олимпийскими чемпионами</li>
-                <li>✓ Ваш QR-код на медиа-кубе с призывом подписаться</li>
-                <li>✓ Награждение победителей чемпионским поясом</li>
-            </ul>
+            <!-- ===== БУРГЕР-МЕНЮ (МОБИЛЬНАЯ ВЕРСИЯ) ===== -->
+            <button class="burger-btn" id="burgerBtn" aria-label="Открыть меню">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
-    </section>
-    
-    <!-- ПАКЕТ 2: ГЕНЕРАЛЬНЫЙ ПАРТНЕР -->
-    <section class="spotlight">
-        <div class="image"><img src="images/general_partner.jpg" alt="Генеральный партнер" /></div>
-        <div class="content">
-            <h2>ГЕНЕРАЛЬНЫЙ ПАРТНЕР</h2>
-            <ul style="list-style: none; padding: 0;">
-                <li>✓ Логотип на всей рекламной продукции</li>
-                <li>✓ Билеты SUPER VIP и в фанатский сектор</li>
-                <li>✓ Упоминания: ведущий 4 раза, комментатор 3 раза</li>
-                <li>✓ Трансляция логотипа на медиа-кубе (4 экрана)</li>
-                <li>✓ Самый большой логотип на PRESS WALL</li>
-                <li>✓ Интервью для телевидения на фоне PRESS WALL</li>
-                <li>✓ Логотип по периметру игровой площадки</li>
-                <li>✓ Награждение призеров матча</li>
-                <li>✓ Размещение продукции в любой точке фойе</li>
-            </ul>
-        </div>
-    </section>
-    
-    <!-- ПАКЕТ 3: ГЕНЕРАЛЬНЫЙ СПОНСОР -->
-    <section class="spotlight">
-        <div class="image"><img src="images/general_sponsor.jpg" alt="Генеральный спонсор" /></div>
-        <div class="content">
-            <h2>ГЕНЕРАЛЬНЫЙ СПОНСОР</h2>
-            <ul style="list-style: none; padding: 0;">
-                <li>✓ Логотип на всей рекламной продукции</li>
-                <li>✓ Билеты SUPER VIP и в фанатский сектор</li>
-                <li>✓ Упоминания: ведущий 5 раз, комментатор 5 раз</li>
-                <li>✓ Трансляция логотипа/ролика на медиа-кубе</li>
-                <li>✓ Самый большой логотип на PRESS WALL</li>
-                <li>✓ Логотип на форме игроков обеих команд</li>
-                <li>✓ Ваша рекламная продукция каждому гостю</li>
-                <li>✓ Логотип по периметру игровой площадки</li>
-                <li>✓ Награждение участников матча</li>
-            </ul>
-        </div>
-    </section>
-    
-    <!-- ПАКЕТ 4: СПОНСОР VIP -->
-    <section class="spotlight">
-        <div class="image"><img src="images/vip.jpg" alt="Спонсор VIP" /></div>
-        <div class="content">
-            <h2>СПОНСОР VIP</h2>
-            <ul style="list-style: none; padding: 0;">
-                <li>✓ Логотип на всей рекламной продукции</li>
-                <li>✓ Билеты SUPER VIP и в фанатский сектор</li>
-                <li>✓ Упоминания: ведущий 3 раза, комментатор 3 раза</li>
-                <li>✓ Ваш логотип на обоих PRESS WALL</li>
-                <li>✓ Раздача полиграфии 3500 болельщикам</li>
-                <li>✓ Логотип по периметру игровой площадки</li>
-                <li>✓ Размещение продукции в фойе</li>
-                <li>✓ Розыгрыш ваших призов среди зрителей</li>
-            </ul>
-        </div>
-    </section>
-    
-    <!-- ПАКЕТ 5: СПОНСОР PLUS -->
-<section class="spotlight">
-        <div class="image"><img src="images/plus.jpg" alt="Спонсор PLUS" /></div>
-        <div class="content">
-            <h2>СПОНСОР PLUS</h2>
-            <ul style="list-style: none; padding: 0;">
-                <li>✓ Логотип на главном PRESS WALL</li>
-                <li>✓ Билеты VIP и в фанатский сектор</li>
-                <li>✓ Упоминания: ведущий 2 раза, комментатор 2 раза</li>
-                <li>✓ Раздача полиграфии 3500 болельщикам</li>
-                <li>✓ Логотип по периметру игровой площадки</li>
-                <li>✓ Реклама в соцсетях fvl_spb (2 недели)</li>
-            </ul>
-        </div>
-    </section>
-    
-    <!-- ПАКЕТ 6: ПАРТНЕР -->
-    <section class="spotlight">
-        <div class="image"><img src="images/partner.jpg" alt="Партнер" /></div>
-        <div class="content">
-            <h2>ПАРТНЕР</h2>
-            <ul style="list-style: none; padding: 0;">
-                <li>✓ Логотип на главном PRESS WALL</li>
-                <li>✓ Билеты VIP и в фанатский сектор</li>
-                <li>✓ Раздача полиграфии 3500 болельщикам</li>
-                <li>✓ Реклама в соцсетях fvl_spb (1 неделя)</li>
-            </ul>
-        </div>
-    </section>
-    
-    <!-- ПАКЕТ 7: СПОНСОР (Базовый) -->
-    <section class="spotlight">
-        <div class="image"><img src="images/sponsor.jpg" alt="Спонсор" /></div>
-        <div class="content">
-            <h2>СПОНСОР</h2>
-            <ul style="list-style: none; padding: 0;">
-                <li>✓ Логотип на главном PRESS WALL</li>
-                <li>✓ Билеты VIP и в фанатский сектор</li>
-                <li>✓ Раздача полиграфии 3500 болельщикам</li>
-                <li>✓ Упоминание ведущего 1 раз</li>
-                <li>✓ Упоминание комментатора 1 раз</li>
-                <li>✓ Реклама в соцсетях fvl_spb (1 неделя + сторис)</li>
-            </ul>
-        </div>
-    </section>
-    
-</section>		
 
-
-    <!-- Three - Анонс суперматча FVL PRO 7 -->
-<section id="three" class="wrapper style3 special" style="background: linear-gradient(135deg, #1e1e2f 0%, #2a2a40 100%); padding: 4rem 0; position: relative; border-bottom: 3px solid #00a8ff; border-top: 3px solid #00a8ff;">
-    
-    <!-- Тонкий декоративный элемент -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: radial-gradient(circle at 20% 50%, rgba(0, 168, 255, 0.3) 0%, transparent 50%); pointer-events: none;"></div>
-    
-    <div class="inner" style="max-width: 1000px; margin: 0 auto; position: relative; z-index: 2;">
-        
-        <!-- Заголовок с акцентным цветом --> 
-<header class="major" style="text-align: center; margin-bottom: 3rem;"> 
-    <!-- ГЛАВНОЕ СОБЫТИЕ ГОДА -->
-    <p style="color: #00a8ff; font-size: 2rem; font-weight: 600; letter-spacing: 3px; margin-bottom: 2rem;"> 
-        ГЛАВНОЕ СОБЫТИЕ ГОДА
-    </p> 
-    
-    <!-- СУПЕРМАТЧ -->
-    <h2 style="color: white; font-size: 4rem; font-weight: 800; text-transform: uppercase; margin: 2rem 0 0.8rem 0; line-height: 1.2;"> 
-        СУПЕРМАТЧ <span style="color: #00a8ff;">FVL PRO 7</span> 
-    </h2> 
-    
-    <!-- МОСКВА VS ПИТЕР (теперь ближе к суперматчу) -->
-    <p style="color: rgba(255,255,255,0.9); font-size: 2rem; font-weight: 600; margin-top: 0.5rem; margin-bottom: 1rem;"> 
-        МОСКВА <span style="color: #00a8ff; font-weight: 800;">VS</span> ПИТЕР 
-    </p> 
-    
-    <div style="width: 80px; height: 3px; background: #00a8ff; margin: 2rem auto;"></div> 
+        <div class="header-phone-row">
+            <a href="tel:+79170738790" class="header-phone">
+                <i class="fas fa-phone-alt"></i> +7 (917) 073-87-90
+            </a>
+        </div>
+    </div>
 </header>
-        
-<!-- Блок с датой и местом (без эмодзи, текст по центру) --> 
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 1.5rem; margin: 3rem 0;">
-    
-    <!-- Дата -->
-    <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px; text-align: center; flex: 1; min-width: 200px; border: 1px solid rgba(0, 168, 255, 0.3); display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 180px;"> 
-        <div style="color: white; font-size: 2rem; font-weight: 700; line-height: 1.3;">24 АПРЕЛЯ</div> 
-        <div style="color: #00a8ff; font-size: 1.8rem; font-weight: 600;">2026</div> 
-    </div> 
-    
-    <!-- Место --> 
-    <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px; text-align: center; flex: 1; min-width: 200px; border: 1px solid rgba(0, 168, 255, 0.3); display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 180px;"> 
-        <div style="color: white; font-size: 1.6rem; font-weight: 600; line-height: 1.3;">АРЕНА «ДИНАМО»</div> 
-        <div style="color: rgba(255,255,255,0.7); font-size: 1.1rem; margin-top: 0.5rem;">м. Парк Победы</div> 
-    </div> 
-    
-    <!-- Зрители --> 
-    <div style="background: rgba(255,255,255,0.05); padding: 1.5rem; border-radius: 8px; text-align: center; flex: 1; min-width: 200px; border: 1px solid rgba(0, 168, 255, 0.3); display: flex; flex-direction: column; justify-content: center; align-items: center; min-height: 180px;"> 
-        <div style="color: white; font-size: 2.5rem; font-weight: 700; line-height: 1.3;">3 500</div> 
-        <div style="color: rgba(255,255,255,0.7); font-size: 1.2rem;">зрителей</div> 
-    </div> 
+
+<!-- ===== МОБИЛЬНОЕ МЕНЮ (ОВЕРЛЕЙ) ===== -->
+<div class="mobile-menu-overlay" id="mobileOverlay"></div>
+
+<div class="mobile-menu" id="mobileMenu">
+    <ul>
+        <li><a href="#works" class="mobile-link">Наши работы</a></li>
+        <li><a href="#benefits" class="mobile-link">Преимущества</a></li>
+        <li><a href="#prices" class="mobile-link">Цены</a></li>
+        <li><a href="#form" class="mobile-link">Контакты</a></li>
+        <li><a href="tel:+79170738790" class="mobile-phone"><i class="fas fa-phone-alt"></i> +7 (917) 073-87-90</a></li>
+    </ul>
 </div>
-        
-       <!-- Статистика (акцентная) --> 
-<div style="background: rgba(0, 168, 255, 0.3); border-radius: 8px; padding: 2.5rem 1.5rem; margin: 3rem 0; text-align: center; border: 1px solid rgba(0, 168, 255, 0.3);"> 
-    <div style="display: flex; flex-wrap: wrap; justify-content: space-around; gap: 2rem;"> 
-        <div> 
-            <div style="color: #00a8ff; font-size: 2.5rem; font-weight: 800;">№1</div> 
-            <div style="color: white; font-size: 1.3rem;">в России по просмотрам</div> 
-        </div> 
-        <div> 
-            <div style="color: #00a8ff; font-size: 2.5rem; font-weight: 800;">1M+</div> 
-            <div style="color: white; font-size: 1.3rem;">онлайн-зрителей</div> 
-        </div> 
-        <div> 
-            <div style="color: #00a8ff; font-size: 2.5rem; font-weight: 800;">2 года</div> 
-            <div style="color: white; font-size: 1.3rem;">лидер медиалиг</div> 
-        </div> 
-    </div> 
-</div>
+
+<!-- ===== HERO ===== -->
+<section class="hero">
+    <div class="hero-bg"></div>
+    <div class="container">
+        <div class="hero-content">
+            <div class="badge animate animate-delay-1">
+                <i class="fas fa-star"></i> 7 лет безупречной работы
+            </div>
+            <h1 class="animate animate-delay-2">
+                Ремонт квартир <br />
+                <span class="highlight">под ключ</span> с гарантией
+            </h1>
+            <p class="animate animate-delay-3">
+                От косметического до дизайнерского ремонта. Работаем по договору, без предоплаты и с фиксированной сметой.
+            </p>
+            <a href="#form" class="btn-primary animate animate-delay-3">
+                <i class="fas fa-pencil-alt"></i> Получить консультацию
+            </a>
+            <div class="hero-stats animate animate-delay-4">
+                <div class="stat">
+                    <strong>7 лет</strong>
+                    <span>на рынке</span>
+                </div>
+                <div class="stat">
+                    <strong>500+</strong>
+                    <span>выполненных проектов</span>
+                </div>
+                <div class="stat">
+                    <strong>3 года</strong>
+                    <span>гарантии</span>
+                </div>
+            </div>
         </div>
-        
     </div>
 </section>
-<!-- КОНЕЦ БЛОКА СУПЕРМАТЧА (Three) -->
-</section> 
-<!-- Блок с видео с YouTube -->
-<div style="max-width: 900px; margin: 50px auto 30px auto; padding: 0 20px;">
-  <div style="position: relative; padding-bottom: 56.25%; /* 16:9 */ height: 0; overflow: hidden; border-radius: 24px; box-shadow: 0 20px 40px rgba(0,0,0,0.15);">
-    <iframe 
-      style="position: absolute; top: 0; left: 0; width: 100%; height: 100%;" 
-      src="https://www.youtube.com/embed/qrva0OMmE9M" 
-      frameborder="0" 
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-      allowfullscreen>
-    </iframe>
-  </div>
-  <!-- Подпись под видео (можно удалить, если не нужна) -->
-  <p style="text-align: center; margin-top: 16px; color: #666; font-size: 16px;">
-    Обзор матча FVL — почувствуй атмосферу
-  </p>
-</div>
-<!-- Конец блока с видео -->
-<!-- ========== НАЧАЛО: Форма обратной связи (ФИНАЛЬНАЯ) ========== -->
-<section id="four" style="padding: 4rem 2rem; background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);">
-    <div class="inner" style="max-width: 800px; margin: 0 auto;">
-        <header class="major" style="text-align: center; margin-bottom: 3rem;">
-            <h2 style="color: white; font-size: 2.5rem; margin: 0;">Стать партнером</h2>
-            <p style="color: rgba(255,255,255,0.8); font-size: 1.2rem; margin: 1rem 0;">Заполните форму, и мы свяжемся с вами</p>
-            <div style="width: 80px; height: 3px; background: #4169e1; margin: 1.5rem auto;"></div>
-        </header>
+
+<!-- ===== GALLERY ===== -->
+<section class="gallery" id="works">
+    <div class="container">
+        <h2 class="section-title">Наши работы</h2>
+        <p class="section-sub">Нажмите на фото, чтобы открыть галерею</p>
         
-        <form id="partner-form" style="display: grid; grid-template-columns: 1fr 1fr; gap: 1.2rem; max-width: 800px; margin: 0 auto;">
-            
-            <!-- Имя (левая колонка) -->
-            <div style="grid-column: span 1;">
-                <input type="text" name="name" placeholder="Ваше имя *" required 
-                       style="width: 100%; padding: 1rem 1.2rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 50px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem; box-sizing: border-box; height: 58px; line-height: normal;">
-            </div>
-            
-            <!-- Телефон (правая колонка) -->
-            <div style="grid-column: span 1;">
-                <input type="tel" name="phone" placeholder="Ваш телефон *" required 
-                       style="width: 100%; padding: 1rem 1.2rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 50px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem; box-sizing: border-box; height: 58px; line-height: normal;">
-            </div>
-            
-            <!-- Email (левая колонка) -->
-            <div style="grid-column: span 1;">
-                <input type="email" name="email" placeholder="Email (необязательно)" 
-                       style="width: 100%; padding: 1rem 1.2rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 50px; background: rgba(255,255,255,0.08); color: white; font-size: 1rem; box-sizing: border-box; height: 58px; line-height: normal;">
-            </div>
-            
-            <!-- Выбор пакета (правая колонка) - ИСПРАВЛЕНО -->
-            <div style="grid-column: span 1;">
-                <select name="package" required 
-                        style="width: 100%; 
-                               padding: 1rem 1.2rem; 
-                               border: 2px solid rgba(255,255,255,0.1); 
-                               border-radius: 50px; 
-                               background: rgba(255,255,255,0.08); 
-                               color: white; 
-                               font-size: 1rem; 
-                               box-sizing: border-box; 
-                               height: 58px;
-                               line-height: 1.2;
-                               appearance: none; 
-                               background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>'); 
-                               background-repeat: no-repeat; 
-                               background-position: right 1.2rem center; 
-                               background-size: 16px;">
-                    <option value="" disabled selected style="background: #1a1a1a; color: white;">Выберите пакет *</option>
-                    <option value="coorganizer" style="background: #1a1a1a; color: white;">Соорганизатор</option>
-                    <option value="general_partner" style="background: #1a1a1a; color: white;">Генеральный партнер</option>
-                    <option value="general_sponsor" style="background: #1a1a1a; color: white;">Генеральный спонсор</option>
-                    <option value="vip_sponsor" style="background: #1a1a1a; color: white;">Спонсор VIP</option>
-                    <option value="plus_sponsor" style="background: #1a1a1a; color: white;">Спонсор Plus</option>
-                    <option value="partner" style="background: #1a1a1a; color: white;">Партнер</option>
-                    <option value="sponsor" style="background: #1a1a1a; color: white;">Спонсор</option>
-                </select>
-            </div>
-            
-            <!-- Комментарий (на всю ширину - обе колонки) -->
-            <div style="grid-column: span 2;">
-                <textarea name="comment" placeholder="Комментарий (необязательно)" rows="3" 
-                          style="width: 100%; padding: 1rem 1.2rem; border: 2px solid rgba(255,255,255,0.1); border-radius: 24px; background: rgba(255,255,255,0.08); color: white; font-family: inherit; font-size: 1rem; box-sizing: border-box; resize: vertical;"></textarea>
-            </div>
-            
-            <!-- Чекбокс с согласием (на всю ширину) -->
-            <div style="grid-column: span 2; display: flex; align-items: center; gap: 1rem; background: rgba(255,255,255,0.05); padding: 0.8rem 1.2rem; border-radius: 50px; margin: 0.5rem 0;">
-                <input type="checkbox" name="consent" id="consent" required 
-                       style="width: 24px; height: 24px; flex-shrink: 0; margin: 0; accent-color: #4169e1; background-color: white; border: 2px solid #4169e1; border-radius: 6px; cursor: pointer;">
-                <label for="consent" style="color: white; font-size: 1rem; line-height: 1.4; cursor: pointer;">
-                    Я согласен на обработку персональных данных
-                </label>
-            </div>
-            
-            <!-- Кнопка отправки (на всю ширину) -->
-            <button type="submit" style="grid-column: span 2; width: fit-content; min-width: 250px; margin: 0.5rem auto; padding: 1rem 2.5rem; background: #4169e1; color: white; border: none; border-radius: 50px; font-weight: bold; font-size: 1.1rem; cursor: pointer; transition: background 0.3s; display: flex; align-items: center; justify-content: center; text-align: center; line-height: 1.2; height: 58px; box-sizing: border-box;" 
-                    onmouseover="this.style.background='#3154b3'" onmouseout="this.style.background='#4169e1'">
-                ОТПРАВИТЬ ЗАЯВКУ
+        <div class="gallery-slider-wrapper">
+            <button class="gallery-arrow prev" id="galleryPrev">
+                <i class="fas fa-chevron-left"></i>
             </button>
             
-            <!-- Telegram (на всю ширину) -->
-            <p style="grid-column: span 2; text-align: center; color: rgba(255,255,255,0.6); margin-top: 1rem;">
-                Или напишите нам в Telegram: 
-                <a href="https://t.me/dimaboets" target="_blank" style="color: #4169e1; text-decoration: none; font-weight: 500;">@dimaboets</a>
-            </p>
+            <div class="gallery-slider" id="gallerySlider">
+                <div class="gallery-item" data-index="0">
+                    <img src="images/vannaya-1-1.jpg" alt="Ванная классический стиль" loading="lazy" />
+                    <div class="info">
+                        <h4>Ванная — классический стиль</h4>
+                        <p>Капитальный ремонт, плитка, 6 м²</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-index="1">
+                    <img src="images/vannaya-2-1.jpg" alt="Ванная современный стиль" loading="lazy" />
+                    <div class="info">
+                        <h4>Ванная — современный стиль</h4>
+                        <p>Дизайнерский ремонт, панели, 5 м²</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-index="2">
+                    <img src="images/gallery-3.jpg" alt="Скоро добавим" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\' viewBox=\'0 0 400 300\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23cfc1b4\'/%3E%3Ctext x=\'50%25\' y=\'40%25\' font-size=\'36\' font-family=\'Inter, sans-serif\' fill=\'%23e05a2a\' text-anchor=\'middle\' font-weight=\'700\'%3E🚧%3C/text%3E%3Ctext x=\'50%25\' y=\'58%25\' font-size=\'18\' font-family=\'Inter, sans-serif\' fill=\'%233d352e\' text-anchor=\'middle\'%3EСкоро добавим%3C/text%3E%3C/svg%3E'" />
+                    <div class="info">
+                        <h4>Скоро добавим</h4>
+                        <p>Новый проект в работе</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-index="3">
+                    <img src="images/gallery-4.jpg" alt="Скоро добавим" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\' viewBox=\'0 0 400 300\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23dccfc4\'/%3E%3Ctext x=\'50%25\' y=\'40%25\' font-size=\'36\' font-family=\'Inter, sans-serif\' fill=\'%23e05a2a\' text-anchor=\'middle\' font-weight=\'700\'%3E🚧%3C/text%3E%3Ctext x=\'50%25\' y=\'58%25\' font-size=\'18\' font-family=\'Inter, sans-serif\' fill=\'%233d352e\' text-anchor=\'middle\'%3EСкоро добавим%3C/text%3E%3C/svg%3E'" />
+                    <div class="info">
+                        <h4>Скоро добавим</h4>
+                        <p>Новый проект в работе</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-index="4">
+                    <img src="images/gallery-5.jpg" alt="Скоро добавим" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\' viewBox=\'0 0 400 300\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23d9ccc0\'/%3E%3Ctext x=\'50%25\' y=\'40%25\' font-size=\'36\' font-family=\'Inter, sans-serif\' fill=\'%23e05a2a\' text-anchor=\'middle\' font-weight=\'700\'%3E🚧%3C/text%3E%3Ctext x=\'50%25\' y=\'58%25\' font-size=\'18\' font-family=\'Inter, sans-serif\' fill=\'%233d352e\' text-anchor=\'middle\'%3EСкоро добавим%3C/text%3E%3C/svg%3E'" />
+                    <div class="info">
+                        <h4>Скоро добавим</h4>
+                        <p>Новый проект в работе</p>
+                    </div>
+                </div>
+
+                <div class="gallery-item" data-index="5">
+                    <img src="images/gallery-6.jpg" alt="Скоро добавим" loading="lazy" onerror="this.src='data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'400\' height=\'300\' viewBox=\'0 0 400 300\'%3E%3Crect width=\'400\' height=\'300\' fill=\'%23e2d5c8\'/%3E%3Ctext x=\'50%25\' y=\'40%25\' font-size=\'36\' font-family=\'Inter, sans-serif\' fill=\'%23e05a2a\' text-anchor=\'middle\' font-weight=\'700\'%3E🚧%3C/text%3E%3Ctext x=\'50%25\' y=\'58%25\' font-size=\'18\' font-family=\'Inter, sans-serif\' fill=\'%233d352e\' text-anchor=\'middle\'%3EСкоро добавим%3C/text%3E%3C/svg%3E'" />
+                    <div class="info">
+                        <h4>Скоро добавим</h4>
+                        <p>Новый проект в работе</p>
+                    </div>
+                </div>
+            </div>
             
-        </form>
+            <button class="gallery-arrow next" id="galleryNext">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
     </div>
 </section>
-<!-- ========== КОНЕЦ: Форма обратной связи ========== -->
 
-<!-- ДАЛЬШЕ ИДЕТ Footer (ваш существующий футер) -->
-<footer id="footer" style="background: #1e1e2f; padding: 2rem 0;">
-				<!-- Footer с контактами FVL --> 
-     <footer id="footer" style="background: #1e1e2f; padding: 2rem 0;"> 
-      
-      <!-- Соцсети -->
-      <ul class="icons" style="margin-bottom: 1.5rem;"> 
-       <li><a href="https://vk.com/fvl_spb" target="_blank" class="icon brands fa-vk fa-2x" style="color: white;"><span class="label">VK</span></a></li> 
-       <li><a href="https://instagram.com/fvl_spb" target="_blank" class="icon brands fa-instagram fa-2x" style="color: white;"><span class="label">Instagram</span></a></li> 
-       <li><a href="tel:+79216336342" class="icon solid fa-phone fa-2x" style="color: white;"><span class="label">Phone</span></a></li> 
-      </ul> 
-      
-      <!-- Контакты текстом -->
-      <div style="text-align: center; color: white; margin-bottom: 1rem;">
-       <p style="margin: 0.3rem 0;">Дмитрий Александрович Борисов</p>
-       <p style="margin: 0.3rem 0;"><a href="tel:+79216336342" style="color: #00a8ff; text-decoration: none;">+7 (921) 633-63-42</a></p>
-      </div>
-      
-      <!-- Адрес -->
-      <div style="text-align: center; color: rgba(255,255,255,0.7); font-size: 0.9rem; margin-bottom: 1.5rem;">
-       <p>г. Москва, м. Парк Победы, ул. Василисы Кожиной, 13<br>Волейбольная арена «Динамо»</p>
-      </div>
-      
-      <!-- Копирайт -->
-      <ul class="copyright" style="margin-top: 1rem;"> 
-       <li style="color: rgba(255,255,255,0.5);">&copy; Волейбольная лига FVL</li>
-      </ul> 
-      
-     </footer>
+<!-- ===== BENEFITS ===== -->
+<section class="benefits" id="benefits">
+    <div class="container">
+        <h2 class="section-title">Почему нам доверяют</h2>
+        <p class="section-sub">Прозрачные условия и реальные гарантии</p>
+        
+        <div class="benefits-slider-wrapper">
+            <button class="benefits-arrow prev" id="benefitsPrev">
+                <i class="fas fa-chevron-left"></i>
+            </button>
+            
+            <div class="benefits-slider" id="benefitsSlider">
+                <div class="benefit-item">
+                    <i class="fas fa-file-signature"></i>
+                    <h4>Работа по договору</h4>
+                    <p>Юридическая гарантия выполнения обязательств</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <h4>Гарантия до 3 лет</h4>
+                    <p>Бесплатно устраняем любые недочёты</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-calendar-check"></i>
+                    <h4>Соблюдение сроков</h4>
+                    <p>Фиксируем даты в договоре с компенсацией</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-user-tie"></i>
+                    <h4>Мастера с опытом от 5 лет</h4>
+                    <p>Только штатные специалисты</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-ruble-sign"></i>
+                    <h4>Фиксированная смета</h4>
+                    <p>Без скрытых платежей и переплат</p>
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-tools"></i>
+                    <h4>Закупка материалов</h4>
+                    <p>Самостоятельно закупим и доставим всё необходимое</p>
+                </div>
+            </div>
+            
+            <button class="benefits-arrow next" id="benefitsNext">
+                <i class="fas fa-chevron-right"></i>
+            </button>
+        </div>
+    </div>
+</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/jquery.scrollex.min.js"></script>
-			<script src="assets/js/jquery.scrolly.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+<!-- ===== PRICES ===== -->
+<section class="prices" id="prices">
+    <div class="container">
+        <h2 class="section-title">Стоимость ремонта</h2>
+        <p class="section-sub">Выберите подходящий вариант</p>
+        <div class="prices-grid">
+            <div class="price-card">
+                <h4>Косметический</h4>
+                <div class="amount">от 3 900 <small>₽/м²</small></div>
+                <p class="desc">Обновление без перепланировки</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Покраска / оклейка стен</li>
+                    <li><i class="fas fa-check"></i> Замена напольных покрытий</li>
+                    <li><i class="fas fa-check"></i> Мелкий ремонт</li>
+                    <li><i class="fas fa-check"></i> Срок: от 2 недель</li>
+                </ul>
+                <a href="#form" class="btn-outline">Узнать точную цену</a>
+            </div>
+            <div class="price-card popular">
+                <h4>Капитальный</h4>
+                <div class="amount">от 6 500 <small>₽/м²</small></div>
+                <p class="desc">Полный ремонт с перепланировкой</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> Демонтаж и перепланировка</li>
+                    <li><i class="fas fa-check"></i> Сантехника и электрика</li>
+                    <li><i class="fas fa-check"></i> Отделка "под ключ"</li>
+                    <li><i class="fas fa-check"></i> Срок: от 1,5 месяца</li>
+                </ul>
+                <a href="#form" class="btn-outline">Узнать точную цену</a>
+            </div>
+            <div class="price-card">
+                <h4>Дизайнерский</h4>
+                <div class="amount">от 9 900 <small>₽/м²</small></div>
+                <p class="desc">Индивидуальный проект и премиум</p>
+                <ul>
+                    <li><i class="fas fa-check"></i> 3D-визуализация</li>
+                    <li><i class="fas fa-check"></i> Авторский надзор</li>
+                    <li><i class="fas fa-check"></i> Эксклюзивные материалы</li>
+                    <li><i class="fas fa-check"></i> Срок: от 2,5 месяцев</li>
+                </ul>
+                <a href="#form" class="btn-outline">Узнать точную цену</a>
+            </div>
+        </div>
+        <p class="prices-note">
+            <i class="fas fa-info-circle"></i> Точная стоимость рассчитывается индивидуально после замера
+        </p>
+    </div>
+</section>
+
+<!-- ===== FORM ===== -->
+<section class="form-section" id="form">
+    <div class="container">
+        <div class="form-wrapper">
+            <div class="form-info">
+                <h2>Остались вопросы? <span>Напишите</span> нам</h2>
+                <p>Заполните форму, и мы перезвоним в течение 15 минут.</p>
+                <div class="contact-row">
+                    <i class="fas fa-phone-alt"></i> +7 (917) 073-87-90
+                </div>
+                <div class="contact-row">
+                    <i class="fas fa-envelope"></i> info@ryzhiy-instrument.ru
+                </div>
+                <div class="contact-row">
+                    <i class="fab fa-telegram"></i> @ryzhiy_master
+                </div>
+                <div style="margin-top: 24px; background: #f5ede6; padding: 12px 20px; border-radius: 30px; font-weight: 600; color: #1e1e1e; display: inline-block; font-size: 0.9rem;">
+                    <i class="fas fa-tools" style="color: #e05a2a;"></i> Рыжий инструмент — ремонт с характером
+                </div>
+            </div>
+
+            <div class="form-card">
+                <form id="contact-form">
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="name">Ваше имя <span style="color:#e05a2a;">*</span></label>
+                            <input type="text" id="name" placeholder="Алексей" required />
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Телефон <span style="color:#e05a2a;">*</span></label>
+                            <input type="tel" id="phone" placeholder="+7 (917) 073-87-90" required />
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Сообщение</label>
+                        <textarea id="message" placeholder="Тип ремонта, площадь и другие пожелания"></textarea>
+                    </div>
+
+                    <!-- ===== ЧЕКБОКС СОГЛАСИЯ НА ОБРАБОТКУ ПД ===== -->
+                    <div class="checkbox-group">
+                        <input type="checkbox" id="agree" required />
+                        <label for="agree">
+                            Я согласен на <a href="#" target="_blank">обработку персональных данных</a> 
+                            <span class="required">*</span>
+                        </label>
+                    </div>
+
+                    <button type="submit" class="btn-submit" id="submitBtn">
+                        <i class="fas fa-paper-plane"></i> Отправить заявку
+                    </button>
+                    <div id="form-status"></div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- ===== FOOTER ===== -->
+<footer class="footer">
+    <div class="container">
+        <p class="brand">
+            <span>Рыжий</span> инструмент
+        </p>
+        <small>© 2026 Все права защищены. Ремонт под ключ с душой.</small>
+        <div class="footer-links">
+            <a href="#">Политика конфиденциальности</a>
+            <a href="#">Согласие на обработку ПД</a>
+        </div>
+    </div>
+</footer>
+
+<!-- ===== МОДАЛЬНОЕ ОКНО ===== -->
+<div class="modal" id="modal">
+    <div class="modal-content">
+        <button class="modal-close" id="modalClose">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="modal-nav prev" id="modalPrev">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="modal-nav next" id="modalNext">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <img class="modal-image" id="modalImage" src="" alt="Фото ремонта" />
+        <div class="modal-counter" id="modalCounter">1 / 4</div>
+        <div class="modal-thumbs" id="modalThumbs"></div>
+    </div>
+</div>
+
+<!-- ===== SCRIPT ===== -->
 <script>
-document.addEventListener('DOMContentLoaded', function() {
-    const form = document.getElementById('partner-form');
-    if (!form) {
-        console.log('Форма не найдена');
-        return;
+    // ===== БУРГЕР-МЕНЮ =====
+    const burgerBtn = document.getElementById('burgerBtn');
+    const mobileMenu = document.getElementById('mobileMenu');
+    const mobileOverlay = document.getElementById('mobileOverlay');
+    const mobileLinks = document.querySelectorAll('.mobile-link');
+
+    function toggleMenu() {
+        mobileMenu.classList.toggle('active');
+        mobileOverlay.classList.toggle('active');
+        document.body.style.overflow = mobileMenu.classList.contains('active') ? 'hidden' : '';
     }
-    
-    form.addEventListener('submit', function(e) {
-        e.preventDefault();
+
+    function closeMenu() {
+        mobileMenu.classList.remove('active');
+        mobileOverlay.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    burgerBtn.addEventListener('click', toggleMenu);
+    mobileOverlay.addEventListener('click', closeMenu);
+
+    mobileLinks.forEach(link => {
+        link.addEventListener('click', closeMenu);
+    });
+
+    // ===== ДАННЫЕ ДЛЯ ГАЛЕРЕИ =====
+    const galleryData = [
+        {
+            id: 1,
+            title: 'Ванная — классический стиль',
+            desc: 'Капитальный ремонт, плитка, 6 м²',
+            images: [
+                'images/vannaya-1-1.jpg',
+                'images/vannaya-1-2.jpg',
+                'images/vannaya-1-3.jpg',
+                'images/vannaya-1-4.jpg'
+            ]
+        },
+        {
+            id: 2,
+            title: 'Ванная — современный стиль',
+            desc: 'Дизайнерский ремонт, панели, 5 м²',
+            images: [
+                'images/vannaya-2-1.jpg',
+                'images/vannaya-2-2.jpg',
+                'images/vannaya-2-3.jpg',
+                'images/vannaya-2-4.jpg'
+            ]
+        },
+        {
+            id: 3,
+            title: 'Скоро добавим',
+            desc: 'Новый проект в работе',
+            images: ['images/gallery-3.jpg']
+        },
+        {
+            id: 4,
+            title: 'Скоро добавим',
+            desc: 'Новый проект в работе',
+            images: ['images/gallery-4.jpg']
+        },
+        {
+            id: 5,
+            title: 'Скоро добавим',
+            desc: 'Новый проект в работе',
+            images: ['images/gallery-5.jpg']
+        },
+        {
+            id: 6,
+            title: 'Скоро добавим',
+            desc: 'Новый проект в работе',
+            images: ['images/gallery-6.jpg']
+        }
+    ];
+
+    // ===== МОДАЛЬНОЕ ОКНО =====
+    const modal = document.getElementById('modal');
+    const modalImage = document.getElementById('modalImage');
+    const modalCounter = document.getElementById('modalCounter');
+    const modalThumbs = document.getElementById('modalThumbs');
+    const modalClose = document.getElementById('modalClose');
+    const modalPrev = document.getElementById('modalPrev');
+    const modalNext = document.getElementById('modalNext');
+
+    let currentIndex = 0;
+    let currentImageIndex = 0;
+
+    function openModal(index) {
+        currentIndex = index;
+        currentImageIndex = 0;
+        modal.classList.add('active');
+        document.body.style.overflow = 'hidden';
+        updateModal();
+    }
+
+    function closeModal() {
+        modal.classList.remove('active');
+        document.body.style.overflow = '';
+    }
+
+    function updateModal() {
+        const item = galleryData[currentIndex];
+        const images = item.images;
+        const currentImage = images[currentImageIndex] || images[0];
         
-        // ТВОИ ДАННЫЕ TELEGRAM
-        const BOT_TOKEN = '8783670971:AAFmRffjKI1ekIn6RrXR8FTPQN3Pk2DRRhg';
-        const CHAT_ID = '509448603';
+        modalImage.src = currentImage;
+        modalImage.alt = item.title;
+        modalImage.onerror = function() {
+            this.src = 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'800\' height=\'600\' viewBox=\'0 0 800 600\'%3E%3Crect width=\'800\' height=\'600\' fill=\'%232d251f\'/%3E%3Ctext x=\'50%25\' y=\'45%25\' font-size=\'48\' font-family=\'Inter, sans-serif\' fill=\'%23e05a2a\' text-anchor=\'middle\' font-weight=\'700\'%3E${item.title}%3C/text%3E%3Ctext x=\'50%25\' y=\'55%25\' font-size=\'24\' font-family=\'Inter, sans-serif\' fill=\'%23cbc1b8\' text-anchor=\'middle\'%3E${item.desc}%3C/text%3E%3C/svg%3E';
+        };
+        modalCounter.textContent = `${currentImageIndex + 1} / ${images.length}`;
+
+        modalThumbs.innerHTML = '';
+        images.forEach((thumbSrc, i) => {
+            const thumbImg = document.createElement('img');
+            thumbImg.src = thumbSrc;
+            thumbImg.alt = item.title;
+            thumbImg.className = i === currentImageIndex ? 'active' : '';
+            thumbImg.onerror = function() {
+                this.src = 'data:image/svg+xml,%3Csvg xmlns=\'http://www.w3.org/2000/svg\' width=\'70\' height=\'50\' viewBox=\'0 0 70 50\'%3E%3Crect width=\'70\' height=\'50\' fill=\'%232d251f\'/%3E%3Ctext x=\'50%25\' y=\'55%25\' font-size=\'14\' font-family=\'Inter, sans-serif\' fill=\'%23e05a2a\' text-anchor=\'middle\'%3E${i+1}%3C/text%3E%3C/svg%3E';
+            };
+            thumbImg.addEventListener('click', () => {
+                currentImageIndex = i;
+                updateModal();
+            });
+            modalThumbs.appendChild(thumbImg);
+        });
+    }
+
+    function prevImage() {
+        const item = galleryData[currentIndex];
+        const images = item.images;
+        if (images.length > 1) {
+            currentImageIndex = (currentImageIndex - 1 + images.length) % images.length;
+            updateModal();
+        }
+    }
+
+    function nextImage() {
+        const item = galleryData[currentIndex];
+        const images = item.images;
+        if (images.length > 1) {
+            currentImageIndex = (currentImageIndex + 1) % images.length;
+            updateModal();
+        }
+    }
+
+    modalClose.addEventListener('click', closeModal);
+    modalPrev.addEventListener('click', prevImage);
+    modalNext.addEventListener('click', nextImage);
+
+    document.addEventListener('keydown', (e) => {
+        if (!modal.classList.contains('active')) return;
+        if (e.key === 'Escape') closeModal();
+        if (e.key === 'ArrowLeft') prevImage();
+        if (e.key === 'ArrowRight') nextImage();
+    });
+
+    modal.addEventListener('click', (e) => {
+        if (e.target === modal) closeModal();
+    });
+
+    // ===== ОБРАБОТЧИКИ ДЛЯ КАРТОЧЕК ГАЛЕРЕИ =====
+    document.querySelectorAll('.gallery-item').forEach((item) => {
+        item.addEventListener('click', function() {
+            const index = parseInt(this.dataset.index);
+            openModal(index);
+        });
+    });
+
+    // ===== GALLERY СЛАЙДЕР =====
+    const gallerySlider = document.getElementById('gallerySlider');
+    const galleryPrevBtn = document.getElementById('galleryPrev');
+    const galleryNextBtn = document.getElementById('galleryNext');
+
+    function updateGalleryButtons() {
+        if (!gallerySlider) return;
+        const scrollLeft = gallerySlider.scrollLeft;
+        const maxScroll = gallerySlider.scrollWidth - gallerySlider.clientWidth;
         
-        // Находим поля
-        const inputs = form.querySelectorAll('input');
-        const name = inputs[0] ? inputs[0].value : '';
-        const phone = inputs[1] ? inputs[1].value : '';
-        const email = inputs[2] ? inputs[2].value : '';
+        if (galleryPrevBtn) {
+            galleryPrevBtn.disabled = scrollLeft <= 0;
+        }
+        if (galleryNextBtn) {
+            galleryNextBtn.disabled = scrollLeft >= maxScroll - 1;
+        }
+    }
+
+    if (gallerySlider) {
+        gallerySlider.addEventListener('scroll', updateGalleryButtons);
+        window.addEventListener('resize', updateGalleryButtons);
         
-        const selectBox = form.querySelector('select');
-        const packageText = selectBox ? selectBox.options[selectBox.selectedIndex].text : 'Не выбран';
-        
-        const comment = form.querySelector('textarea') ? form.querySelector('textarea').value : '';
-        
-        // Проверка
-        if (!name || !phone) {
-            alert('❌ Заполните имя и телефон!');
-            return;
+        if (galleryPrevBtn) {
+            galleryPrevBtn.addEventListener('click', () => {
+                gallerySlider.scrollBy({ left: -350, behavior: 'smooth' });
+                setTimeout(updateGalleryButtons, 300);
+            });
         }
         
-        // Сообщение
-        const message = `📬 НОВАЯ ЗАЯВКА!
-━━━━━━━━━━━━━━━━━━
-👤 Имя: ${name}
-📞 Телефон: ${phone}
-📧 Email: ${email || 'не указан'}
-📦 Пакет: ${packageText}
-💬 Комментарий: ${comment || 'нет'}`;
+        if (galleryNextBtn) {
+            galleryNextBtn.addEventListener('click', () => {
+                gallerySlider.scrollBy({ left: 350, behavior: 'smooth' });
+                setTimeout(updateGalleryButtons, 300);
+            });
+        }
         
-        // Отправка
-        fetch(`https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`, {
-            method: 'POST',
-            headers: {'Content-Type': 'application/json'},
-            body: JSON.stringify({chat_id: CHAT_ID, text: message})
-        })
-        .then(r => r.json())
-        .then(d => {
-            if (d.ok) {
-                alert('✅ Заявка отправлена! Мы свяжемся с вами.');
-                form.reset();
-            } else {
-                alert('❌ Ошибка: ' + (d.description || 'попробуйте позже'));
+        setTimeout(updateGalleryButtons, 100);
+    }
+
+    // ===== BENEFITS СЛАЙДЕР =====
+    const benefitsSlider = document.getElementById('benefitsSlider');
+    const benefitsPrevBtn = document.getElementById('benefitsPrev');
+    const benefitsNextBtn = document.getElementById('benefitsNext');
+
+    function updateBenefitsButtons() {
+        if (!benefitsSlider) return;
+        const scrollLeft = benefitsSlider.scrollLeft;
+        const maxScroll = benefitsSlider.scrollWidth - benefitsSlider.clientWidth;
+        
+        if (benefitsPrevBtn) {
+            benefitsPrevBtn.disabled = scrollLeft <= 0;
+        }
+        if (benefitsNextBtn) {
+            benefitsNextBtn.disabled = scrollLeft >= maxScroll - 1;
+        }
+    }
+
+    if (benefitsSlider) {
+        benefitsSlider.addEventListener('scroll', updateBenefitsButtons);
+        window.addEventListener('resize', updateBenefitsButtons);
+        
+        if (benefitsPrevBtn) {
+            benefitsPrevBtn.addEventListener('click', () => {
+                benefitsSlider.scrollBy({ left: -250, behavior: 'smooth' });
+                setTimeout(updateBenefitsButtons, 300);
+            });
+        }
+        
+        if (benefitsNextBtn) {
+            benefitsNextBtn.addEventListener('click', () => {
+                benefitsSlider.scrollBy({ left: 250, behavior: 'smooth' });
+                setTimeout(updateBenefitsButtons, 300);
+            });
+        }
+        
+        setTimeout(updateBenefitsButtons, 100);
+    }
+
+    // ===== FORM SCRIPT (С ЗАЩИТОЙ ОТ БОТОВ И ГАЛОЧКОЙ) =====
+    document.addEventListener('DOMContentLoaded', function() {
+        const form = document.getElementById('contact-form');
+        const statusDiv = document.getElementById('form-status');
+        const submitBtn = document.getElementById('submitBtn');
+        const agreeCheckbox = document.getElementById('agree');
+
+        // ⬇⬇⬇ ВСТАВЬТЕ СВОИ ДАННЫЕ ⬇⬇⬇
+        const BOT_TOKEN = '8807074165:AAG1X4e3wQF-oCbk_MvQ837-YX9J7mcP54o';
+        const CHAT_ID = '716232442';
+
+        // Блокируем кнопку, пока не поставлена галочка
+        agreeCheckbox.addEventListener('change', function() {
+            submitBtn.disabled = !this.checked;
+        });
+        submitBtn.disabled = true;
+
+        // Защита от ботов — скрытое поле
+        const honeypot = document.createElement('input');
+        honeypot.type = 'text';
+        honeypot.name = 'honeypot';
+        honeypot.style.display = 'none';
+        form.appendChild(honeypot);
+
+        form.addEventListener('submit', async function(e) {
+            e.preventDefault();
+
+            // Проверка на бота (если заполнено скрытое поле — это бот)
+            if (honeypot.value) {
+                statusDiv.className = 'error';
+                statusDiv.textContent = '❌ Обнаружена подозрительная активность.';
+                statusDiv.style.display = 'block';
+                return;
             }
-        })
-        .catch(() => alert('❌ Ошибка соединения'));
+
+            const name = document.getElementById('name').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !phone) {
+                statusDiv.className = 'error';
+                statusDiv.textContent = '❌ Пожалуйста, заполните имя и телефон.';
+                statusDiv.style.display = 'block';
+                return;
+            }
+
+            if (!agreeCheckbox.checked) {
+                statusDiv.className = 'error';
+                statusDiv.textContent = '❌ Пожалуйста, дайте согласие на обработку персональных данных.';
+                statusDiv.style.display = 'block';
+                return;
+            }
+
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-pulse"></i> Отправка...';
+            statusDiv.style.display = 'none';
+
+            const text = `🛠 НОВАЯ ЗАЯВКА С САЙТА!\n\n👤 Имя: ${name}\n📱 Телефон: ${phone}\n📝 Сообщение: ${message || '—'}\n✅ Согласие на обработку ПД: Да\n\n📅 ${new Date().toLocaleString('ru-RU')}`;
+
+            try {
+                const url = `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage?chat_id=${CHAT_ID}&text=${encodeURIComponent(text)}`;
+                const response = await fetch(url);
+                const result = await response.json();
+
+                if (result.ok) {
+                    statusDiv.className = 'success';
+                    statusDiv.textContent = '✅ Заявка отправлена! Мы свяжемся с вами в ближайшее время.';
+                    form.reset();
+                    submitBtn.disabled = true;
+                } else {
+                    throw new Error('Ошибка: ' + JSON.stringify(result));
+                }
+            } catch (error) {
+                console.error('Ошибка отправки:', error);
+                statusDiv.className = 'error';
+                statusDiv.textContent = '❌ Ошибка отправки. Попробуйте позже или позвоните по телефону.';
+            }
+
+            statusDiv.style.display = 'block';
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = '<i class="fas fa-paper-plane"></i> Отправить заявку';
+        });
     });
-});
 </script>
-</body> 
+
+</body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
